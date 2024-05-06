@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
+use \App\Models\recruitments;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +16,13 @@ use App\Http\Controllers\IndexController;
 */
 
 Route::get('/', function () {
-    return view('home.home');
+    $recruitments = recruitments::get();
+    return view('home.home', ['recruitments' => $recruitments]);
 });
 
 Route::get('/event', [IndexController::class,'viewEvent']);
+Route::get('/event/{id}', [IndexController::class,'detailEvent']);
 Route::get('/blog', [IndexController::class,'viewBlog']);
 Route::get('/contact', [IndexController::class,'viewContact']);
+Route::get('/recruitment/{id}', [IndexController::class,'viewRecruitment']);
 

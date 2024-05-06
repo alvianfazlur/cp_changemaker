@@ -72,9 +72,9 @@
                                     <li class="menu-item-has-children">
                                         <a href="#">Recruitment</a>
                                         <ul class="sub-menu">
-                                            <li><a href="#">Youth Changemaker Voluntering</a></li>
-                                            <li><a href="#">Changemaker Youth Excursion</a></li>
-                                            <li><a href="#">Internship Candidate College</a></li>
+                                            @foreach ($recruitments as $r)
+                                            <li><a href="/recruitment/{{$r->id}}">{{$r->program_name}}</a></li>
+                                            @endforeach
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children">
@@ -83,16 +83,22 @@
                                     <li class="menu-item-has-children">
                                         <a href="/blog">Blog</a>
                                     </li>
-                                    <li><a href="/contact">Contact</a></li>
+                                    <li class="menu-item-has-children">
+                                        <a href="#">Partnership</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="#">More</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">Info</a></li>
+                                            <li><a href="/contact">Contact</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
 
                             </div><!-- end of nav-collapse -->
                         </div>
                         <div class="col-lg-3 col-md-2 col-2">
                             <div class="header-right">
-                                <div class="close-form">
-                                    <a class="theme-btn" href="donate.html">Donate Now</a>
-                                </div>
                                 <div class="header-search-form-wrapper">
                                     <div class="cart-search-contact">
                                         <button class="search-toggle-btn"><i class="fi flaticon-search"></i></button>

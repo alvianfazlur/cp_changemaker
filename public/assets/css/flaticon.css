@@ -20,6 +20,9 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
 .flaticon-salary:before {
     content: "\f101";
 }
+.flaticon-whatsapp:before {
+    content: "\f232"; /* Unicode untuk ikon WhatsApp */
+}
 .flaticon-vegetable:before {
     content: "\f102";
 }

@@ -1,6 +1,3 @@
-<?php
-    use Carbon\Carbon;
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,20 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="wpOceans">
     <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
-    <title>Changemaker - Enhance & Empower Indonesian Youth!</title>
-    <link href="assets/css/themify-icons.css" rel="stylesheet">
-    <link href="assets/css/flaticon.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/animate.css" rel="stylesheet">
-    <link href="assets/css/owl.carousel.css" rel="stylesheet">
-    <link href="assets/css/owl.theme.css" rel="stylesheet">
-    <link href="assets/css/slick.css" rel="stylesheet">
-    <link href="assets/css/slick-theme.css" rel="stylesheet">
-    <link href="assets/css/swiper.min.css" rel="stylesheet">
-    <link href="assets/css/owl.transitions.css" rel="stylesheet">
-    <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
-    <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+    <title>Charitio - Multipurpose Charity Nonprofit HTML5 Template</title>
+    <link href="../assets/css/themify-icons.css" rel="stylesheet">
+    <link href="../assets/css/flaticon.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/animate.css" rel="stylesheet">
+    <link href="../assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="../assets/css/owl.theme.css" rel="stylesheet">
+    <link href="../assets/css/slick.css" rel="stylesheet">
+    <link href="../assets/css/slick-theme.css" rel="stylesheet">
+    <link href="../assets/css/swiper.min.css" rel="stylesheet">
+    <link href="../assets/css/owl.transitions.css" rel="stylesheet">
+    <link href="../assets/css/jquery.fancybox.css" rel="stylesheet">
+    <link href="../assets/css/odometer-theme-default.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,7 +36,7 @@
                     <div class="loader-line-mask">
                         <div class="loader-line"></div>
                     </div>
-                    <img src="assets/images/preloader.png" alt="">
+                    <img src="../assets/images/preloader.png" alt="">
                 </div>
             </div>
         </div>
@@ -53,7 +50,7 @@
                             <div class="contact-intro">
                                 <ul>
                                     <li><i class="fi ti-location-pin"></i>7 Green Lake Street Crawfordsville</li>
-                                    <li><i class="fi flaticon-email"></i> changemaker@email</li>
+                                    <li><i class="fi flaticon-email"></i> charito@gmail.com</li>
                                 </ul>
                             </div>
                         </div>
@@ -87,7 +84,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-6">
                                 <div class="navbar-header">
-                                    <a class="navbar-brand" href="/"><img src="assets/images/logo.png" alt=""></a>
+                                    <a class="navbar-brand" href="index.html"><img src="../assets/images/logo.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-1 col-1">
@@ -106,7 +103,7 @@
                                             </ul>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a class= "active" href="#">Events</a>
+                                            <a class= "active" href="/event">Events</a>
                                         </li>
                                         <li class="menu-item-has-children">
                                             <a href="#">Blog</a>
@@ -149,7 +146,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="wpo-breadcumb-wrap">
-                            <h2>Events</h2>
+                            <h2>{{$event->event_name}}</h2>
                             <ul>
                                 <li><a href="/">Home</a></li>
                                 <li><span>Events</span></li>
@@ -160,44 +157,120 @@
             </div>
         </div>
         <!-- end of wpo-breadcumb-section-->
-        <!-- wpo-event-area start -->
-        <div class="wpo-event-area section-padding">
+        <!-- wpo-event-details-area start -->
+        <div class="wpo-event-details-area section-padding">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="wpo-section-title">
-                            <span>Events</span>
-                            <h2>Changemaker Events</h2>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form,</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="wpo-event-wrap">
-                    <div class="row">
-                       @foreach ($events as $e)
-                       <div class="col col-lg-6 col-md-6 col-12">
-                        <div class="wpo-event-single">
-                            <div class="wpo-event-item">
-                                <div class="wpo-event-img">
-                                    <img src="assets/images/event/img-1.jpg" alt="">
-                                    <span class="thumb">{{ Carbon::parse($e->event_date)->format('d F Y') }}</span>
+                <div class="row">
+                    <div class="col col-lg-8">
+                         <div class="wpo-event-item">
+                            <div class="wpo-event-img">
+                                <img src="../assets/images/event-single.jpg" alt="">
+                            </div>
+                            <div class="wpo-event-details-text">
+                                <h2>Event Description</h2>
+                                 <p>{{$event->description}}</p>
+                            </div>
+                            <div class="wpo-event-details-wrap">
+                                <div class="wpo-event-details-tab">
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link active" id="Schedule-tab" data-bs-toggle="tab" href="#Schedule"
+                                                role="tab" aria-controls="Schedule" aria-selected="true">Event Schedule</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="Map-tab" data-bs-toggle="tab" href="#Map" role="tab"
+                                                aria-controls="Map" aria-selected="false">Map Location</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="Contact-tab" data-bs-toggle="tab" href="#Contact" role="tab"
+                                                aria-controls="Contact" aria-selected="false">Contact Us</a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="wpo-event-content">
-                                    <div class="wpo-event-text-top">
-                                        <h2><a href="/event/{{$e->id}}">{{$e->event_name}}</a></h2>
-                                        <p>{{$e->description}}</p>
+                                <div class="wpo-event-details-content">
+                                    <div class="tab-content">
+                                        <div id="Schedule" class="tab-pane active">
+                                            <p>{{$event->Schedule}}</p>    
+                                        </div>
+                                        <div id="Map" class="tab-pane">
+                                            <div class="contact-map">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.9147703055!2d-74.11976314309273!3d40.69740344223377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbd!4v1547528325671" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                        <div id="Contact" class="tab-pane">
+                                            <div class="event-contact">
+                                                <div class="wpo-donations-details">
+                                                
+                                                </div> 
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                       @endforeach
+                    <div class="col col-lg-4 col-12">
+                        <div class="blog-sidebar">
+                            <div class="widget search-widget">
+                                <form>
+                                    <div>
+                                        <input type="text" class="form-control" placeholder="Search Post..">
+                                        <button type="submit"><i class="ti-search"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="widget recent-post-widget">
+                                <h3>Related Posts</h3>
+                                <div class="posts">
+                                    <div class="post">
+                                        <div class="img-holder">
+                                            <img src="../assets/images/recent-posts/img-1.jpg" alt>
+                                        </div>
+                                        <div class="details">
+                                            <h4><a href="blog-single.html">Give Education, It’s The Best Gift Ever.</a></h4>
+                                            <span class="date">19 Jun 2021 </span>
+                                        </div>
+                                    </div>
+                                    <div class="post">
+                                        <div class="img-holder">
+                                            <img src="../assets/images/recent-posts/img-2.jpg" alt>
+                                        </div>
+                                        <div class="details">
+                                            <h4><a href="blog-single.html">Your Help Can Make Someone life Better.</a></h4>
+                                            <span class="date">22 May 2021 </span>
+                                        </div>
+                                    </div>
+                                    <div class="post">
+                                        <div class="img-holder">
+                                            <img src="../assets/images/recent-posts/img-3.jpg" alt>
+                                        </div>
+                                        <div class="details">
+                                            <h4><a href="blog-single.html">Help The Poor, You Will Feel Happy</a></h4>
+                                            <span class="date">12 Apr 2021 </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget tag-widget">
+                                <h3>Tags</h3>
+                                <ul>
+                                    <li><a href="#">Charity</a></li>
+                                    <li><a href="#">Planning</a></li>
+                                    <li><a href="#">Helping</a></li>
+                                    <li><a href="#">Education</a></li>
+                                    <li><a href="#">Medical</a></li>
+                                    <li><a href="#">Wildlife</a></li>
+                                    <li><a href="#">Donation</a></li>
+                                    <li><a href="#">Help</a></li>
+                                    <li><a href="#">World Pandamic</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- wpo-event-area end -->
+        <!-- wpo-event-details-area end -->
 
         <!-- start of wpo-site-footer-section -->
         <footer class="wpo-site-footer">
@@ -207,7 +280,7 @@
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget about-widget">
                                 <div class="logo widget-title">
-                                    <img src="assets/images/logo2.png" alt="blog">
+                                    <img src="../assets/images/logo2.png" alt="blog">
                                 </div>
                                 <p>Welcome and open yourself to your truest love this year with us! With the Release Process</p>
                                 <ul>
@@ -270,12 +343,12 @@
                                     <h3>Projects</h3>
                                 </div>
                                 <ul class="d-flex">
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/1.jpg" alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/2.jpg" alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/3.jpg" alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/4.jpg" alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/5.jpg" alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/6.jpg" alt=""></a></li>
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/1.jpg" alt=""></a></li>
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/2.jpg" alt=""></a></li>
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/3.jpg" alt=""></a></li>
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/4.jpg" alt=""></a></li>
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/5.jpg" alt=""></a></li>
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/6.jpg" alt=""></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -298,14 +371,14 @@
 
     <!-- All JavaScript files
     ================================================== -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <!-- Plugins for this template -->
-    <script src="assets/js/modernizr.custom.js"></script>
-    <script src="assets/js/jquery.dlmenu.js"></script>
-    <script src="assets/js/jquery-plugin-collection.js"></script>
+    <script src="../assets/js/modernizr.custom.js"></script>
+    <script src="../assets/js/jquery.dlmenu.js"></script>
+    <script src="../assets/js/jquery-plugin-collection.js"></script>
     <!-- Custom script for this template -->
-    <script src="assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 
 
