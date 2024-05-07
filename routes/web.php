@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use \App\Models\recruitments;
+use \App\Models\events;
+use \App\Models\blogs;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,12 +19,17 @@ use \App\Models\recruitments;
 
 Route::get('/', function () {
     $recruitments = recruitments::get();
-    return view('home.home', ['recruitments' => $recruitments]);
+    $events = events::orderBy('event_date', 'desc')->take(2)->get();
+    $blogs = blogs::orderBy('publication_date', 'desc')->take(3)->get();
+    return view('home.home', ['recruitments' => $recruitments, 'events' => $events, 'blogs' => $blogs]);
 });
 
 Route::get('/event', [IndexController::class,'viewEvent']);
 Route::get('/event/{id}', [IndexController::class,'detailEvent']);
 Route::get('/blog', [IndexController::class,'viewBlog']);
+Route::get('/blog/{id}', [IndexController::class,'detailBlog']);
 Route::get('/contact', [IndexController::class,'viewContact']);
 Route::get('/recruitment/{id}', [IndexController::class,'viewRecruitment']);
+Route::get('/partnership', [IndexController::class,'viewPartnership']);
+
 

@@ -22,6 +22,8 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-U/mkBsIh9vOsVH+8+jqUdAywlXfWJnR6KGbPW4z9z9n/e/tA3+Sk1eFVU7xWM+pg" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -205,12 +207,12 @@
                                     <div class="office-info-item">
                                         <div class="office-info-icon">
                                             <div class="icon">
-                                                <i class="fi flaticon-placeholder"></i>
+                                                <img src="/assets/images/icon/tik-tok.png" alt="">
                                             </div>
                                         </div>
                                         <div class="office-info-text">
-                                            <h2>Address</h2>
-                                            <p>7 Green Lake Street Crawfordsville, IN 47933</p>
+                                            <h2>Follow Us</h2>
+                                            <a href="https://www.tiktok.com/@changemaker.ind?_t=8WBqLjUmxs2&_r=1">Changemaker Indonesia</a>
                                         </div>
                                     </div>
                                 </div> 
@@ -223,8 +225,7 @@
                                         </div>
                                         <div class="office-info-text">
                                             <h2>Email Us</h2>
-                                            <p>Charito@gmail.com</p>
-                                            <p>helloyou@gmail.com</p>
+                                            <p>Changemaker@email.com</p>
                                         </div>
                                     </div>
                                 </div> 
@@ -232,13 +233,12 @@
                                     <div class="office-info-item">
                                         <div class="office-info-icon">
                                             <div class="icon">
-                                                <i class="fi flaticon-phone-call"></i>
+                                                <img src="/assets/images/icon/instagram.png" alt="">
                                             </div>
                                         </div>
                                         <div class="office-info-text">
-                                            <h2>Call Now</h2>
-                                            <p>+1 800 123 456 789</p>
-                                            <p>+1 800 123 654 987</p>
+                                            <h2>Follow Us</h2>
+                                            <a href="https://www.instagram.com/changemaker.ind/">@changemaker.ind</a>
                                         </div>
                                     </div>
                                 </div> 
@@ -293,7 +293,7 @@
         <section class="wpo-contact-map-section">
             <h2 class="hidden">Contact map</h2>
             <div class="wpo-contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.9147703055!2d-74.11976314309273!3d40.69740344223377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbd!4v1547528325671" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32659993.304524!2d95.88675175821633!3d-2.2230363030918245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c4c07d7496404b7%3A0xe37b4de71badf485!2sIndonesia!5e0!3m2!1sen!2sid!4v1715070028712!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
         <!-- end wpo-contact-map -->

@@ -1,3 +1,6 @@
+<?php
+    use Carbon\Carbon;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="wpOceans">
-    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
     <title>Changemaker - Enhance & Empower Indonesian Youth!</title>
     <link href="/assets/css/themify-icons.css" rel="stylesheet">
     <link href="/assets/css/flaticon.css" rel="stylesheet">
@@ -36,7 +39,7 @@
                     <div class="loader-line-mask">
                         <div class="loader-line"></div>
                     </div>
-                    <img src="assets/images/preloader.png" alt="">
+                    <img src="assets/images/logo.png" alt="">
                 </div>
             </div>
         </div>
@@ -58,8 +61,8 @@
                         </div>
                         <div class="col-lg-3 col-md-6 col-6">
                             <div class="navbar-header">
-                                <h1>Changemaker</h1>
-                                {{-- <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt=""></a> --}}
+                                <br>
+                                <a class="navbar-brand" href="/"><img src="assets/images/logo.png" alt=""></a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-1 col-1">
@@ -84,7 +87,7 @@
                                         <a href="/blog">Blog</a>
                                     </li>
                                     <li class="menu-item-has-children">
-                                        <a href="#">Partnership</a>
+                                        <a href="/partnership">Partnership</a>
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="#">More</a>
@@ -128,7 +131,7 @@
                     <div class="col col-xs-6 col-lg-6">
                         <div class="wpo-hero-section-text">
                             <div class="wpo-hero-title-top">
-                                <span>Lorem Ipsum</span>
+                                <span>Changemaker Indonesia</span>
                             </div>
                             <div class="wpo-hero-title">
                                 <h2>Enhance & Empower Indonesian Youth</h2>
@@ -138,7 +141,7 @@
                                     to become more.</p>
                             </div>
                             <div class="btns">
-                                <a href="about.html" class="btn theme-btn-s2">Get Started</a>
+                                <a href="/about" class="btn theme-btn-s2">Get Started</a>
                             </div>
                         </div>
                     </div>
@@ -196,11 +199,11 @@
                         <div class="wpo-features-item">
                             <div class="wpo-features-icon">
                                 <div class="icon">
-                                    <i class="fi flaticon-vegetable"></i>
+                                    <i class="fi flaticon-target"></i>
                                 </div>
                             </div>
                             <div class="wpo-features-text">
-                                <h2><a href="service-single.html">Healthy Food</a></h2>
+                                <h2>International Volunteer</a></h2>
                             </div>
                         </div>
                     </div>
@@ -212,7 +215,7 @@
                                 </div>
                             </div>
                             <div class="wpo-features-text">
-                                <h2><a href="service-single.html">Clean Water</a></h2>
+                                <h2>College Internship</h2>
                             </div>
                         </div>
                     </div>
@@ -220,11 +223,11 @@
                         <div class="wpo-features-item">
                             <div class="wpo-features-icon">
                                 <div class="icon">
-                                    <i class="fi flaticon-medicine"></i>
+                                    <i class="fi flaticon-dolphin"></i>
                                 </div>
                             </div>
                             <div class="wpo-features-text">
-                                <h2><a href="service-single.html">Medical Care</a></h2>
+                                <h2>Youth Excursion</h2>
                             </div>
                         </div>
                     </div>
@@ -232,11 +235,11 @@
                         <div class="wpo-features-item">
                             <div class="wpo-features-icon">
                                 <div class="icon">
-                                    <i class="fi flaticon-graduation-cap"></i>
+                                    <i class="fi flaticon-salary"></i>
                                 </div>
                             </div>
                             <div class="wpo-features-text">
-                                <h2><a href="service-single.html">Child Education</a></h2>
+                                <h2>100% Fully Funded</h2>
                             </div>
                         </div>
                     </div>
@@ -284,16 +287,19 @@
                     <div class="col-lg-6 col-md-12 col-12">
                         <div class="wpo-about-text">
                             <span>About Us</span>
-                            <h2>We Can Save More Lifes With Your Helping Hand.</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                            <h2>Calling out passionate Changers!!</h2>
+                            <p>Pengabdian Skala International dan berkontribusi dalam pembangunan yang berkelanjutan melalui pengajaran di Sanggar Bimbingan.
+                                Dengan kerjasama kita, kita dapat mewujudkan perubahan positif bagi anak-anak Indonesia yang berbakat.
+                                Mari berbagi pengetahuan dan menginspirasi generasi mendatang!
+                                Dengan fasilitas yang tidak perlu diragukan lagi!! Ditambah dengan jalur FULLY FUNDED🔥🔥 </p>
                             <ul>
-                                <li>The standard chunk of Lorem Ipsum used since.</li>
-                                <li>Randomised words which don't look even slightly believable.</li>
-                                <li>Making this the first true generator on the Internet.</li>
+                                <li>100% Fully Funded</li>
+                                <li>Tiket pesawat PP untuk delegasi terbaik</li>
+                                <li>Konsumsi & Transportasi selama kegiatan.</li>
+                                <li>Sertifikat Internasional</li>
+                                <li>Asuransi kesehatan.</li>
                             </ul>
-                            <a class="theme-btn-s2" href="about.html">More About</a>
+                            <a class="theme-btn-s2" href="/about">More About</a>
                         </div>
                     </div>
                 </div>
@@ -315,37 +321,24 @@
                 </div>
                 <div class="wpo-campaign-wrap">
                     <div class="row">
+                        @foreach ($recruitments as $r)
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="wpo-campaign-single">
                                 <div class="wpo-campaign-item">
                                     <div class="wpo-campaign-img">
                                         <img src="assets/images/campaign/1.jpg" alt="">
-                                        <span class="thumb">Education</span>
+                                        <span class="thumb">{{$r->program_type}}</span>
                                     </div>
                                     <div class="wpo-campaign-content">
                                         <div class="wpo-campaign-text-top">
-                                            <h2><a href="cause-single.html">Help To Build a Secure Life Of a Poor
-                                                    Children.</a></h2>
-                                            <div class="progress-section">
-                                                <div class="process">
-                                                    <div class="progress">
-                                                        <div class="progress-bar" style="width: 75%;">
-                                                            <div class="progress-value"><span>75</span>%</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <ul>
-                                                <li><span>Goal:</span> $3,000.00</li>
-                                                <li><span>Raised:</span> $2,000.00</li>
-                                            </ul>
+                                            <h2><a href="/recruitment/{{$r->id}}">{{$r->program_name}}</a></h2>
+                                            <p></p>
                                             <div class="campaign-btn">
                                                 <ul>
                                                     <li>
-                                                        <span><img src="assets/images/campaign/1.png" alt=""></span>
-                                                        <span><a href="event-single.html">Laura Faiary</a></span>
+                                                        <span><img src="assets/images/logo.png" alt=""></span>
+                                                        <span>Changemaker</span>
                                                     </li>
-                                                    <li><a class="e-btn" href="#">Donate Now</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -353,82 +346,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="wpo-campaign-single">
-                                <div class="wpo-campaign-item">
-                                    <div class="wpo-campaign-img">
-                                        <img src="assets/images/campaign/2.jpg" alt="">
-                                        <span class="thumb-2">Food</span>
-                                    </div>
-                                    <div class="wpo-campaign-content">
-                                        <div class="wpo-campaign-text-top">
-                                            <h2><a href="cause-single.html">Ensure Clean Water To The African Kids.</a>
-                                            </h2>
-                                            <div class="progress-section">
-                                                <div class="process">
-                                                    <div class="progress">
-                                                        <div class="progress-bar" style="width: 75%;">
-                                                            <div class="progress-value"><span>75</span>%</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <ul>
-                                                <li><span>Goal:</span> $3,000.00</li>
-                                                <li><span>Raised:</span> $2,000.00</li>
-                                            </ul>
-                                            <div class="campaign-btn">
-                                                <ul>
-                                                    <li>
-                                                        <span><img src="assets/images/campaign/1.png" alt=""></span>
-                                                        <span><a href="event-single.html">Laura Faiary</a></span>
-                                                    </li>
-                                                    <li><a class="e-btn" href="#">Donate Now</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="wpo-campaign-single">
-                                <div class="wpo-campaign-item">
-                                    <div class="wpo-campaign-img">
-                                        <img src="assets/images/campaign/3.jpg" alt="">
-                                        <span class="thumb">Medicine</span>
-                                    </div>
-                                    <div class="wpo-campaign-content">
-                                        <div class="wpo-campaign-text-top">
-                                            <h2><a href="cause-single.html">Your Help Can Save A Human Life From
-                                                    Death.</a></h2>
-                                            <div class="progress-section">
-                                                <div class="process">
-                                                    <div class="progress">
-                                                        <div class="progress-bar" style="width: 75%;">
-                                                            <div class="progress-value"><span>75</span>%</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <ul>
-                                                <li><span>Goal:</span> $3,000.00</li>
-                                                <li><span>Raised:</span> $2,000.00</li>
-                                            </ul>
-                                            <div class="campaign-btn">
-                                                <ul>
-                                                    <li>
-                                                        <span><img src="assets/images/campaign/1.png" alt=""></span>
-                                                        <span><a href="event-single.html">Laura Faiary</a></span>
-                                                    </li>
-                                                    <li><a class="e-btn" href="#">Donate Now</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    @endforeach
                     </div>
                 </div>
             </div>
@@ -566,8 +484,7 @@
                     <div class="col-12">
                         <div class="wpo-cta-section">
                             <div class="wpo-cta-content">
-                                <h2>Lets Chenge The World With Humanity</h2>
-                                <a href="volunteer.html">Become A Volunteer</a>
+                                <h2>Lets Change The World With Humanity</h2>
                             </div>
                             <div class="volunteer-img">
                                 <img src="assets/images/volunteer.png" alt="">
@@ -580,13 +497,13 @@
         </div>
         <!-- wpo-cta-area end -->
         <!-- wpo-event-area start -->
-        <div class="wpo-event-area">
+        <div class="wpo-event-area section-padding">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <div class="wpo-section-title">
                             <span>Events</span>
-                            <h2>Fundraising Events</h2>
+                            <h2>Changemaker Events</h2>
                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have
                                 suffered alteration in some form,</p>
                         </div>
@@ -594,54 +511,27 @@
                 </div>
                 <div class="wpo-event-wrap">
                     <div class="row">
-                        <div class="col col-lg-6 col-md-6 col-12">
-                            <div class="wpo-event-single">
-                                <div class="wpo-event-item">
-                                    <div class="wpo-event-img">
-                                        <img src="assets/images/event/img-1.jpg" alt="">
-                                        <span class="thumb">24 <span>Nov</span></span>
-                                    </div>
-                                    <div class="wpo-event-content">
-                                        <div class="wpo-event-text-top">
-                                            <h2><a href="event-single.html">Help The Poor From Your Soal</a></h2>
-                                            <p>There are many variations of passages of Lorem Ipsum available.</p>
-                                        </div>
+                       @foreach ($events as $e)
+                       <div class="col col-lg-6 col-md-6 col-12">
+                        <div class="wpo-event-single">
+                            <div class="wpo-event-item">
+                                <div class="wpo-event-img">
+                                    <img src="assets/images/event/img-1.jpg" alt="">
+                                    <span class="thumb">{{ Carbon::parse($e->event_date)->format('d F Y') }}</span>
+                                </div>
+                                <div class="wpo-event-content">
+                                    <div class="wpo-event-text-top">
+                                        <h2><a href="/event/{{$e->id}}">{{$e->event_name}}</a></h2>
+                                        @php
+                                            $description = strlen($e->description) > 100 ? substr($e->description, 0, 100) . '...' : $e->description;
+                                        @endphp
+                                        <p>{{ $description }}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col col-lg-3 col-md-6 col-12">
-                            <div class="wpo-event-single">
-                                <div class="wpo-event-item">
-                                    <div class="wpo-event-img">
-                                        <img src="assets/images/event/img-2.jpg" alt="">
-                                    </div>
-                                    <div class="wpo-event-content">
-                                        <div class="wpo-event-text-top">
-                                            <span>24 Nov,  2021</span>
-                                            <h2><a href="event-single.html">Help Children Raise Out Of Proverty</a></h2>
-                                            <p>There are many variations of passages of Lorem Ipsum available.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-lg-3 col-md-6 col-12">
-                            <div class="wpo-event-single">
-                                <div class="wpo-event-item">
-                                    <div class="wpo-event-img">
-                                        <img src="assets/images/event/img-3.jpg" alt="">
-                                    </div>
-                                    <div class="wpo-event-content">
-                                        <div class="wpo-event-text-top">
-                                            <span>24 Nov,  2021</span>
-                                            <h2><a href="event-single.html">Provideing Education Is The Valuable Gift</a></h2>
-                                            <p>There are many variations of passages of Lorem Ipsum available.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                       @endforeach
                     </div>
                 </div>
             </div>
@@ -662,81 +552,30 @@
                 </div>
                 <div class="wpo-blog-items">
                     <div class="row">
+                        @foreach ($blogs as $b)
                         <div class="col col-lg-4 col-md-6 col-12">
                             <div class="wpo-blog-item">
                                 <div class="wpo-blog-img">
-                                    <img src="assets/images/blog/img-1.jpg" alt="">
+                                    <img src="{{$b->image}}" alt="">
                                 </div>
                                 <div class="wpo-blog-content">
                                     <div class="wpo-blog-content-top">
-                                        <h2><a href="blog.html">Giving The Poor Is A Great Satisfiction Of heart.</a></h2>
+                                        <h2><a href="/blog/{{$b->id}}">{{$b->title}}</a></h2>
                                     </div>
                                     <div class="wpo-blog-content-btm">
                                         <div class="wpo-blog-content-btm-left">
                                             <div class="wpo-blog-content-btm-left-img">
-                                                <img src="assets/images/blog/blog-avater/img-1.jpg" alt="">
+                                                <img src="assets/images/logo.png" alt="">
                                             </div>
                                             <div class="wpo-blog-content-btm-left-text">
-                                                <h4><a href="blog.html">Konal Biry</a></h4>
+                                                <h4>{{$b->author}}</h4>
                                             </div>
-                                        </div>
-                                        <div class="wpo-blog-content-btm-right">
-                                            <span><i class="fi flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i> 35</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col col-lg-4 col-md-6 col-12">
-                            <div class="wpo-blog-item">
-                                <div class="wpo-blog-img">
-                                    <img src="assets/images/blog/img-2.jpg" alt="">
-                                </div>
-                                <div class="wpo-blog-content">
-                                    <div class="wpo-blog-content-top">
-                                        <h2><a href="blog.html">Your Help Can Make Someone’s life Easier.</a></h2>
-                                    </div>
-                                    <div class="wpo-blog-content-btm">
-                                        <div class="wpo-blog-content-btm-left">
-                                            <div class="wpo-blog-content-btm-left-img">
-                                                <img src="assets/images/blog/blog-avater/img-3.jpg" alt="">
-                                            </div>
-                                            <div class="wpo-blog-content-btm-left-text">
-                                                <h4><a href="blog.html">Marry Elizabeth</a></h4>
-                                            </div>
-                                        </div>
-                                        <div class="wpo-blog-content-btm-right">
-                                            <span><i class="fi flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i> 35</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-lg-4 col-md-6 col-12">
-                            <div class="wpo-blog-item">
-                                <div class="wpo-blog-img">
-                                    <img src="assets/images/blog/img-3.jpg" alt="">
-                                </div>
-                                <div class="wpo-blog-content">
-                                    <div class="wpo-blog-content-top">
-                                        <h2><a href="blog.html">Give Education, It’s The Best Gift Ever.</a></h2>
-                                    </div>
-                                    <div class="wpo-blog-content-btm">
-                                        <div class="wpo-blog-content-btm-left">
-                                            <div class="wpo-blog-content-btm-left-img">
-                                                <img src="assets/images/blog/blog-avater/img-2.jpg" alt="">
-                                            </div>
-                                            <div class="wpo-blog-content-btm-left-text">
-                                                <h4><a href="blog.html">Josna Bothy</a></h4>
-                                            </div>
-                                        </div>
-                                        <div class="wpo-blog-content-btm-right">
-                                            <span><i class="fi flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i> 35</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -792,7 +631,7 @@
                                 <div class="logo widget-title">
                                     <img src="assets/images/logo2.png" alt="blog">
                                 </div>
-                                <p>Welcome and open yourself to your truest love this year with us! With the Release Process</p>
+                                <p>Welcome and open yourself to your trust love this year with us! With the Release Process</p>
                                 <ul>
                                     <li>
                                         <a href="#">

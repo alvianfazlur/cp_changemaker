@@ -1,6 +1,3 @@
-<?php
-    use Carbon\Carbon;
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="wpOceans">
-    <link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
     <title>Charitio - Multipurpose Charity Nonprofit HTML5 Template</title>
     <link href="assets/css/themify-icons.css" rel="stylesheet">
     <link href="assets/css/flaticon.css" rel="stylesheet">
@@ -87,8 +84,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-6">
                                 <div class="navbar-header">
-                                    <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"
-                                            alt=""></a>
+                                    <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-1 col-1">
@@ -96,7 +92,16 @@
                                     <button class="menu-close"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
                                         <li class="menu-item-has-children">
-                                            <a href="/">Home</a>
+                                            <a href="#">Home</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="index.html">Home Charity</a></li>
+                                                <li><a href="index-2.html">Home Education</a></li>
+                                                <li><a href="index-3.html">Home Wildlife</a></li>
+                                                <li><a href="index-4.html">Home Ocean Polution</a></li>
+                                                <li><a href="index-5.html">Home World Pandemic</a></li>
+                                                <li><a href="index-6.html">Home Nature</a></li>
+                                                <li><a href="index-7.html">Home Nature S2</a></li>
+                                            </ul>
                                         </li>
                                         <li class="menu-item-has-children">
                                             <a  href="#">Causes</a>
@@ -114,12 +119,12 @@
                                             </ul>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a href="#">Pages</a>
+                                            <a class="active" href="#">Pages</a>
                                             <ul class="sub-menu">
                                                 <li><a href="about.html">About</a></li>
                                                 <li><a href="service.html">Service</a></li>
                                                 <li><a href="service-single.html">Service Single</a></li>
-                                                <li><a href="project.html">Project</a></li>
+                                                <li><a class="active" href="project.html">Project</a></li>
                                                 <li><a href="project-single.html">Project Single</a></li>
                                                 <li><a href="donate.html">Donate</a></li>
                                                 <li><a href="team-single.html">Volunteer</a></li>
@@ -130,11 +135,11 @@
                                             </ul>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a class="active" href="blog.html">Blog</a>
+                                            <a href="blog.html">Blog</a>
                                             <ul class="sub-menu">
                                                 <li><a href="blog.html">Blog right sidebar</a></li>
                                                 <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-                                                <li><a class="active" href="blog-fullwidth.html">Blog fullwidth</a></li>
+                                                <li><a href="blog-fullwidth.html">Blog fullwidth</a></li>
                                                 <li class="menu-item-has-children">
                                                     <a href="#">Blog details</a>
                                                     <ul class="sub-menu">
@@ -156,19 +161,17 @@
                             <div class="col-lg-3 col-md-2 col-2">
                                 <div class="header-right">
                                     <div class="close-form">
-                                        <a class="theme-btn-s2" href="donate.html">Donate Now</a>
+                                        <a class="theme-btn-s2" href="">Donate Now</a>
                                     </div>
                                     <div class="header-search-form-wrapper">
                                         <div class="cart-search-contact">
-                                            <button class="search-toggle-btn"><i
-                                                    class="fi flaticon-search"></i></button>
+                                            <button class="search-toggle-btn"><i class="fi flaticon-search"></i></button>
                                             <div class="header-search-form">
                                                 <form>
                                                     <div>
                                                         <input type="text" class="form-control"
                                                             placeholder="Search here...">
-                                                        <button type="submit"><i
-                                                                class="fi flaticon-search"></i></button>
+                                                        <button type="submit"><i class="fi flaticon-search"></i></button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -188,64 +191,65 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="wpo-breadcumb-wrap">
-                            <h2>Blog</h2>
+                            <h2>projects</h2>
                             <ul>
                                 <li><a href="index.html">Home</a></li>
-                                <li><span>Blog</span></li>
+                                <li><span>projects</span></li>
                             </ul>
+                            <br>
+                            <div class="close-form">
+                                <a class="theme-btn-s2" href="#">Join Our Partnership -></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- end of wpo-breadcumb-section-->
-
-
-        <!-- start wpo-blog-pg-section -->
-        <section class="wpo-blog-pg-section section-padding">
-            <div class="container">
-                <div class="row">
-                    @foreach ($blogs as $b)                    
-                    <div class="col col-lg-10 offset-lg-1">
-                        <div class="wpo-blog-content">
-                            <div class="post format-standard-image">
-                                <div class="entry-media">
-                                    <img src="{{$b->image}}" alt>
+        <!-- start wpo-project-section -->
+        <section class="wpo-project-section pb-0 section-padding">
+            <div class="container-fluid">
+                <div class="sortable-gallery">
+                    <div class="row">
+                        <div class="wpo-campaign-area section-padding">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-6">
+                                    </div>
                                 </div>
-                                <div class="entry-meta">
-                                    <ul>
-                                        <li><i class="fi flaticon-user"></i> By <a href="#">{{$b->author}}</a> </li>
-                                        <li><i class="fi flaticon-calendar"></i> {{ Carbon::parse($b->publication_date)->format('d F Y') }}</li>
-                                    </ul>
+                                <div class="wpo-campaign-wrap">
+                                    <div class="row">
+                                        @foreach ($partnerships as $p)
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="wpo-campaign-single">
+                                                <div class="wpo-campaign-item">
+                                                    <div class="wpo-campaign-img">
+                                                        <img src="{{$p->image}}" alt="">                                            
+                                                        <span class="thumb">{{$p->type}}</span>
+                                                    </div>
+                                                    <div class="wpo-campaign-content">
+                                                        <div class="wpo-campaign-text-top">
+                                                            <h2><a href="/recruitment/{{$p->id}}">{{$p->name}}</a></h2>
+                                                            <p></p>
+                                                            <div class="campaign-btn">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                    </div>
                                 </div>
-                                <div class="entry-details">
-                                    <h3><a href="blog-single.html">{{$b->title}}</a></h3>
-                                    <p>{{substr($b->content, 0, strpos($b->content, "\n", strpos($b->content, "\n")+1))}}</p>
-                                    <a href="/blog/{{$b->id}}" class="read-more">READ MORE...</a>
-                                </div>
-                            </div>                            
-                            <div class="pagination-wrapper pagination-wrapper-left">
-                                <ul class="pg-pagination">
-                                    <li>
-                                        <a href="#" aria-label="Previous">
-                                            <i class="fi ti-angle-left"></i>
-                                        </a>
-                                    </li>
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li>
-                                        <a href="#" aria-label="Next">
-                                            <i class="fi ti-angle-right"></i>
-                                        </a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
+                       
                     </div>
-                    @endforeach
                 </div>
+
             </div> <!-- end container -->
         </section>
-        <!-- end wpo-blog-pg-section -->
+        <!-- end wpo-project-section -->
 
         <!-- start of wpo-site-footer-section -->
         <footer class="wpo-site-footer">
@@ -257,8 +261,7 @@
                                 <div class="logo widget-title">
                                     <img src="assets/images/logo2.png" alt="blog">
                                 </div>
-                                <p>Welcome and open yourself to your truest love this year with us! With the Release
-                                    Process</p>
+                                <p>Welcome and open yourself to your truest love this year with us! With the Release Process</p>
                                 <ul>
                                     <li>
                                         <a href="#">
@@ -312,25 +315,19 @@
                                 </div>
                             </div>
                         </div>
-
+                        
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget instagram">
                                 <div class="widget-title">
                                     <h3>Projects</h3>
                                 </div>
                                 <ul class="d-flex">
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/1.jpg"
-                                                alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/2.jpg"
-                                                alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/3.jpg"
-                                                alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/4.jpg"
-                                                alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/5.jpg"
-                                                alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/6.jpg"
-                                                alt=""></a></li>
+                                    <li><a href="project-single.html"><img src="assets/images/instragram/1.jpg" alt=""></a></li>
+                                    <li><a href="project-single.html"><img src="assets/images/instragram/2.jpg" alt=""></a></li>
+                                    <li><a href="project-single.html"><img src="assets/images/instragram/3.jpg" alt=""></a></li>
+                                    <li><a href="project-single.html"><img src="assets/images/instragram/4.jpg" alt=""></a></li>
+                                    <li><a href="project-single.html"><img src="assets/images/instragram/5.jpg" alt=""></a></li>
+                                    <li><a href="project-single.html"><img src="assets/images/instragram/6.jpg" alt=""></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -341,8 +338,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col col-xs-12">
-                            <p class="copyright"> &copy; 2021 Charito Theme. Design By <a href="index.html">wpOcean</a>.
-                                All Rights Reserved.</p>
+                            <p class="copyright"> &copy; 2021 Charito Theme. Design By <a href="index.html">wpOcean</a>. All Rights Reserved.</p>
                         </div>
                     </div>
                 </div>

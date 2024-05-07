@@ -10,21 +10,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="wpOceans">
-    <link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
+    <link rel="shortcut icon" type="image/png" href="../assets/images/logo.png">
     <title>Charitio - Multipurpose Charity Nonprofit HTML5 Template</title>
-    <link href="assets/css/themify-icons.css" rel="stylesheet">
-    <link href="assets/css/flaticon.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/animate.css" rel="stylesheet">
-    <link href="assets/css/owl.carousel.css" rel="stylesheet">
-    <link href="assets/css/owl.theme.css" rel="stylesheet">
-    <link href="assets/css/slick.css" rel="stylesheet">
-    <link href="assets/css/slick-theme.css" rel="stylesheet">
-    <link href="assets/css/swiper.min.css" rel="stylesheet">
-    <link href="assets/css/owl.transitions.css" rel="stylesheet">
-    <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
-    <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/themify-icons.css" rel="stylesheet">
+    <link href="../assets/css/flaticon.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/animate.css" rel="stylesheet">
+    <link href="../assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="../assets/css/owl.theme.css" rel="stylesheet">
+    <link href="../assets/css/slick.css" rel="stylesheet">
+    <link href="../assets/css/slick-theme.css" rel="stylesheet">
+    <link href="../assets/css/swiper.min.css" rel="stylesheet">
+    <link href="../assets/css/owl.transitions.css" rel="stylesheet">
+    <link href="../assets/css/jquery.fancybox.css" rel="stylesheet">
+    <link href="../assets/css/odometer-theme-default.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,7 +39,7 @@
                     <div class="loader-line-mask">
                         <div class="loader-line"></div>
                     </div>
-                    <img src="assets/images/preloader.png" alt="">
+                    <img src="../assets/images/logo.png" alt="">
                 </div>
             </div>
         </div>
@@ -87,7 +87,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-6">
                                 <div class="navbar-header">
-                                    <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"
+                                    <a class="navbar-brand" href="index.html"><img src="../assets/images/logo.png"
                                             alt=""></a>
                                 </div>
                             </div>
@@ -96,7 +96,16 @@
                                     <button class="menu-close"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
                                         <li class="menu-item-has-children">
-                                            <a href="/">Home</a>
+                                            <a href="#">Home</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="index.html">Home Charity</a></li>
+                                                <li><a href="index-2.html">Home Education</a></li>
+                                                <li><a href="index-3.html">Home Wildlife</a></li>
+                                                <li><a href="index-4.html">Home Ocean Polution</a></li>
+                                                <li><a href="index-5.html">Home World Pandemic</a></li>
+                                                <li><a href="index-6.html">Home Nature</a></li>
+                                                <li><a href="index-7.html">Home Nature S2</a></li>
+                                            </ul>
                                         </li>
                                         <li class="menu-item-has-children">
                                             <a  href="#">Causes</a>
@@ -134,7 +143,7 @@
                                             <ul class="sub-menu">
                                                 <li><a href="blog.html">Blog right sidebar</a></li>
                                                 <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-                                                <li><a class="active" href="blog-fullwidth.html">Blog fullwidth</a></li>
+                                                <li><a href="blog-fullwidth.html">Blog fullwidth</a></li>
                                                 <li class="menu-item-has-children">
                                                     <a href="#">Blog details</a>
                                                     <ul class="sub-menu">
@@ -142,7 +151,7 @@
                                                         </li>
                                                         <li><a href="blog-single-left-sidebar.html">Blog details left
                                                                 sidebar</a></li>
-                                                        <li><a href="blog-single-fullwidth.html">Blog details
+                                                        <li><a class="active" href="blog-single-fullwidth.html">Blog details
                                                                 fullwidth</a></li>
                                                     </ul>
                                                 </li>
@@ -188,9 +197,9 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="wpo-breadcumb-wrap">
-                            <h2>Blog</h2>
+                            <h2>{{$blog->title}}</h2>
                             <ul>
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li><span>Blog</span></li>
                             </ul>
                         </div>
@@ -201,51 +210,84 @@
         <!-- end of wpo-breadcumb-section-->
 
 
-        <!-- start wpo-blog-pg-section -->
-        <section class="wpo-blog-pg-section section-padding">
+        <!-- start wpo-blog-single-section -->
+        <section class="wpo-blog-single-section section-padding">
             <div class="container">
                 <div class="row">
-                    @foreach ($blogs as $b)                    
-                    <div class="col col-lg-10 offset-lg-1">
+                    <div class="col col-lg-10 offset-lg-1 col-12">
                         <div class="wpo-blog-content">
                             <div class="post format-standard-image">
                                 <div class="entry-media">
-                                    <img src="{{$b->image}}" alt>
+                                    <img src="{{$blog->image}}" alt>
                                 </div>
                                 <div class="entry-meta">
                                     <ul>
-                                        <li><i class="fi flaticon-user"></i> By <a href="#">{{$b->author}}</a> </li>
-                                        <li><i class="fi flaticon-calendar"></i> {{ Carbon::parse($b->publication_date)->format('d F Y') }}</li>
+                                        <li><i class="fi flaticon-user"></i> By <a href="#">{{$blog->author}}</a> </li>
+                                        <li><i class="fi flaticon-calendar"></i> {{ Carbon::parse($blog->publication_date)->format('d F Y') }}</li>
                                     </ul>
                                 </div>
-                                <div class="entry-details">
-                                    <h3><a href="blog-single.html">{{$b->title}}</a></h3>
-                                    <p>{{substr($b->content, 0, strpos($b->content, "\n", strpos($b->content, "\n")+1))}}</p>
-                                    <a href="/blog/{{$b->id}}" class="read-more">READ MORE...</a>
+                                <p style="text-align: justify;">{{$blog->content}}</p>
+                                <blockquote>
+                                    "Youthful Spirit, Endless Impact: Embracing Volunteerism as the Catalyst for Positive Change in Our Communities, One Selfless Act at a Time."    
+                                </blockquote>
+                                <div class="gallery">
+                                    <div>
+                                        <img src="../assets/images/blog/img-1.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <img src="../assets/images/blog/img-2.jpg" alt="" >
+                                    </div>
                                 </div>
-                            </div>                            
-                            <div class="pagination-wrapper pagination-wrapper-left">
-                                <ul class="pg-pagination">
-                                    <li>
-                                        <a href="#" aria-label="Previous">
-                                            <i class="fi ti-angle-left"></i>
-                                        </a>
-                                    </li>
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li>
-                                        <a href="#" aria-label="Next">
-                                            <i class="fi ti-angle-right"></i>
-                                        </a>
-                                    </li>
-                                </ul>
                             </div>
+                            <div class="tag-share-s2 clearfix">
+                                <div class="tag">
+                                    <span>Share: </span>
+                                    <ul>
+                                        <li><a href="#">facebook</a></li>
+                                        <li><a href="#">twitter</a></li>
+                                        <li><a href="#">linkedin</a></li>
+                                        <li><a href="#">pinterest</a></li>
+                                    </ul>
+                                </div>
+                            </div> <!-- end tag-share -->
+
+                            <div class="author-box">
+                                <div class="author-avatar">
+                                    <a href="#" target="_blank"><img src="../assets/images/logo.png" alt></a>
+                                </div>
+                                <div class="author-content">
+                                    <a href="" class="author-name">Author: {{$blog->author}}</a>
+                                    <div class="socials">
+                                        <ul class="social-link">
+                                            <li><a href="#"><i class="ti-facebook"></i></a></li>
+                                            <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                                            <li><a href="#"><i class="ti-linkedin"></i></a></li>
+                                            <li><a href="#"><i class="ti-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> <!-- end author-box -->
+
+                            {{-- <div class="more-posts">
+                                <div class="previous-post">
+                                    <a href="blog.html">
+                                        <span class="post-control-link">Previous Post</span>
+                                        <span class="post-name">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</span>
+                                    </a>
+                                </div>
+                                <div class="next-post">
+                                    <a href="/blog/{{$blog->id+1}}">
+                                        <span class="post-control-link">Next Post</span>
+                                        <span class="post-name">Dignissimos ducimus qui blanditiis praesentiu deleniti atque corrupti quos dolores</span>
+                                    </a>
+                                </div>
+                            </div> --}}
                         </div>
                     </div>
-                    @endforeach
                 </div>
             </div> <!-- end container -->
         </section>
-        <!-- end wpo-blog-pg-section -->
+        <!-- end wpo-blog-single-section -->
 
         <!-- start of wpo-site-footer-section -->
         <footer class="wpo-site-footer">
@@ -255,7 +297,7 @@
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget about-widget">
                                 <div class="logo widget-title">
-                                    <img src="assets/images/logo2.png" alt="blog">
+                                    <img src="../assets/images/logo2.png" alt="blog">
                                 </div>
                                 <p>Welcome and open yourself to your truest love this year with us! With the Release
                                     Process</p>
@@ -319,17 +361,17 @@
                                     <h3>Projects</h3>
                                 </div>
                                 <ul class="d-flex">
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/1.jpg"
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/1.jpg"
                                                 alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/2.jpg"
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/2.jpg"
                                                 alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/3.jpg"
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/3.jpg"
                                                 alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/4.jpg"
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/4.jpg"
                                                 alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/5.jpg"
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/5.jpg"
                                                 alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/6.jpg"
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/6.jpg"
                                                 alt=""></a></li>
                                 </ul>
                             </div>
@@ -354,14 +396,14 @@
 
     <!-- All JavaScript files
     ================================================== -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <!-- Plugins for this template -->
-    <script src="assets/js/modernizr.custom.js"></script>
-    <script src="assets/js/jquery.dlmenu.js"></script>
-    <script src="assets/js/jquery-plugin-collection.js"></script>
+    <script src="../assets/js/modernizr.custom.js"></script>
+    <script src="../assets/js/jquery.dlmenu.js"></script>
+    <script src="../assets/js/jquery-plugin-collection.js"></script>
     <!-- Custom script for this template -->
-    <script src="assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 
 

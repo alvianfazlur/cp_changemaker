@@ -186,7 +186,10 @@
                                 <div class="wpo-event-content">
                                     <div class="wpo-event-text-top">
                                         <h2><a href="/event/{{$e->id}}">{{$e->event_name}}</a></h2>
-                                        <p>{{$e->description}}</p>
+                                        @php
+                                            $description = strlen($e->description) > 100 ? substr($e->description, 0, 100) . '...' : $e->description;
+                                        @endphp
+                                        <p>{{ $description }}</p>
                                     </div>
                                 </div>
                             </div>
