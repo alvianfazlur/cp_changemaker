@@ -23,23 +23,31 @@ class IndexController extends Controller
 
     public function viewRecruitment($id){
         $recruitment = recruitments::where('id', $id)->first();
-        return view('recruitment.viewRecruitment', ['recruitment' => $recruitment]);
+        $recruitments = recruitments::get();
+        return view('recruitment.viewRecruitment', ['recruitment' => $recruitment, 'recruitments' => $recruitments]);
     }
     public function viewBlog(){
         $blogs = blogs::get();
-        return view('blog.blog', ['blogs' => $blogs]);
+        $recruitments = recruitments::get();
+        return view('blog.blog', ['blogs' => $blogs, 'recruitments' => $recruitments]);
     }
     public function detailBlog($id){
         $blog = blogs::where('id', $id)->first();
         return view('blog.detailBlog', ['blog' => $blog]);
     }
     public function viewContact(){
-        return view('contact.contact');
+        $recruitments = recruitments::get();
+        return view('contact.contact', ['recruitments' => $recruitments]);
     }
 
     public function viewPartnership(){
         $partnerships = partnerships::get(); 
-        $recruitment = recruitments::get();
-        return view('partnership.partnership', ['recruitment' => $recruitment, 'partnerships' => $partnerships]);
+        $recruitments = recruitments::get();
+        return view('partnership.partnership', ['recruitments' => $recruitments, 'partnerships' => $partnerships]);
+    }
+
+    public function viewInfo(){
+        $recruitments = recruitments::get();
+        return view('about.about', ['recruitments' => $recruitments]);
     }
 }

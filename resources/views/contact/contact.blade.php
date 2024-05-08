@@ -97,56 +97,29 @@
                                             <a href="/">Home</a>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a  href="#">Causes</a>
+                                            <a href="#">Recruitment</a>
                                             <ul class="sub-menu">
-                                                <li><a href="cause.html">Causes</a></li>
-                                                <li><a href="cause-single.html">Causes Single</a></li>
+                                                @foreach ($recruitments as $r)
+                                                <li><a href="/recruitment/{{$r->id}}">{{$r->program_name}}</a></li>
+                                                @endforeach
                                             </ul>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a href="#">Events</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="event.html">Events</a></li>
-                                                <li><a href="event-s2.html">Events S2</a></li>
-                                                <li><a href="event-single.html">Events Single</a></li>
-                                            </ul>
+                                            <a href="/event">Events</a>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a href="#">Pages</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="about.html">About</a></li>
-                                                <li><a href="service.html">Service</a></li>
-                                                <li><a href="service-single.html">Service Single</a></li>
-                                                <li><a href="project.html">Project</a></li>
-                                                <li><a href="project-single.html">Project Single</a></li>
-                                                <li><a href="donate.html">Donate</a></li>
-                                                <li><a href="team-single.html">Volunteer</a></li>
-                                                <li><a href="testimonial.html">Testimonial</a></li>
-                                                <li><a href="404.html">Error 404</a></li>
-                                                <li><a href="login.html">Login</a></li>
-                                                <li><a href="register.html">Sign Up</a></li>
-                                            </ul>
+                                            <a href="/blog">Blog</a>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a href="blog.html">Blog</a>
+                                            <a href="/partnership">Partnership</a>
+                                        </li>
+                                        <li class="menu-item-has-children">
+                                            <a class="active" href="#">More</a>
                                             <ul class="sub-menu">
-                                                <li><a href="blog.html">Blog right sidebar</a></li>
-                                                <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-                                                <li><a href="blog-fullwidth.html">Blog fullwidth</a></li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Blog details</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="blog-single.html">Blog details right sidebar</a>
-                                                        </li>
-                                                        <li><a href="blog-single-left-sidebar.html">Blog details left
-                                                                sidebar</a></li>
-                                                        <li><a href="blog-single-fullwidth.html">Blog details
-                                                                fullwidth</a></li>
-                                                    </ul>
-                                                </li>
+                                                <li><a href="/about">Info</a></li>
+                                                <li><a href="/contact">Contact</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class="active" href="contact.html">Contact</a></li>
                                     </ul>
     
                                 </div><!-- end of nav-collapse -->

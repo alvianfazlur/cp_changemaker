@@ -95,23 +95,32 @@
                                     <button class="menu-close"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
                                         <li class="menu-item-has-children">
-                                            <a href="/">Home</a>
+                                            <a href="#">Home</a>
                                         </li>
                                         <li class="menu-item-has-children">
                                             <a href="#">Recruitment</a>
                                             <ul class="sub-menu">
                                                 @foreach ($recruitments as $r)
-                                                    <li><a href="#">{{$r->program_name}}</a></li>
+                                                <li><a href="/recruitment/{{$r->id}}">{{$r->program_name}}</a></li>
                                                 @endforeach
                                             </ul>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a class= "active" href="#">Events</a>
+                                            <a class="active" href="/event">Events</a>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a href="#">Blog</a>
+                                            <a href="/blog">Blog</a>
                                         </li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li class="menu-item-has-children">
+                                            <a href="/partnership">Partnership</a>
+                                        </li>
+                                        <li class="menu-item-has-children">
+                                            <a href="#">More</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="/about">Info</a></li>
+                                                <li><a href="/contact">Contact</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
     
                                 </div><!-- end of nav-collapse -->

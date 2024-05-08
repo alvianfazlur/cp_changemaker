@@ -92,8 +92,9 @@
                                     <li class="menu-item-has-children">
                                         <a href="#">More</a>
                                         <ul class="sub-menu">
-                                            <li><a href="#">Info</a></li>
+                                            <li><a href="/about">Info</a></li>
                                             <li><a href="/contact">Contact</a></li>
+                                            <li><a href="/login">Login</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -597,24 +598,11 @@
                 <div class="row">
                     <div class="col col-xs-12">
                         <div class="partner-grids partners-slider owl-carousel">
-                            <div class="grid">
-                                <img src="assets/images/partners/img-1.jpg" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/img-2.jpg" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/img-3.jpg" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/img-4.jpg" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/img-5.jpg" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/img-6.jpg" alt>
-                            </div>
+                            @foreach ($partnerships as $p)
+                                <div class="grid">
+                                    <img src="{{$p->image}}" alt style="width: 200px; height: auto;">
+                                </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
