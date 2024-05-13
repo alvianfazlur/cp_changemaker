@@ -49,7 +49,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white active bg-gradient-primary" href="">
+          <a class="nav-link text-white" href="/admin/recruitments">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">table_view</i>
             </div>
@@ -57,29 +57,29 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="/admin/blogs">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">table_view</i>
-            </div>
-            <span class="nav-link-text ms-1">Blogs</span>
-          </a>
+            <a class="nav-link text-white" href="/admin/blogs">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10">table_view</i>
+              </div>
+              <span class="nav-link-text ms-1">Blogs</span>
+            </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="/admin/events">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">table_view</i>
-            </div>
-            <span class="nav-link-text ms-1">Events</span>
-          </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="/admin/partnerships">
-          <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-            <i class="material-icons opacity-10">table_view</i>
-          </div>
-          <span class="nav-link-text ms-1">Partnerships</span>
-        </a>
-    </li>
+            <a class="nav-link text-white" href="/admin/events">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10">table_view</i>
+              </div>
+              <span class="nav-link-text ms-1">Events</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white active bg-gradient-primary" href="/admin/partnerships">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10">table_view</i>
+              </div>
+              <span class="nav-link-text ms-1">Partnerships</span>
+            </a>
+        </li>
         <li class="nav-item mt-3">
           <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
         </li>
@@ -107,9 +107,9 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Tables</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Partnerships</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Recruitments</h6>
+          <h6 class="font-weight-bolder mb-0">Partnerships</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -136,69 +136,57 @@
           <div class="card my-4">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
               <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                <h6 class="text-white text-capitalize ps-3">Recruitment Database</h6>
+                <h6 class="text-white text-capitalize ps-3">Partner Database</h6>
               </div>
               <br>
-                <a class="btn btn-outline-success" href="../admin/new-recruitment">Open New Recruitment</a>
+                <a class="btn btn-outline-success" href="../admin/new-partnership">Add New Partner</a>
             </div>
-            <div class="card-body px-0">
+            <div class="card-body px-0 pb-2">
               <div class="table-responsive p-0">
                 <table class="table align-items-center mb-0">
                   <thead>
                     <tr>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Program Name</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Program Type</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Location</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Start date</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">End Date</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Type</th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Description</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Requirements</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Benefits</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Link</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Image Url</th>
                       <th class="text-secondary opacity-7"></th>
                       <th class="text-secondary opacity-7"></th>
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach ($recruitments as $r)
+                    @foreach ($partnerships as $p)
                     <tr>
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">{{$r->program_name}}</h6>
+                            <h6 class="mb-0 text-sm">{{substr($p->name, 0, 20)}}</h6>
                           </div>
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">{{$r->program_type}}</p>
+                        <p class="text-xs font-weight-bold mb-0">{{$p->type}}</p>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">{{$r->location}}</p>
+                        <p class="text-xs font-weight-bold mb-0">{{ substr($p->description, 0, 50) }}</p>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">{{ Carbon::parse($r->start_date)->format('d F Y') }}</p>
+                        <p class="text-xs font-weight-bold mb-0">{{substr($p->link, 0, 50)}}</p>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">{{ Carbon::parse($r->end_date)->format('d F Y') }}</p>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">{{ substr($r->decription, 0, 50) }}</p>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">{{$r->requirements}}</p>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">{{ substr($r->benefits, 0, 50) }}</p>
+                        <p class="text-xs font-weight-bold mb-0">{{substr($p->image, 0, 50)}}</p>
                       </td>
                       <td class="align-middle">
-                        <a href="/admin/update-recruitment/{{$r->id}}" class="text-secondary font-weight-bold text-xs btn" data-toggle="tooltip" data-original-title="Edit user" data-id="{{$r->id}}">
+                        <a href="/admin/update-partnership/{{$p->id}}" class="text-secondary font-weight-bold text-xs btn" data-toggle="tooltip" data-original-title="Edit user" data-id="{{$p->id}}">
                             EDIT
                         </a>
                       </td>                    
                       <td class="align-middle">
-                        <a href="javascript:void(0);" class="text-secondary font-weight-bold text-xs btn" data-toggle="tooltip" data-original-title="Edit user" data-id="{{$r->id}}" onclick="confirmDelete({{$r->id}})">
+                        <a href="javascript:void(0);" class="text-secondary font-weight-bold text-xs btn" data-toggle="tooltip" data-original-title="Edit user" data-id="{{$p->id}}" onclick="confirmDelete({{$p->id}})">
                             Delete
                         </a>
-                      </td>                    
+                      </td>                       
                     </tr>
                     @endforeach
                   </tbody>
@@ -341,10 +329,10 @@
     function confirmDelete(id) {
         var result = confirm("Are you sure you want to delete this open recruitment?");
         if (result) {
-            window.location.href = "/admin/delete-recruitment/" + id;
+            window.location.href = "/admin/delete-partnership/" + id;
         }
     }
-</script>
+  </script>
 </body>
 
 </html>

@@ -30,42 +30,41 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="wpo-donate-header">
-                        <h2>Edit Your Recruitments</h2>
+                        <h2>Add Recruitments</h2>
                     </div>
                     <div id="Donations" class="tab-pane">
-                        <form action="/admin/updateDataRecruitments" method="post">
+                        <form action="/admin/store-recruitment" method="post">
                             {{ csrf_field() }}
-                            <input type="hidden" name="id" value="{{ $recruitments->id }}"> <br/>
+                            {{-- <input type="hidden" name="id" value=""> <br/> --}}
                             <div class="wpo-donations-amount">
                                 <h2>Program Name</h2>
-                                <input type="text" class="form-control" name="program_name"value="{{ $recruitments->program_name}}" id="text" required>
+                                <input type="text" class="form-control" name="program_name"value="" id="text" required>
                                 
                                 <h2>Program Type</h2>
                                 <select class="form-select" name="program_type" id="type" required>
-                                    <option value="{{$recruitments->program_type}}">{{$recruitments->program_type}}</option>
                                     <option value="Self Funded">Self Funded</option>
                                     <option value="Special Funded">Special Funded</option>
                                     <option value="Fully Funded">Fully Funded</option>
                                 </select> <br>                               
                            
                                 <h2>Location</h2>
-                                <input type="text" class="form-control" name="location"value="{{ $recruitments->location}}" id="text" required>
+                                <input type="text" class="form-control" name="location"value="" id="text" required>
                            
                                 <h2>Start Date</h2>
-                                <input type="date" class="form-control" name="start_date"value="{{ $recruitments->start_date}}" id="text" required>
+                                <input type="date" class="form-control" name="start_date"value="" id="text" required>
                            
                                 <h2>End Date</h2>
-                                <input type="date" class="form-control" name="end_date"value="{{ $recruitments->end_date}}" id="text" required>
+                                <input type="date" class="form-control" name="end_date"value="" id="text" required>
                            
                                 <h2>Description</h2>
-                                <textarea class="form-control" name="description" id="description" required>{{ $recruitments->decription}}</textarea>
+                                <textarea class="form-control" name="description" id="description" required></textarea>
                                 <br>
                                 <h2>Requirements</h2>
-                                <textarea class="form-control" name="requirements" id="requirements" required>{{ $recruitments->requirements}}</textarea>
+                                <textarea class="form-control" name="requirements" id="requirements" required></textarea>
                                 <br>
                            
                                 <h2>Benefits</h2>
-                                <textarea class="form-control" name="benefits" id="benefits">{{ $recruitments->benefits}}</textarea>
+                                <textarea class="form-control" name="benefits" id="benefits"></textarea>
                                 
                             </div>
                             <div class="submit-area">

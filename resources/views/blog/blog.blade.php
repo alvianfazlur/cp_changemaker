@@ -192,26 +192,11 @@
                                     </ul>
                                 </div>
                                 <div class="entry-details">
-                                    <h3><a href="blog-single.html">{{$b->title}}</a></h3>
+                                    <h3><a href="/blog/{{$b->id}}">{{$b->title}}</a></h3>
                                     <p>{{substr($b->content, 0, strpos($b->content, "\n", strpos($b->content, "\n")+1))}}</p>
                                     <a href="/blog/{{$b->id}}" class="read-more">READ MORE...</a>
                                 </div>
                             </div>                            
-                            <div class="pagination-wrapper pagination-wrapper-left">
-                                <ul class="pg-pagination">
-                                    <li>
-                                        <a href="#" aria-label="Previous">
-                                            <i class="fi ti-angle-left"></i>
-                                        </a>
-                                    </li>
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li>
-                                        <a href="#" aria-label="Next">
-                                            <i class="fi ti-angle-right"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                     @endforeach
