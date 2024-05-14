@@ -33,7 +33,8 @@ class IndexController extends Controller
     }
     public function detailBlog($id){
         $blog = blogs::where('id', $id)->first();
-        return view('blog.detailBlog', ['blog' => $blog]);
+        $recruitments = recruitments::get();
+        return view('blog.detailBlog', ['blog' => $blog,  'recruitments' => $recruitments]);
     }
     public function viewContact(){
         $recruitments = recruitments::get();
@@ -48,6 +49,25 @@ class IndexController extends Controller
 
     public function viewInfo(){
         $recruitments = recruitments::get();
-        return view('about.about', ['recruitments' => $recruitments]);
+        $partnerships = partnerships::get(); 
+        return view('about.about', ['recruitments' => $recruitments, 'partnerships' => $partnerships]);
+    }
+
+    public function searchBlog($title){
+        $blogs = blogs::where('title', 'LIKE', '%' . $title . '%')->get();
+        $recruitments = recruitments::get();
+        if ($blogs->isEmpty()) {
+            return view('blog.no-result', ['recruitments' => $recruitments]);
+        }
+        return view('blog.search-blog', ['blogs' => $blogs, 'recruitments' => $recruitments]);
+    }
+
+    public function searchEvent($title){
+        $events = events::where('event_name', 'LIKE', '%' . $title . '%')->get();
+        $recruitments = recruitments::get();
+        if ($events->isEmpty()) {
+            return view('event.no-results', ['recruitments' => $recruitments]);
+        }
+        return view('event.search-event', ['events' => $events, 'recruitments' => $recruitments]);
     }
 }

@@ -52,8 +52,8 @@
                         <div class="col col-md-7 col-sm-12 col-12">
                             <div class="contact-intro">
                                 <ul>
-                                    <li><i class="fi ti-location-pin"></i>7 Green Lake Street Crawfordsville</li>
-                                    <li><i class="fi flaticon-email"></i> charito@gmail.com</li>
+                                    <li><i class="fi ti-location-pin"></i>Indonesia</li>
+                                    <li><i class="fi flaticon-email"></i> changemaker@gmail.com</li>
                                 </ul>
                             </div>
                         </div>
@@ -63,8 +63,8 @@
                                     <li>Visit our social pages</li>
                                     <li><a href="#"><i class="ti-facebook"></i></a></li>
                                     <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                                    <li><a href="#"><i class="ti-instagram"></i></a></li>
-                                    <li><a href="#"><i class="ti-google"></i></a></li>
+                                    <li><a href="https://www.instagram.com/changemaker.ind/"><i class="ti-instagram"></i></a></li>
+                                    <li><a href="https://www.tiktok.com/@changemaker.ind?_t=8WBqLjUmxs2&_r=1"><img src="/assets/images/icon/tik-tok-white.png" alt="Tiktok" style="width: 18px; height: 18px;"></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -95,96 +95,38 @@
                                 <div id="navbar" class="collapse navbar-collapse navigation-holder">
                                     <button class="menu-close"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Home</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="index.html">Home Charity</a></li>
-                                                <li><a href="index-2.html">Home Education</a></li>
-                                                <li><a href="index-3.html">Home Wildlife</a></li>
-                                                <li><a href="index-4.html">Home Ocean Polution</a></li>
-                                                <li><a href="index-5.html">Home World Pandemic</a></li>
-                                                <li><a href="index-6.html">Home Nature</a></li>
-                                                <li><a href="index-7.html">Home Nature S2</a></li>
-                                            </ul>
+                                        <li>
+                                            <a href="/">Home</a>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a  href="#">Causes</a>
+                                            <a href="#">Recruitment</a>
                                             <ul class="sub-menu">
-                                                <li><a href="cause.html">Causes</a></li>
-                                                <li><a href="cause-single.html">Causes Single</a></li>
+                                                @foreach ($recruitments as $r)
+                                                <li><a href="/recruitment/{{$r->id}}">{{$r->program_name}}</a></li>
+                                                @endforeach
                                             </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/event">Events</a>
+                                        </li>
+                                        <li>
+                                            <a class="active" href="/blog">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="/partnership">Partnership</a>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a href="#">Events</a>
+                                            <a href="#">More</a>
                                             <ul class="sub-menu">
-                                                <li><a href="event.html">Events</a></li>
-                                                <li><a href="event-s2.html">Events S2</a></li>
-                                                <li><a href="event-single.html">Events Single</a></li>
+                                                <li><a href="/about">Info</a></li>
+                                                <li><a href="/contact">Contact</a></li>
+                                                <li><a href="/login">Login</a></li>
                                             </ul>
                                         </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Pages</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="about.html">About</a></li>
-                                                <li><a href="service.html">Service</a></li>
-                                                <li><a href="service-single.html">Service Single</a></li>
-                                                <li><a href="project.html">Project</a></li>
-                                                <li><a href="project-single.html">Project Single</a></li>
-                                                <li><a href="donate.html">Donate</a></li>
-                                                <li><a href="team-single.html">Volunteer</a></li>
-                                                <li><a href="testimonial.html">Testimonial</a></li>
-                                                <li><a href="404.html">Error 404</a></li>
-                                                <li><a href="login.html">Login</a></li>
-                                                <li><a href="register.html">Sign Up</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a class="active" href="blog.html">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog.html">Blog right sidebar</a></li>
-                                                <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-                                                <li><a href="blog-fullwidth.html">Blog fullwidth</a></li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Blog details</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="blog-single.html">Blog details right sidebar</a>
-                                                        </li>
-                                                        <li><a href="blog-single-left-sidebar.html">Blog details left
-                                                                sidebar</a></li>
-                                                        <li><a class="active" href="blog-single-fullwidth.html">Blog details
-                                                                fullwidth</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">Contact</a></li>
                                     </ul>
     
                                 </div><!-- end of nav-collapse -->
-                            </div>
-                            <div class="col-lg-3 col-md-2 col-2">
-                                <div class="header-right">
-                                    <div class="close-form">
-                                        <a class="theme-btn-s2" href="donate.html">Donate Now</a>
-                                    </div>
-                                    <div class="header-search-form-wrapper">
-                                        <div class="cart-search-contact">
-                                            <button class="search-toggle-btn"><i
-                                                    class="fi flaticon-search"></i></button>
-                                            <div class="header-search-form">
-                                                <form>
-                                                    <div>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Search here...">
-                                                        <button type="submit"><i
-                                                                class="fi flaticon-search"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            </div>s
                         </div>
                     </div><!-- end of container -->
                 </nav>

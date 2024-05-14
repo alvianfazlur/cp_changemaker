@@ -56,7 +56,10 @@
                            
                                 <h2>End Date</h2>
                                 <input type="date" class="form-control" name="end_date"value="{{ $recruitments->end_date}}" id="text" required>
-                           
+
+                                <h2>Link</h2>
+                                <input type="text" class="form-control" name="link"value="{{ $recruitments->link}}" id="text" required>
+
                                 <h2>Description</h2>
                                 <textarea class="form-control" name="description" id="description" required>{{ $recruitments->decription}}</textarea>
                                 <br>

@@ -10,8 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="wpOceans">
-    <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png">
-    <title>Charitio - Multipurpose Charity Nonprofit HTML5 Template</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/images/logo.png">
+    <title>Changemaker</title>
     <link href="../assets/css/themify-icons.css" rel="stylesheet">
     <link href="../assets/css/flaticon.css" rel="stylesheet">
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -52,8 +52,8 @@
                         <div class="col col-md-7 col-sm-12 col-12">
                             <div class="contact-intro">
                                 <ul>
-                                    <li><i class="fi ti-location-pin"></i>7 Green Lake Street Crawfordsville</li>
-                                    <li><i class="fi flaticon-email"></i> charito@gmail.com</li>
+                                    <li><i class="fi ti-location-pin"></i>Indonesia</li>
+                                    <li><i class="fi flaticon-email"></i> changemaker@gmail.com</li>
                                 </ul>
                             </div>
                         </div>
@@ -63,8 +63,8 @@
                                     <li>Visit our social pages</li>
                                     <li><a href="#"><i class="ti-facebook"></i></a></li>
                                     <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                                    <li><a href="#"><i class="ti-instagram"></i></a></li>
-                                    <li><a href="#"><i class="ti-google"></i></a></li>
+                                    <li><a href="https://www.instagram.com/changemaker.ind/"><i class="ti-instagram"></i></a></li>
+                                    <li><a href="https://www.tiktok.com/@changemaker.ind?_t=8WBqLjUmxs2&_r=1"><img src="/assets/images/icon/tik-tok-white.png" alt="Tiktok" style="width: 18px; height: 18px;"></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -94,7 +94,7 @@
                                 <div id="navbar" class="collapse navbar-collapse navigation-holder">
                                     <button class="menu-close"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
-                                        <li class="menu-item-has-children">
+                                        <li>
                                             <a href="/">Home</a>
                                         </li>
                                         <li class="menu-item-has-children">
@@ -105,13 +105,13 @@
                                                 @endforeach
                                             </ul>
                                         </li>
-                                        <li class="menu-item-has-children">
+                                        <li>
                                             <a href="/event">Events</a>
                                         </li>
-                                        <li class="menu-item-has-children">
+                                        <li>
                                             <a href="/blog">Blog</a>
                                         </li>
-                                        <li class="menu-item-has-children">
+                                        <li>
                                             <a href="/partnership">Partnership</a>
                                         </li>
                                         <li class="menu-item-has-children">
@@ -119,6 +119,7 @@
                                             <ul class="sub-menu">
                                                 <li><a href="/about">Info</a></li>
                                                 <li><a href="/contact">Contact</a></li>
+                                                <li><a href="/login">Login</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -127,9 +128,7 @@
                             </div>
                             <div class="col-lg-3 col-md-2 col-2">
                                 <div class="header-right">
-                                    <div class="close-form">
-                                        <a class="theme-btn-s2" href="donate.html">Donate Now</a>
-                                    </div>
+                                    
                                     <div class="header-search-form-wrapper">
                                         <div class="cart-search-contact">
                                             <button class="search-toggle-btn"><i class="fi flaticon-search"></i></button>
@@ -163,6 +162,10 @@
                                 <li><a href="/">Home</a></li>
                                 <li><span>Open Volunteer </span></li>
                             </ul>
+                            <br><br>
+                            <div class="close-form">
+                                <a class="theme-btn-s2" href="{{$recruitment->link}}">Register Now!</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -181,7 +184,20 @@
                                     <div class="wpo-project-single-content-des-wrap">
                                         <div class="wpo-project-single-content-des-left">
                                             <h2>Open Volunteer Details</h2>
-                                            <p>{{$recruitment->decription}}</p>
+                                            <textarea name="benefits" readonly id="descriptionTextarea" style="border: none; width: 100%; resize: none; overflow: hidden;">{{$recruitment->decription}}</textarea>
+                                            <script>
+                                                document.addEventListener("DOMContentLoaded", function() {
+                                                    var textarea = document.getElementById('descriptionTextarea');
+                                                    textarea.style.height = 'auto'; // Reset the height
+                                                    textarea.style.height = textarea.scrollHeight + 'px'; // Set the height to fit the content
+            
+                                                    textarea.addEventListener('focus', function() {
+                                                        textarea.style.border = 'none';
+                                                        textarea.style.outline = 'none';
+                                                    });
+                                                });
+                                            </script>
+                                            <br><br>
                                             <h3>Terbuka Untuk</h3>
                                             <p>{{$recruitment->requirements}}</p>
                                         </div>
@@ -204,92 +220,19 @@
                             </div>
                             <div class="wpo-solutions-section">
                                 <h2>Best Benefits of Project</h2>
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="wpo-solutions-item">
-                                            <div class="wpo-solutions-icon">
-                                                <div class="icon">
-                                                    <i class="fi flaticon-vegetable"></i>
-                                                </div>
-                                            </div>
-                                            <div class="wpo-solutions-text">
-                                                <h2><a href="service-single.html">Healthy Food</a></h2>
-                                                <p>The lower-numbered purposes are better understood and practiced </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="wpo-solutions-item">
-                                            <div class="wpo-solutions-icon">
-                                                <div class="icon">
-                                                    <i class="fi flaticon-water-tap"></i>
-                                                </div>
-                                            </div>
-                                            <div class="wpo-solutions-text">
-                                                <h2><a href="service-single.html">Clean Water</a></h2>
-                                                <p>The lower-numbered purposes are better understood and practiced </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="wpo-solutions-item">
-                                            <div class="wpo-solutions-icon">
-                                                <div class="icon">
-                                                    <i class="fi flaticon-medicine"></i>
-                                                </div>
-                                            </div>
-                                            <div class="wpo-solutions-text">
-                                                <h2><a href="service-single.html">Medical Care</a></h2>
-                                                <p>The lower-numbered purposes are better understood and practiced </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <textarea name="benefits" readonly id="benefitsTextarea" style="border: none; width: 100%; resize: none; overflow: hidden;">{{$recruitment->benefits}}</textarea>
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", function() {
+                                        var textarea = document.getElementById('benefitsTextarea');
+                                        textarea.style.height = 'auto'; // Reset the height
+                                        textarea.style.height = textarea.scrollHeight + 'px'; // Set the height to fit the content
 
-                                <p>I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. </p>
-                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem Ut enim ad minima veniam, quis nostrum exercitationem .</p>
-                            </div>
-                            <div class="tag-share clearfix">
-                                <div class="tag">
-                                    <ul>
-                                        <li><a href="#">Charity</a></li>
-                                        <li><a href="#">Wildlife</a></li>
-                                        <li><a href="#">Nature</a></li>
-                                    </ul>
-                                </div>
-                                <div class="share">
-                                    <span>Share: </span>
-                                    <ul>
-                                        <li><a href="#"><i class="ti-facebook"></i></a></li>
-                                        <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                                        <li><a href="#"><i class="ti-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="ti-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="more-posts">
-                                <div class="previous-post">
-                                    <a href="#">
-                                        <div class="post-img">
-                                            <img src="../assets/images/project-single/prev.png" alt="">
-                                        </div>
-                                        <div class="post-text">
-                                            <span class="post-control-link">Previous Post</span>
-                                            <span class="post-name">Child Education</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="next-post">
-                                    <a href="#">
-                                        <div class="post-text">
-                                            <span class="post-control-link">Next Post</span>
-                                            <span class="post-name">Healthy Food</span>
-                                        </div>
-                                        <div class="post-img">
-                                            <img src="../assets/images/project-single/next.png" alt="">
-                                        </div>
-                                    </a>
-                                </div>
+                                        textarea.addEventListener('focus', function() {
+                                            textarea.style.border = 'none';
+                                            textarea.style.outline = 'none';
+                                        });
+                                    });
+                                </script>
                             </div>
                         </div>
                     </div>

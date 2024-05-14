@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="wpOceans">
-    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
-    <title>Charitio - Multipurpose Charity Nonprofit HTML5 Template</title>
+    <link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
+    <title>Changemaker</title>
     <link href="assets/css/themify-icons.css" rel="stylesheet">
     <link href="assets/css/flaticon.css" rel="stylesheet">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -51,8 +51,8 @@
                         <div class="col col-md-7 col-sm-12 col-12">
                             <div class="contact-intro">
                                 <ul>
-                                    <li><i class="fi ti-location-pin"></i>7 Green Lake Street Crawfordsville</li>
-                                    <li><i class="fi flaticon-email"></i> charito@gmail.com</li>
+                                    <li><i class="fi ti-location-pin"></i>Indonesia</li>
+                                    <li><i class="fi flaticon-email"></i> changemaker@gmail.com</li>
                                 </ul>
                             </div>
                         </div>
@@ -62,8 +62,8 @@
                                     <li>Visit our social pages</li>
                                     <li><a href="#"><i class="ti-facebook"></i></a></li>
                                     <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                                    <li><a href="#"><i class="ti-instagram"></i></a></li>
-                                    <li><a href="#"><i class="ti-google"></i></a></li>
+                                    <li><a href="https://www.instagram.com/changemaker.ind/"><i class="ti-instagram"></i></a></li>
+                                    <li><a href="https://www.tiktok.com/@changemaker.ind?_t=8WBqLjUmxs2&_r=1"><img src="/assets/images/icon/tik-tok-white.png" alt="Tiktok" style="width: 18px; height: 18px;"></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -93,7 +93,7 @@
                                 <div id="navbar" class="collapse navbar-collapse navigation-holder">
                                     <button class="menu-close"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
-                                        <li class="menu-item-has-children">
+                                        <li>
                                             <a href="/">Home</a>
                                         </li>
                                         <li class="menu-item-has-children">
@@ -104,13 +104,13 @@
                                                 @endforeach
                                             </ul>
                                         </li>
-                                        <li class="menu-item-has-children">
+                                        <li>
                                             <a href="/event">Events</a>
                                         </li>
-                                        <li class="menu-item-has-children">
+                                        <li>
                                             <a href="/blog">Blog</a>
                                         </li>
-                                        <li class="menu-item-has-children">
+                                        <li>
                                             <a href="/partnership">Partnership</a>
                                         </li>
                                         <li class="menu-item-has-children">
@@ -118,33 +118,14 @@
                                             <ul class="sub-menu">
                                                 <li><a href="/about">Info</a></li>
                                                 <li><a href="/contact">Contact</a></li>
+                                                <li><a href="/login">Login</a></li>
                                             </ul>
                                         </li>
                                     </ul>
     
                                 </div><!-- end of nav-collapse -->
                             </div>
-                            <div class="col-lg-3 col-md-2 col-2">
-                                <div class="header-right">
-                                    <div class="close-form">
-                                        <a class="theme-btn-s2" href="donate.html">Donate Now</a>
-                                    </div>
-                                    <div class="header-search-form-wrapper">
-                                        <div class="cart-search-contact">
-                                            <button class="search-toggle-btn"><i class="fi flaticon-search"></i></button>
-                                            <div class="header-search-form">
-                                                <form>
-                                                    <div>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Search here...">
-                                                        <button type="submit"><i class="fi flaticon-search"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div><!-- end of container -->
                 </nav>

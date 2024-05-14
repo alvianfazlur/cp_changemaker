@@ -108,12 +108,6 @@
       </li>
       </ul>
     </div>
-    <div class="sidenav-footer position-absolute w-100 bottom-0 ">
-      <div class="mx-3">
-        <a class="btn btn-outline-primary mt-4 w-100" href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-dashboard?ref=sidebarfree" type="button">Documentation</a>
-        <a class="btn bg-gradient-primary w-100" href="https://www.creative-tim.com/product/material-dashboard-pro?ref=sidebarfree" type="button">Upgrade to pro</a>
-      </div>
-    </div>
   </aside>
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
@@ -187,7 +181,7 @@
                   </a>
                 </div>
                 <div class="col-md-6 col-6">
-                  <a href="/">
+                  <a href="/register">
                     <div class="card">
                       <div class="card-header mx-4 p-3 text-center">
                         <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
@@ -195,8 +189,8 @@
                         </div>
                       </div>
                       <div class="card-body pt-0 p-3 text-center">
-                        <h6 class="text-center mb-0">Homepage</h6>
-                        <span class="text-xs">Navigate to Website</span>
+                        <h6 class="text-center mb-0">Admin</h6>
+                        <span class="text-xs">Add Admin</span>
                       </div>
                     </div>
                   </a>
@@ -239,8 +233,7 @@
                    <span class="mb-2 text-xs">Author: <span class="text-dark ms-sm-2 font-weight-bold">{{$b->author}}</span></span>
                     </div>
                   <div class="ms-auto text-end">
-                    <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;"><i class="material-icons text-sm me-2">delete</i>Delete</a>
-                    <a class="btn btn-link text-dark px-3 mb-0" href="/admin/edit-blog/{{$b->id}}"><i class="material-icons text-sm me-2">edit</i>Edit</a>
+                    <a class="btn btn-link text-dark px-3 mb-0" href="/admin/update-blog/{{$b->id}}"><i class="material-icons text-sm me-2">edit</i>Edit</a>
                   </div>
                 </li>
                 @endforeach
@@ -282,7 +275,9 @@
               </ul>
             </div>
             <div class="col-6 text-end">
-              <button class="btn btn-sm mb-0">view all</button>
+              <a href="/admin/events">
+                <button class="btn btn-sm mb-0">view all</button>
+              </a>
             </div>
             <br>
           </div>
@@ -315,7 +310,10 @@
               </ul>
             </div>
             <div class="col-6 text-end">
-              <button class="btn btn-sm mb-0">view all</button>
+              <a href="/admin/partnerships">
+
+                <button class="btn btn-sm mb-0">view all</button>
+              </a>
             </div>
             <br>
           </div>

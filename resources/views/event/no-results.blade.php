@@ -11,20 +11,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="wpOceans">
     <link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
-    <title>Charitio - Multipurpose Charity Nonprofit HTML5 Template</title>
-    <link href="assets/css/themify-icons.css" rel="stylesheet">
-    <link href="assets/css/flaticon.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/animate.css" rel="stylesheet">
-    <link href="assets/css/owl.carousel.css" rel="stylesheet">
-    <link href="assets/css/owl.theme.css" rel="stylesheet">
-    <link href="assets/css/slick.css" rel="stylesheet">
-    <link href="assets/css/slick-theme.css" rel="stylesheet">
-    <link href="assets/css/swiper.min.css" rel="stylesheet">
-    <link href="assets/css/owl.transitions.css" rel="stylesheet">
-    <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
-    <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+    <title>Changemaker</title>
+    <link href="../assets/css/themify-icons.css" rel="stylesheet">
+    <link href="../assets/css/flaticon.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/animate.css" rel="stylesheet">
+    <link href="../assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="../assets/css/owl.theme.css" rel="stylesheet">
+    <link href="../assets/css/slick.css" rel="stylesheet">
+    <link href="../assets/css/slick-theme.css" rel="stylesheet">
+    <link href="../assets/css/swiper.min.css" rel="stylesheet">
+    <link href="../assets/css/owl.transitions.css" rel="stylesheet">
+    <link href="../assets/css/jquery.fancybox.css" rel="stylesheet">
+    <link href="../assets/css/odometer-theme-default.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,7 +39,7 @@
                     <div class="loader-line-mask">
                         <div class="loader-line"></div>
                     </div>
-                    <img src="assets/images/preloader.png" alt="">
+                    <img src="../assets/images/preloader.png" alt="">
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
                             <div class="contact-intro">
                                 <ul>
                                     <li><i class="fi ti-location-pin"></i>Indonesia</li>
-                                    <li><i class="fi flaticon-email"></i> changemaker@gmail.com</li>
+                                    <li><i class="fi flaticon-email"></i> changemaker@email</li>
                                 </ul>
                             </div>
                         </div>
@@ -87,16 +87,15 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-6">
                                 <div class="navbar-header">
-                                    <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"
-                                            alt=""></a>
+                                    <a class="navbar-brand" href="/"><img src="../assets/images/logo.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-1 col-1">
                                 <div id="navbar" class="collapse navbar-collapse navigation-holder">
                                     <button class="menu-close"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
-                                        <li>
-                                            <a href="/">Home</a>
+                                        <li class="menu-item-has-children">
+                                            <a href="#">Home</a>
                                         </li>
                                         <li class="menu-item-has-children">
                                             <a href="#">Recruitment</a>
@@ -107,10 +106,10 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="/event">Events</a>
+                                            <a class="active" href="/event">Events</a>
                                         </li>
                                         <li>
-                                            <a class="active" href="/blog">Blog</a>
+                                            <a href="/blog">Blog</a>
                                         </li>
                                         <li>
                                             <a href="/partnership">Partnership</a>
@@ -131,12 +130,11 @@
                                 <div class="header-right">
                                     <div class="header-search-form-wrapper">
                                         <div class="cart-search-contact">
-                                            <button class="search-toggle-btn"><i
-                                                    class="fi flaticon-search"></i></button>
+                                            <button class="search-toggle-btn"><i class="fi flaticon-search"></i></button>
                                             <div class="header-search-form">
                                                 <form id="searchForm">
                                                     <div>
-                                                        <input type="text" class="form-control" name="search" id="searchInput" placeholder="Search here..." required>
+                                                        <input type="text" class="form-control" name="search" required id="searchInput" placeholder="Search here..." required>
                                                         <button type="submit"><i class="fi flaticon-search"></i></button>
                                                     </div>
                                                 </form>
@@ -144,7 +142,7 @@
                                                     document.getElementById('searchForm').addEventListener('submit', function(event) {
                                                         event.preventDefault(); 
                                                         var searchQuery = document.getElementById('searchInput').value;
-                                                        var searchUrl = '/search-blog/' + encodeURIComponent(searchQuery);
+                                                        var searchUrl = '/search-event/' + encodeURIComponent(searchQuery);
                                                         window.location.href = searchUrl; 
                                                     });
                                                 </script>
@@ -165,10 +163,10 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="wpo-breadcumb-wrap">
-                            <h2>Blog</h2>
+                            <h2>No Events Found</h2>
                             <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><span>Blog</span></li>
+                                <li><a href="/">Home</a></li>
+                                <li><span>Events</span></li>
                             </ul>
                         </div>
                     </div>
@@ -176,38 +174,28 @@
             </div>
         </div>
         <!-- end of wpo-breadcumb-section-->
-
-
-        <!-- start wpo-blog-pg-section -->
-        <section class="wpo-blog-pg-section section-padding">
+        <!-- wpo-event-area start -->
+        <section class="error-404-section section-padding">
             <div class="container">
                 <div class="row">
-                    @foreach ($blogs as $b)                    
-                    <div class="col col-lg-10 offset-lg-1">
-                        <div class="wpo-blog-content">
-                            <div class="post format-standard-image">
-                                <div class="entry-media">
-                                    <img src="{{$b->image}}" alt>
-                                </div>
-                                <div class="entry-meta">
-                                    <ul>
-                                        <li><i class="fi flaticon-user"></i> By <a href="#">{{$b->author}}</a> </li>
-                                        <li><i class="fi flaticon-calendar"></i> {{ Carbon::parse($b->publication_date)->format('d F Y') }}</li>
-                                    </ul>
-                                </div>
-                                <div class="entry-details">
-                                    <h3><a href="/blog/{{$b->id}}">{{$b->title}}</a></h3>
-                                    <p>{{substr($b->content, 0, strpos($b->content, "\n", strpos($b->content, "\n")+1))}}</p>
-                                    <a href="/blog/{{$b->id}}" class="read-more">READ MORE...</a>
-                                </div>
-                            </div>                            
+                    <div class="col col-xs-12">
+                        <div class="content clearfix">
+                            <div class="error">
+                                <img src="../assets/images/error-404.png" alt>
+                            </div>
+                            <div class="error-message">
+                                <h3>Oops! Events Not Found!</h3>
+                                <p>We’re sorry but we can’t seem to find the page you requested. This might be because
+                                    you have typed the searchh incorrectly.</p>
+                                <a href="/event" class="theme-btn">View All Events</a>
+                            </div>
                         </div>
                     </div>
-                    @endforeach
-                </div>
+                </div> <!-- end row -->
             </div> <!-- end container -->
         </section>
-        <!-- end wpo-blog-pg-section -->
+        <!-- end error-404-section -->
+        <!-- wpo-event-area end -->
 
         <!-- start of wpo-site-footer-section -->
         <footer class="wpo-site-footer">
@@ -217,10 +205,9 @@
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget about-widget">
                                 <div class="logo widget-title">
-                                    <img src="assets/images/logo2.png" alt="blog">
+                                    <img src="../assets/images/logo2.png" alt="blog">
                                 </div>
-                                <p>Welcome and open yourself to your truest love this year with us! With the Release
-                                    Process</p>
+                                <p>Welcome and open yourself to your truest love this year with us! With the Release Process</p>
                                 <ul>
                                     <li>
                                         <a href="#">
@@ -274,25 +261,19 @@
                                 </div>
                             </div>
                         </div>
-
+                        
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget instagram">
                                 <div class="widget-title">
                                     <h3>Projects</h3>
                                 </div>
                                 <ul class="d-flex">
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/1.jpg"
-                                                alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/2.jpg"
-                                                alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/3.jpg"
-                                                alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/4.jpg"
-                                                alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/5.jpg"
-                                                alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/6.jpg"
-                                                alt=""></a></li>
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/1.jpg" alt=""></a></li>
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/2.jpg" alt=""></a></li>
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/3.jpg" alt=""></a></li>
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/4.jpg" alt=""></a></li>
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/5.jpg" alt=""></a></li>
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/6.jpg" alt=""></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -303,8 +284,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col col-xs-12">
-                            <p class="copyright"> &copy; 2021 Charito Theme. Design By <a href="index.html">wpOcean</a>.
-                                All Rights Reserved.</p>
+                            <p class="copyright"> &copy; 2021 Charito Theme. Design By <a href="index.html">wpOcean</a>. All Rights Reserved.</p>
                         </div>
                     </div>
                 </div>
@@ -316,14 +296,14 @@
 
     <!-- All JavaScript files
     ================================================== -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <!-- Plugins for this template -->
-    <script src="assets/js/modernizr.custom.js"></script>
-    <script src="assets/js/jquery.dlmenu.js"></script>
-    <script src="assets/js/jquery-plugin-collection.js"></script>
+    <script src="../assets/js/modernizr.custom.js"></script>
+    <script src="../assets/js/jquery.dlmenu.js"></script>
+    <script src="../assets/js/jquery-plugin-collection.js"></script>
     <!-- Custom script for this template -->
-    <script src="assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 
 

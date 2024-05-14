@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="wpOceans">
     <link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
-    <title>Charitio - Multipurpose Charity Nonprofit HTML5 Template</title>
+    <title>Changemaker</title>
     <link href="assets/css/themify-icons.css" rel="stylesheet">
     <link href="assets/css/flaticon.css" rel="stylesheet">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -49,8 +49,8 @@
                         <div class="col col-md-7 col-sm-12 col-12">
                             <div class="contact-intro">
                                 <ul>
-                                    <li><i class="fi ti-location-pin"></i>7 Green Lake Street Crawfordsville</li>
-                                    <li><i class="fi flaticon-email"></i> charito@gmail.com</li>
+                                    <li><i class="fi ti-location-pin"></i>Indonesia</li>
+                                    <li><i class="fi flaticon-email"></i> changemaker@gmail.com</li>
                                 </ul>
                             </div>
                         </div>
@@ -60,8 +60,8 @@
                                     <li>Visit our social pages</li>
                                     <li><a href="#"><i class="ti-facebook"></i></a></li>
                                     <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                                    <li><a href="#"><i class="ti-instagram"></i></a></li>
-                                    <li><a href="#"><i class="ti-google"></i></a></li>
+                                    <li><a href="https://www.instagram.com/changemaker.ind/"><i class="ti-instagram"></i></a></li>
+                                    <li><a href="https://www.tiktok.com/@changemaker.ind?_t=8WBqLjUmxs2&_r=1"><img src="/assets/images/icon/tik-tok-white.png" alt="Tiktok" style="width: 18px; height: 18px;"></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -91,7 +91,7 @@
                                 <div id="navbar" class="collapse navbar-collapse navigation-holder">
                                     <button class="menu-close"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
-                                        <li class="menu-item-has-children">
+                                        <li>
                                             <a href="/">Home</a>
                                         </li>
                                         <li class="menu-item-has-children">
@@ -102,13 +102,13 @@
                                                 @endforeach
                                             </ul>
                                         </li>
-                                        <li class="menu-item-has-children">
+                                        <li>
                                             <a href="/event">Events</a>
                                         </li>
-                                        <li class="menu-item-has-children">
+                                        <li>
                                             <a href="/blog">Blog</a>
                                         </li>
-                                        <li class="menu-item-has-children">
+                                        <li>
                                             <a href="/partnership">Partnership</a>
                                         </li>
                                         <li class="menu-item-has-children">
@@ -116,6 +116,7 @@
                                             <ul class="sub-menu">
                                                 <li><a href="/about">Info</a></li>
                                                 <li><a href="/contact">Contact</a></li>
+                                                <li><a href="/login">Login</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -123,25 +124,7 @@
                                 </div><!-- end of nav-collapse -->
                             </div>
                             <div class="col-lg-3 col-md-2 col-2">
-                                <div class="header-right">
-                                    <div class="close-form">
-                                        <a class="theme-btn-s2" href="donate.html">Donate Now</a>
-                                    </div>
-                                    <div class="header-search-form-wrapper">
-                                        <div class="cart-search-contact">
-                                            <button class="search-toggle-btn"><i class="fi flaticon-search"></i></button>
-                                            <div class="header-search-form">
-                                                <form>
-                                                    <div>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Search here...">
-                                                        <button type="submit"><i class="fi flaticon-search"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+    
                             </div>
                         </div>
                     </div><!-- end of container -->
@@ -196,11 +179,11 @@
                         <div class="wpo-features-item">
                             <div class="wpo-features-icon">
                                 <div class="icon">
-                                    <i class="fi flaticon-vegetable"></i>
+                                    <i class="fi flaticon-target"></i>
                                 </div>
                             </div>
                             <div class="wpo-features-text">
-                                <h2><a href="service-single.html">Healthy Food</a></h2>
+                                <h2>International Volunteer</a></h2>
                             </div>
                         </div>
                     </div>
@@ -212,7 +195,7 @@
                                 </div>
                             </div>
                             <div class="wpo-features-text">
-                                <h2><a href="service-single.html">Clean Water</a></h2>
+                                <h2>College Internship</h2>
                             </div>
                         </div>
                     </div>
@@ -220,11 +203,11 @@
                         <div class="wpo-features-item">
                             <div class="wpo-features-icon">
                                 <div class="icon">
-                                    <i class="fi flaticon-medicine"></i>
+                                    <i class="fi flaticon-dolphin"></i>
                                 </div>
                             </div>
                             <div class="wpo-features-text">
-                                <h2><a href="service-single.html">Medical Care</a></h2>
+                                <h2>Youth Excursion</h2>
                             </div>
                         </div>
                     </div>
@@ -232,11 +215,11 @@
                         <div class="wpo-features-item">
                             <div class="wpo-features-icon">
                                 <div class="icon">
-                                    <i class="fi flaticon-graduation-cap"></i>
+                                    <i class="fi flaticon-salary"></i>
                                 </div>
                             </div>
                             <div class="wpo-features-text">
-                                <h2><a href="service-single.html">Child Education</a></h2>
+                                <h2>100% Fully Funded</h2>
                             </div>
                         </div>
                     </div>
@@ -397,29 +380,25 @@
 
         <!-- start partners-section -->
         <section class="partners-section section-padding">
-            <h2 class="hidden">partner</h2>
             <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="wpo-section-title">
+                            <span>Who help us</span>
+                            <h2>Our Beloved Partner</h2>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                suffered alteration in some form,</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col col-xs-12">
                         <div class="partner-grids partners-slider owl-carousel">
-                            <div class="grid">
-                                <img src="assets/images/partners/img-1.jpg" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/img-2.jpg" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/img-3.jpg" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/img-4.jpg" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/img-5.jpg" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/img-6.jpg" alt>
-                            </div>
+                            @foreach ($partnerships as $p)
+                                <div class="grid">
+                                    <img src="{{$p->image}}" alt style="width: 200px; height: auto;">
+                                </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

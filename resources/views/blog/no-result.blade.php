@@ -10,21 +10,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="wpOceans">
-    <link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
+    <link rel="shortcut icon" type="image/png" href="../assets/images/logo.png">
     <title>Charitio - Multipurpose Charity Nonprofit HTML5 Template</title>
-    <link href="assets/css/themify-icons.css" rel="stylesheet">
-    <link href="assets/css/flaticon.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/animate.css" rel="stylesheet">
-    <link href="assets/css/owl.carousel.css" rel="stylesheet">
-    <link href="assets/css/owl.theme.css" rel="stylesheet">
-    <link href="assets/css/slick.css" rel="stylesheet">
-    <link href="assets/css/slick-theme.css" rel="stylesheet">
-    <link href="assets/css/swiper.min.css" rel="stylesheet">
-    <link href="assets/css/owl.transitions.css" rel="stylesheet">
-    <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
-    <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/themify-icons.css" rel="stylesheet">
+    <link href="../assets/css/flaticon.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/animate.css" rel="stylesheet">
+    <link href="../assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="../assets/css/owl.theme.css" rel="stylesheet">
+    <link href="../assets/css/slick.css" rel="stylesheet">
+    <link href="../assets/css/slick-theme.css" rel="stylesheet">
+    <link href="../assets/css/swiper.min.css" rel="stylesheet">
+    <link href="../assets/css/owl.transitions.css" rel="stylesheet">
+    <link href="../assets/css/jquery.fancybox.css" rel="stylesheet">
+    <link href="../assets/css/odometer-theme-default.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,7 +39,7 @@
                     <div class="loader-line-mask">
                         <div class="loader-line"></div>
                     </div>
-                    <img src="assets/images/preloader.png" alt="">
+                    <img src="../assets/images/preloader.png" alt="">
                 </div>
             </div>
         </div>
@@ -87,7 +87,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-6">
                                 <div class="navbar-header">
-                                    <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"
+                                    <a class="navbar-brand" href="index.html"><img src="../assets/images/logo.png"
                                             alt=""></a>
                                 </div>
                             </div>
@@ -179,34 +179,26 @@
 
 
         <!-- start wpo-blog-pg-section -->
-        <section class="wpo-blog-pg-section section-padding">
+        <section class="error-404-section section-padding">
             <div class="container">
                 <div class="row">
-                    @foreach ($blogs as $b)                    
-                    <div class="col col-lg-10 offset-lg-1">
-                        <div class="wpo-blog-content">
-                            <div class="post format-standard-image">
-                                <div class="entry-media">
-                                    <img src="{{$b->image}}" alt>
-                                </div>
-                                <div class="entry-meta">
-                                    <ul>
-                                        <li><i class="fi flaticon-user"></i> By <a href="#">{{$b->author}}</a> </li>
-                                        <li><i class="fi flaticon-calendar"></i> {{ Carbon::parse($b->publication_date)->format('d F Y') }}</li>
-                                    </ul>
-                                </div>
-                                <div class="entry-details">
-                                    <h3><a href="/blog/{{$b->id}}">{{$b->title}}</a></h3>
-                                    <p>{{substr($b->content, 0, strpos($b->content, "\n", strpos($b->content, "\n")+1))}}</p>
-                                    <a href="/blog/{{$b->id}}" class="read-more">READ MORE...</a>
-                                </div>
-                            </div>                            
+                    <div class="col col-xs-12">
+                        <div class="content clearfix">
+                            <div class="error">
+                                <img src="../assets/images/error-404.png" alt>
+                            </div>
+                            <div class="error-message">
+                                <h3>Oops! Blogs Not Found!</h3>
+                                <p>We’re sorry but we can’t seem to find the page you requested. This might be because
+                                    you have typed the search bar incorrectly.</p>
+                                <a href="/blog" class="theme-btn">View All Blogs</a>
+                            </div>
                         </div>
                     </div>
-                    @endforeach
-                </div>
+                </div> <!-- end row -->
             </div> <!-- end container -->
         </section>
+        <!-- end error-404-section -->
         <!-- end wpo-blog-pg-section -->
 
         <!-- start of wpo-site-footer-section -->
@@ -217,7 +209,7 @@
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget about-widget">
                                 <div class="logo widget-title">
-                                    <img src="assets/images/logo2.png" alt="blog">
+                                    <img src="../assets/images/logo2.png" alt="blog">
                                 </div>
                                 <p>Welcome and open yourself to your truest love this year with us! With the Release
                                     Process</p>
@@ -281,17 +273,17 @@
                                     <h3>Projects</h3>
                                 </div>
                                 <ul class="d-flex">
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/1.jpg"
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/1.jpg"
                                                 alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/2.jpg"
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/2.jpg"
                                                 alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/3.jpg"
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/3.jpg"
                                                 alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/4.jpg"
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/4.jpg"
                                                 alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/5.jpg"
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/5.jpg"
                                                 alt=""></a></li>
-                                    <li><a href="project-single.html"><img src="assets/images/instragram/6.jpg"
+                                    <li><a href="project-single.html"><img src="../assets/images/instragram/6.jpg"
                                                 alt=""></a></li>
                                 </ul>
                             </div>
@@ -316,14 +308,14 @@
 
     <!-- All JavaScript files
     ================================================== -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <!-- Plugins for this template -->
-    <script src="assets/js/modernizr.custom.js"></script>
-    <script src="assets/js/jquery.dlmenu.js"></script>
-    <script src="assets/js/jquery-plugin-collection.js"></script>
+    <script src="../assets/js/modernizr.custom.js"></script>
+    <script src="../assets/js/jquery.dlmenu.js"></script>
+    <script src="../assets/js/jquery-plugin-collection.js"></script>
     <!-- Custom script for this template -->
-    <script src="assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 
 

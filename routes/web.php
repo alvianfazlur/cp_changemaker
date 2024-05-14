@@ -36,6 +36,8 @@ Route::get('/event', [IndexController::class,'viewEvent']);
 Route::get('/event/{id}', [IndexController::class,'detailEvent']);
 Route::get('/blog', [IndexController::class,'viewBlog']);
 Route::get('/blog/{id}', [IndexController::class,'detailBlog']);
+Route::get('/search-blog/{title}', [IndexController::class,'searchBlog']);
+Route::get('/search-event/{title}', [IndexController::class,'searchEvent']);
 Route::get('/contact', [IndexController::class,'viewContact']);
 Route::get('/about', [IndexController::class,'viewInfo']);
 Route::get('/recruitment/{id}', [IndexController::class,'viewRecruitment']);

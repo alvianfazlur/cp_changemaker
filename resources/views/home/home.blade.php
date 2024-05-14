@@ -69,8 +69,8 @@
                             <div id="navbar" class="collapse navbar-collapse navigation-holder">
                                 <button class="menu-close"><i class="ti-close"></i></button>
                                 <ul class="nav navbar-nav mb-2 mb-lg-0">
-                                    <li class="menu-item-has-children">
-                                        <a class="active" href="#">Home</a>
+                                    <li>
+                                        <a class="active" href="/">Home</a>
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="#">Recruitment</a>
@@ -80,13 +80,13 @@
                                             @endforeach
                                         </ul>
                                     </li>
-                                    <li class="menu-item-has-children">
+                                    <li>
                                         <a href="/event">Events</a>
                                     </li>
-                                    <li class="menu-item-has-children">
+                                    <li>
                                         <a href="/blog">Blog</a>
                                     </li>
-                                    <li class="menu-item-has-children">
+                                    <li>
                                         <a href="/partnership">Partnership</a>
                                     </li>
                                     <li class="menu-item-has-children">
@@ -589,7 +589,7 @@
                     <div class="col-lg-6">
                         <div class="wpo-section-title">
                             <span>Who help us</span>
-                            <h2>Our Partners & Donors</h2>
+                            <h2>Our Beloved Partner</h2>
                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have
                                 suffered alteration in some form,</p>
                         </div>

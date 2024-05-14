@@ -46,10 +46,7 @@
                         @csrf
                         <div class="wpo-accountInfo">
                             <div class="wpo-accountInfoHeader">
-                                <a href="#"><img src="assets/images/logo2.png" alt=""></a>
-                                    <a class="wpo-accountBtn" href="register.html">
-                                        <span class="">Create Account</span>
-                                    </a>
+                                <a href="#"><img src="assets/images/logo.png" alt=""></a>
                             </div>
                             <div class="image">
                                 <img src="assets/images/login.svg" alt="">
@@ -90,7 +87,6 @@
                                 </div>
                             </div>
                             <br>
-                            <p class="subText">Don't have an account? <a href="register.html">Create free account</a></p>
                         </div>
                     </form>
                 </div>

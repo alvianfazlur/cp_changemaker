@@ -50,7 +50,7 @@ class AdminController extends Controller
             'start_date' => $request->start_date,
             'end_date' => $request->end_date,
             'decription' => $request->description,
-            'requirements' => $request->requirements,
+            'link' => $request->link,
             'benefits' => $request->benefits
             
         ]);
@@ -147,6 +147,7 @@ class AdminController extends Controller
             'end_date' => $request->end_date,
             'decription' => $request->description,
             'requirements' => $request->requirements,
+            'link' => $request->link,
             'benefits' => $request->benefits,
         ]);       
 	
