@@ -33,7 +33,7 @@
                 <div class="loader-line-mask">
                     <div class="loader-line"></div>
                 </div>
-                <img src="assets/images/preloader.png" alt="">
+                <img src="assets/images/logo.png" alt="">
             </div>
         </div>
     </div>

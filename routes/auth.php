@@ -103,4 +103,20 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/delete-partnership/{id}', [AdminController::class,'delete_partnership']);
     Route::get('/admin/update-partnership/{id}', [AdminController::class,'edit_partnership']);
     Route::post('/admin/updateDataPartnership', [AdminController::class,'update_partnership']);
+    
+    //CRUD Admin Team
+    Route::get('/admin/teams', [AdminController::class,'open_teams']);
+    Route::get('/admin/new-team', [AdminController::class,'new_team']);
+    Route::post('/admin/store-team', [AdminController::class,'storeTeam']);
+    Route::get('/admin/delete-team/{id}', [AdminController::class,'delete_team']);
+    Route::get('/admin/update-team/{id}', [AdminController::class,'edit_team']);
+    Route::post('/admin/updateDataTeam', [AdminController::class,'update_team']);
+    
+    //CRUD Admin Testimonial
+    Route::get('/admin/testimonial', [AdminController::class,'open_testimonial']);
+    Route::get('/admin/new-testimonial', [AdminController::class,'new_testimonial']);
+    Route::post('/admin/store-testimonial', [AdminController::class,'storeTestimonial']);
+    Route::get('/admin/delete-testimonial/{id}', [AdminController::class,'delete_testimonial']);
+    Route::get('/admin/update-testimonial/{id}', [AdminController::class,'edit_testimonial']);
+    Route::post('/admin/updateDataTestimonial', [AdminController::class,'update_testimonial']);
 });

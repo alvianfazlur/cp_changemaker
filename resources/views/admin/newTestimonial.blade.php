@@ -30,29 +30,22 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="wpo-donate-header">
-                        <h2>New Event</h2>
+                        <h2>New Testimoni</h2>
                     </div>
                     <div id="Donations" class="tab-pane">
-                        <form action="/admin/store-event" method="post">
+                        <form action="/admin/store-testimonial" method="post">
                             {{ csrf_field() }}
                             {{-- <input type="hidden" name="id" value=""> <br/> --}}
                             <div class="wpo-donations-amount">
-                                <h2>Event Name</h2>
-                                <input type="text" class="form-control" name="event_name"value="" id="text" required>                             
+                                <h2>Name</h2>
+                                <input type="text" class="form-control" name="name"value="" id="text" required>                             
                            
-                                <h2>Embedded Google Maps Url</h2>
-                                <input type="text" class="form-control" name="location"value="" id="text" required placeholder="Input inside the src">
-                           
-                                <h2>Event Date</h2>
-                                <input type="date" class="form-control" name="event_date"value="{{ date('Y-m-d') }}" id="text" required>
+                                <h2>Job</h2>
+                                <input type="text" class="form-control" name="job"value=" " id="text" required>
 
-                                <h2>Description</h2>
-                                <textarea class="form-control" name="description" id="description" required></textarea>
+                                <h2>Testimoni</h2>
+                                <textarea class="form-control" name="testimoni" id="description" required></textarea>
                                 <br>
-                                <h2>Schedule</h2>
-                                <textarea class="form-control" name="schedule" id="description" required></textarea>
-                                <br>
-                                
                             </div>
                             <div class="submit-area">
                                 <button type="submit" class="theme-btn submit-btn">Save Changes</button>

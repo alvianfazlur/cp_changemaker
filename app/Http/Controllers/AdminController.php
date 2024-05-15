@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\blogs;
 use App\Models\events;
 use App\Models\partnerships;
+use App\Models\team;
+use App\Models\testimonial;
 use Illuminate\Http\Request;
 use \App\Models\recruitments;
 use Illuminate\Support\Facades\DB;
@@ -18,6 +20,14 @@ class AdminController extends Controller
     public function open_events(){
         $events = events::get();
         return view('admin.events', ['events' => $events]);
+    }
+    public function open_teams(){
+        $teams = team::get();
+        return view('admin.teams', ['teams' => $teams]);
+    }
+    public function open_testimonial(){
+        $testimonial = testimonial::get();
+        return view('admin.testimonial', ['testimonial' => $testimonial]);
     }
     public function open_partnership(){
         $partnerships = partnerships::get();
@@ -36,6 +46,14 @@ class AdminController extends Controller
     public function edit_partnership($id){
         $partnership = partnerships::where('id', $id)->first();
         return view('admin.editPartnership', ['partnership' => $partnership]);
+    }
+    public function edit_team($id){
+        $team = team::where('id', $id)->first();
+        return view('admin.editTeam', ['team' => $team]);
+    }
+    public function edit_testimonial($id){
+        $testimonial = testimonial::where('id', $id)->first();
+        return view('admin.editTestimonial', ['testimonial' => $testimonial]);
     }
     public function edit_blog($id){
         $blog = blogs::where('id', $id)->first();
@@ -77,6 +95,7 @@ class AdminController extends Controller
             'location' => $request->location,
             'event_date' => $request->event_date,
             'description' => $request->description, 
+            'schedule' => $request->schedule, 
         ]);
 	// alihkan halaman
 	return redirect('/home');
@@ -92,6 +111,27 @@ class AdminController extends Controller
         ]);
 	// alihkan halaman
 	return redirect('/admin/partnerships');
+    }
+    public function update_team(Request $request){
+
+        team::where('id',$request->id)->update([
+            'name' => $request->name,
+            'job' => $request->job,
+            'image' => $request->image,
+            'socmed' => $request->socmed, 
+        ]);
+	// alihkan halaman
+	return redirect('/admin/teams');
+    }
+    public function update_testimonial(Request $request){
+
+        testimonial::where('id',$request->id)->update([
+            'name' => $request->name,
+            'job' => $request->job,
+            'testimoni' => $request->testimoni,
+        ]);
+	// alihkan halaman
+	return redirect('/admin/testimonial');
     }
 
     public function delete_event($id){
@@ -114,6 +154,16 @@ class AdminController extends Controller
 	    DB::table('blogs')->where('id',$id)->delete();
 	    return redirect('/admin/blogs');
     }
+    public function delete_team($id){
+	    
+	    DB::table('teams')->where('id',$id)->delete();
+	    return redirect('/admin/teams');
+    }
+    public function delete_testimonial($id){
+	    
+	    DB::table('testimonials')->where('id',$id)->delete();
+	    return redirect('/admin/testimonial');
+    }
     public function delete_partnership($id){
 	    
 	    DB::table('partnerships')->where('id',$id)->delete();
@@ -129,6 +179,12 @@ class AdminController extends Controller
     }
     public function new_partnership(){
         return view('admin.newPartnership', []);
+    }
+    public function new_team(){
+        return view('admin.newTeam', []);
+    }
+    public function new_testimonial(){
+        return view('admin.newTestimonial', []);
     }
     public function new_event(){
         return view('admin.newEvent', []);
@@ -160,9 +216,31 @@ class AdminController extends Controller
             'location' => $request->location,
             'event_date' => $request->event_date,
             'description' => $request->description,
+            'schedule' => $request->schedule,
         ]);       
 	
 	return redirect('/admin/events');
+    }
+    public function storeTeam(Request $request){
+        // insert data ke table
+        team::create([
+            'name' => $request->name,
+            'job' => $request->job,
+            'image' => $request->image,
+            'socmed' => $request->socmed,
+        ]);       
+	
+	return redirect('/admin/teams');
+    }
+    public function storeTestimonial(Request $request){
+        // insert data ke table
+        testimonial::create([
+            'name' => $request->name,
+            'job' => $request->job,
+            'testimoni' => $request->testimoni,
+        ]);       
+	
+	return redirect('/admin/testimonial');
     }
 
     public function storePartnership(Request $request){

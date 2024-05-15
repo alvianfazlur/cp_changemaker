@@ -2,12 +2,14 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\LoginController;
+use App\Models\testimonial;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use \App\Models\recruitments;
 use \App\Models\events;
 use \App\Models\blogs;
 use \App\Models\partnerships;
+use \App\Models\team;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 
@@ -25,9 +27,11 @@ use App\Http\Controllers\AdminController;
 Route::get('/', function () {
     $recruitments = recruitments::get();
     $partnerships = partnerships::get();
+    $teams = team::get();
+    $testimonial = testimonial::get();
     $events = events::orderBy('event_date', 'desc')->take(2)->get();
     $blogs = blogs::orderBy('publication_date', 'desc')->take(3)->get();
-    return view('home.home', ['recruitments' => $recruitments, 'events' => $events, 'blogs' => $blogs, 'partnerships' => $partnerships]);
+    return view('home.home', ['recruitments' => $recruitments, 'events' => $events, 'blogs' => $blogs, 'partnerships' => $partnerships, 'teams' => $teams, 'testimonial' => $testimonial]);
 });
 
 

@@ -21,7 +21,7 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
     content: "\f101";
 }
 .flaticon-whatsapp:before {
-    content: "\f232"; /* Unicode untuk ikon WhatsApp */
+    content: "\f232";
 }
 .flaticon-vegetable:before {
     content: "\f102";

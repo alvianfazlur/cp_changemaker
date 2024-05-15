@@ -34,7 +34,7 @@
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
         <img src="../assets/images/logo.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold text-white">Chhangemaker Admin</span>
+        <span class="ms-1 font-weight-bold text-white">Changemaker Admin</span>
       </a>
     </div>
     <hr class="horizontal light mt-0 mb-2">
@@ -73,7 +73,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white active bg-gradient-primary" href="/admin/partnerships">
+            <a class="nav-link text-white" href="/admin/partnerships">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">table_view</i>
               </div>
@@ -86,6 +86,14 @@
                 <i class="material-icons opacity-10">table_view</i>
               </div>
               <span class="nav-link-text ms-1">Teams</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white active bg-gradient-primary" href="/admin/testimonial">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10">table_view</i>
+              </div>
+              <span class="nav-link-text ms-1">Testimonial</span>
             </a>
         </li>
         <li class="nav-item mt-3">
@@ -109,9 +117,9 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Partnerships</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Testimonial</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Partnerships</h6>
+          <h6 class="font-weight-bolder mb-0">Testimonial</h6>
         </nav>
         </div>
       </div>
@@ -123,10 +131,10 @@
           <div class="card my-4">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
               <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                <h6 class="text-white text-capitalize ps-3">Partner Database</h6>
+                <h6 class="text-white text-capitalize ps-3">Testimonial Database</h6>
               </div>
               <br>
-                <a class="btn btn-outline-success" href="../admin/new-partnership">Add New Partner</a>
+                <a class="btn btn-outline-success" href="../admin/new-testimonial">Add New Testimoni</a>
             </div>
             <div class="card-body px-0 pb-2">
               <div class="table-responsive p-0">
@@ -134,43 +142,35 @@
                   <thead>
                     <tr>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Type</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Description</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Link</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Image Url</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Job</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Testimoni</th>
                       <th class="text-secondary opacity-7"></th>
                       <th class="text-secondary opacity-7"></th>
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach ($partnerships as $p)
+                    @foreach ($testimonial as $t)
                     <tr>
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">{{substr($p->name, 0, 20)}}</h6>
+                            <h6 class="mb-0 text-sm">{{substr($t->name, 0, 20)}}</h6>
                           </div>
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">{{$p->type}}</p>
+                        <p class="text-xs font-weight-bold mb-0">{{$t->job}}</p>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">{{ substr($p->description, 0, 50) }}</p>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">{{substr($p->link, 0, 50)}}</p>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">{{substr($p->image, 0, 50)}}</p>
+                        <p class="text-xs font-weight-bold mb-0">{{ substr($t->testimoni, 0, 50) }}</p>
                       </td>
                       <td class="align-middle">
-                        <a href="/admin/update-partnership/{{$p->id}}" class="text-secondary font-weight-bold text-xs btn" data-toggle="tooltip" data-original-title="Edit user" data-id="{{$p->id}}">
+                        <a href="/admin/update-testimonial/{{$t->id}}" class="text-secondary font-weight-bold text-xs btn" data-toggle="tooltip" data-original-title="Edit user" data-id="{{$t->id}}">
                             EDIT
                         </a>
                       </td>                    
                       <td class="align-middle">
-                        <a href="javascript:void(0);" class="text-secondary font-weight-bold text-xs btn" data-toggle="tooltip" data-original-title="Edit user" data-id="{{$p->id}}" onclick="confirmDelete({{$p->id}})">
+                        <a href="javascript:void(0);" class="text-secondary font-weight-bold text-xs btn" data-toggle="tooltip" data-original-title="Edit user" data-id="{{$t->id}}" onclick="confirmDelete({{$t->id}})">
                             Delete
                         </a>
                       </td>                       
@@ -316,7 +316,7 @@
     function confirmDelete(id) {
         var result = confirm("Are you sure you want to delete this open recruitment?");
         if (result) {
-            window.location.href = "/admin/delete-partnership/" + id;
+            window.location.href = "/admin/delete-testimonial/" + id;
         }
     }
   </script>

@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="wpOceans">
-    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
-    <title>Charitio - Multipurpose Charity Nonprofit HTML5 Template</title>
+    <link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
+    <title>Changemaker</title>
     <link href="assets/css/themify-icons.css" rel="stylesheet">
     <link href="assets/css/flaticon.css" rel="stylesheet">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
                 <div class="loader-line-mask">
                     <div class="loader-line"></div>
                 </div>
-                <img src="assets/images/preloader.png" alt="">
+                <img src="assets/images/logo.png" alt="">
             </div>
         </div>
     </div>
@@ -60,7 +60,7 @@
                         <div class="wpo-accountForm form-style">
                             <div class="fromTitle">
                                 <h2>Signup</h2>
-                                <p>Sign into your pages account</p>
+                                <br>
                             </div>
                             <div class="row">
                                 <div>

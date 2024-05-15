@@ -43,11 +43,14 @@
                                 <h2>Start Date</h2>
                                 <input type="date" class="form-control" name="event_date"value="{{ $events->event_date}}" id="text" required>
                                 
-                                <h2>Location</h2>
+                                <h2>Embedded Google Maps Url</h2>
                                 <input type="text" class="form-control" name="location"value="{{ $events->location}}" id="text" required>
                         
                                 <h2>Description</h2>
                                 <textarea class="form-control" name="description" id="description" required>{{ $events->description}}</textarea>
+                                <br>
+                                <h2>Schedule</h2>
+                                <textarea class="form-control" name="schedule" id="description" required>{{ $events->schedule}}</textarea>
                                 <br>
                            
                             </div>

@@ -23,6 +23,7 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
@@ -37,7 +38,7 @@
                     <div class="loader-line-mask">
                         <div class="loader-line"></div>
                     </div>
-                    <img src="assets/images/preloader.png" alt="">
+                    <img src="assets/images/logo.png" alt="">
                 </div>
             </div>
         </div>
@@ -62,8 +63,7 @@
                                     <li><a href="#"><i class="ti-facebook"></i></a></li>
                                     <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
                                     <li><a href="https://www.instagram.com/changemaker.ind/"><i class="ti-instagram"></i></a></li>
-                                    <li><a href="https://www.tiktok.com/@changemaker.ind?_t=8WBqLjUmxs2&_r=1"><img src="/assets/images/icon/tik-tok-white.png" alt="Tiktok" style="width: 18px; height: 18px;"></a></li>
-                                </ul>
+                                    <li><a href="https://www.tiktok.com/@changemaker.ind?_t=8WBqLjUmxs2&_r=1"><i class="fab fa-tiktok"></i></a></li></ul>
                             </div>
                         </div>
                     </div>
@@ -180,7 +180,7 @@
                                                     </div>
                                                     <div class="wpo-campaign-content">
                                                         <div class="wpo-campaign-text-top">
-                                                            <h2><a href="/recruitment/{{$p->id}}">{{$p->name}}</a></h2>
+                                                            <h2>{{$p->name}}</h2>
                                                             <p></p>
                                                             <div class="campaign-btn">
                                                             </div>

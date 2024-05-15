@@ -30,29 +30,23 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="wpo-donate-header">
-                        <h2>New Event</h2>
+                        <h2>Edit Your Recruitments</h2>
                     </div>
                     <div id="Donations" class="tab-pane">
-                        <form action="/admin/store-event" method="post">
+                        <form action="/admin/updateDataTestimonial" method="post">
                             {{ csrf_field() }}
-                            {{-- <input type="hidden" name="id" value=""> <br/> --}}
+                            <input type="hidden" name="id" value="{{ $testimonial->id }}"> <br/>
                             <div class="wpo-donations-amount">
-                                <h2>Event Name</h2>
-                                <input type="text" class="form-control" name="event_name"value="" id="text" required>                             
-                           
-                                <h2>Embedded Google Maps Url</h2>
-                                <input type="text" class="form-control" name="location"value="" id="text" required placeholder="Input inside the src">
-                           
-                                <h2>Event Date</h2>
-                                <input type="date" class="form-control" name="event_date"value="{{ date('Y-m-d') }}" id="text" required>
-
-                                <h2>Description</h2>
-                                <textarea class="form-control" name="description" id="description" required></textarea>
-                                <br>
-                                <h2>Schedule</h2>
-                                <textarea class="form-control" name="schedule" id="description" required></textarea>
-                                <br>
+                                <h2>Name</h2>
+                                <input type="text" class="form-control" name="name"value="{{ $testimonial->name}}" id="text" required>                          
                                 
+                                <h2>Job</h2>
+                                <input type="text" class="form-control" name="job"value="{{ $testimonial->job}}" id="text" required>
+                                
+                                <h2>Testimoni</h2>
+                                <textarea class="form-control" name="testimoni" id="description" required>{{ $testimonial->testimoni}}</textarea>
+                                <br>
+
                             </div>
                             <div class="submit-area">
                                 <button type="submit" class="theme-btn submit-btn">Save Changes</button>
