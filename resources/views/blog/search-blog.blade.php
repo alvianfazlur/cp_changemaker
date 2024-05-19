@@ -254,7 +254,7 @@
                                     <li><a href="/event">Events</a></li>
                                     <li><a href="/blog">Latest News</a></li>
                                     <li><a href="/contact">Contact us</a></li>
-                                    <li><a href="/partenrship">Partnerships</a></li>
+                                    <li><a href="/partnership">Partnerships</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -267,7 +267,7 @@
                                     <p>Would you have any enquiries.Please feel free to contuct us</p>
                                     <ul>
                                         <li><i class="fi flaticon-mail"></i>changemaker@gmail.com</li>
-                                        <li><i class="fi flaticon-phone-call"></i>+628</li>
+                                        <li><i class="fi flaticon-phone-call"></i>+62895411022313</li>
                                         <li><i class="fi flaticon-location"></i>Indonesia</li>
                                     </ul>
                                 </div>

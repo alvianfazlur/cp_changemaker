@@ -34,7 +34,7 @@
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
         <img src="../assets/images/logo.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold text-white">Chhangemaker Admin</span>
+        <span class="ms-1 font-weight-bold text-white">Changemaker Admin</span>
       </a>
     </div>
     <hr class="horizontal light mt-0 mb-2">
@@ -134,7 +134,7 @@
                 <h6 class="text-white text-capitalize ps-3">Partner Database</h6>
               </div>
               <br>
-                <a class="btn btn-outline-success" href="../admin/new-team">Add New Partner</a>
+                <a class="btn btn-outline-success" href="../admin/new-team">Add New Team</a>
             </div>
             <div class="card-body px-0 pb-2">
               <div class="table-responsive p-0">

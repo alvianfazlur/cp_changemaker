@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\team;
 use Illuminate\Http\Request;
 use \App\Models\events;
 use \App\Models\recruitments;
@@ -17,8 +18,9 @@ class IndexController extends Controller
     }
     public function detailEvent($id){
         $event = events::where('id', $id)->first();
+        $allEvents = events::orderBy('event_date', 'desc')->take(5)->get();
         $recruitments = recruitments::get();
-        return view('event.detailEvent', ['event' => $event, 'recruitments' => $recruitments]);
+        return view('event.detailEvent', ['event' => $event, 'recruitments' => $recruitments, 'allEvents' => $allEvents]);
     }
 
     public function viewRecruitment($id){
@@ -48,9 +50,10 @@ class IndexController extends Controller
     }
 
     public function viewInfo(){
+        $teams = team::get();
         $recruitments = recruitments::get();
         $partnerships = partnerships::get(); 
-        return view('about.about', ['recruitments' => $recruitments, 'partnerships' => $partnerships]);
+        return view('about.about', ['recruitments' => $recruitments, 'partnerships' => $partnerships, 'teams' => $teams]);
     }
 
     public function searchBlog($title){

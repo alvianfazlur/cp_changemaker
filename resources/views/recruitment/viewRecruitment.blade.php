@@ -289,7 +289,7 @@
                                     <li><a href="/event">Events</a></li>
                                     <li><a href="/blog">Latest News</a></li>
                                     <li><a href="/contact">Contact us</a></li>
-                                    <li><a href="/partenrship">Partnerships</a></li>
+                                    <li><a href="/partnership">Partnerships</a></li>
                                 </ul>
                             </div>
                         </div>

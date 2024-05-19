@@ -311,67 +311,24 @@
                         <div class="wpo-section-title">
                             <span>Expert Team</span>
                             <h2>Meet Our Volunteer Team</h2>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form,</p>
+                            <p>These passionate individuals generously give their time and talents to support our mission.
+                                Their unwavering commitment and tireless efforts drive our success and inspire us every day.</p>
                         </div>
                     </div>
                 </div>
                 <div class="wpo-team-wrap">
                     <div class="team-slider owl-carousel">
+                        @foreach ($teams as $t)   
                         <div class="wpo-team-item">
                             <div class="wpo-team-img">
-                                <img src="assets/images/team/2.jpg" alt="">
+                                <img src="{{$t->image}}" alt="" style="max-height: 350px; object-fit: fill;">
                             </div>
                             <div class="wpo-team-content">
-                                <h2><a href="team-single.html">Maria Belziana</a></h2>
-                                <span>Volunteer</span>
+                                <h2><a href="#">{{$t->name}}</a></h2>
+                                <span>{{$t->job}}</span>
                             </div>
                         </div>
-                        <div class="wpo-team-item">
-                            <div class="wpo-team-img">
-                                <img src="assets/images/team/3.jpg" alt="">
-                            </div>
-                            <div class="wpo-team-content">
-                                <h2><a href="team-single.html">Robert Chirls</a></h2>
-                                <span>Volunteer</span>
-                            </div>
-                        </div>
-                        <div class="wpo-team-item">
-                            <div class="wpo-team-img">
-                                <img src="assets/images/team/4.jpg" alt="">
-                            </div>
-                            <div class="wpo-team-content">
-                                <h2><a href="team-single.html">William Frost</a></h2>
-                                <span>Volunteer</span>
-                            </div>
-                        </div>
-                        <div class="wpo-team-item">
-                            <div class="wpo-team-img">
-                                <img src="assets/images/team/5.jpg" alt="">
-                            </div>
-                            <div class="wpo-team-content">
-                                <h2><a href="team-single.html">Zenefer Marry</a></h2>
-                                <span>Volunteer</span>
-                            </div>
-                        </div>
-                        <div class="wpo-team-item">
-                            <div class="wpo-team-img">
-                                <img src="assets/images/team/6.jpg" alt="">
-                            </div>
-                            <div class="wpo-team-content">
-                                <h2><a href="team-single.html">Devid Harmin</a></h2>
-                                <span>Volunteer</span>
-                            </div>
-                        </div>
-                        <div class="wpo-team-item">
-                            <div class="wpo-team-img">
-                                <img src="assets/images/team/1.jpg" alt="">
-                            </div>
-                            <div class="wpo-team-content">
-                                <h2><a href="team-single.html">Angeica Laura</a></h2>
-                                <span>Volunteer</span>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -386,8 +343,8 @@
                         <div class="wpo-section-title">
                             <span>Who help us</span>
                             <h2>Our Beloved Partner</h2>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form,</p>
+                            <p>We are proud to collaborate with our beloved partner,
+                                whose unwavering support and shared vision help us achieve remarkable milestones.</p>
                         </div>
                     </div>
                 </div>
@@ -451,7 +408,7 @@
                                     <li><a href="/event">Events</a></li>
                                     <li><a href="/blog">Latest News</a></li>
                                     <li><a href="/contact">Contact us</a></li>
-                                    <li><a href="/partenrship">Partnerships</a></li>
+                                    <li><a href="/partnership">Partnerships</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -464,7 +421,7 @@
                                     <p>Would you have any enquiries.Please feel free to contuct us</p>
                                     <ul>
                                         <li><i class="fi flaticon-mail"></i>changemaker@gmail.com</li>
-                                        <li><i class="fi flaticon-phone-call"></i>+628</li>
+                                        <li><i class="fi flaticon-phone-call"></i>+62895411022313</li>
                                         <li><i class="fi flaticon-location"></i>Indonesia</li>
                                     </ul>
                                 </div>

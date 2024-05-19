@@ -1,3 +1,6 @@
+<?php
+    use Carbon\Carbon;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -232,6 +235,23 @@
                                         window.location.href = searchUrl; 
                                     });
                                 </script>
+                                <div class="widget recent-post-widget">
+                                    <br>
+                                    <h3>Latest Events</h3>
+                                    <div class="posts">
+                                        @foreach ($allEvents as $a)     
+                                        <div class="post">
+                                            <div class="img-holder">
+                                                <img src="../assets/images/event-single.jpg" alt style="height: 100%; width: 100%; object-fit: cover;">
+                                            </div>
+                                            <div class="details">
+                                                <h4><a href="/event/{{$a->id}}">{{$a->event_name}}</a></h4>
+                                                <span class="date">{{ Carbon::parse($a->event_date)->format('d F Y') }}</span>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -285,7 +305,7 @@
                                     <li><a href="/event">Events</a></li>
                                     <li><a href="/blog">Latest News</a></li>
                                     <li><a href="/contact">Contact us</a></li>
-                                    <li><a href="/partenrship">Partnerships</a></li>
+                                    <li><a href="/partnership">Partnerships</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -298,7 +318,7 @@
                                     <p>Would you have any enquiries.Please feel free to contuct us</p>
                                     <ul>
                                         <li><i class="fi flaticon-mail"></i>changemaker@gmail.com</li>
-                                        <li><i class="fi flaticon-phone-call"></i>+628</li>
+                                        <li><i class="fi flaticon-phone-call"></i>+62895411022313</li>
                                         <li><i class="fi flaticon-location"></i>Indonesia</li>
                                     </ul>
                                 </div>

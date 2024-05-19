@@ -103,24 +103,6 @@
 
                             </div><!-- end of nav-collapse -->
                         </div>
-                        <div class="col-lg-3 col-md-2 col-2">
-                            <div class="header-right">
-                                <div class="header-search-form-wrapper">
-                                    <div class="cart-search-contact">
-                                        <button class="search-toggle-btn"><i class="fi flaticon-search"></i></button>
-                                        <div class="header-search-form">
-                                            <form>
-                                                <div>
-                                                    <input type="text" class="form-control"
-                                                        placeholder="Search here...">
-                                                    <button type="submit"><i class="fi flaticon-search"></i></button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div><!-- end of container -->
             </nav>
@@ -263,7 +245,7 @@
                                     <div class="s-s2"></div>
                                 </div>
                                 <div class="wpo-ab-shape-2"><img src="assets/images/ab-shape-2.png" alt=""></div>
-                                <div class="wpo-total-raised">
+                                {{-- <div class="wpo-total-raised">
                                     <div class="wpo-total-raised-wrap">
                                         <div class="wpo-total-raised-icon">
                                             <i class="fi flaticon-wallet-filled-money-tool"></i>
@@ -283,7 +265,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -315,10 +297,10 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <div class="wpo-section-title">
-                            <span>We Love To Help Poor</span>
+                            <span>We Love To Help</span>
                             <h2>Our Featured Campaigns</h2>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form,</p>
+                            <p>Discover our standout initiatives that are making a significant impact. 
+                            Each campaign highlights our commitment to creating positive change and driving meaningful results</p>
                         </div>
                     </div>
                 </div>
@@ -363,8 +345,8 @@
                         <div class="wpo-section-title">
                             <span>Expert Team</span>
                             <h2>Meet Our Volunteer Team</h2>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form,</p>
+                            <p>These passionate individuals generously give their time and talents to support our mission.
+                                Their unwavering commitment and tireless efforts drive our success and inspire us every day</p>
                         </div>
                     </div>
                 </div>
@@ -373,10 +355,10 @@
                         @foreach ($teams as $t)   
                         <div class="wpo-team-item">
                             <div class="wpo-team-img">
-                                <img src="{{$t->image}}" alt="">
+                                <img src="{{$t->image}}" alt="" style="max-height: 350px; object-fit: fill;">
                             </div>
                             <div class="wpo-team-content">
-                                <h2><a href="#">{{$t->name}}</a></h2>
+                                <h2><a href="{{$t->socmed}}">{{$t->name}}</a></h2>
                                 <span>{{$t->job}}</span>
                             </div>
                         </div>
@@ -394,8 +376,8 @@
                         <div class="wpo-section-title">
                             <span>Testimonial</span>
                             <h2>What People Say About Us</h2>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form,</p>
+                            <p>hear from the amazing people who have been impacted by our work. 
+                            Their stories and feedback inspire us every day and drive us to continue making a difference</p>
                         </div>
                     </div>
                 </div>
@@ -443,8 +425,7 @@
                         <div class="wpo-section-title">
                             <span>Events</span>
                             <h2>Changemaker Events</h2>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form,</p>
+                            <p>Join us at our upcoming events where we bring people together to learn, engage, and make a difference.</p>
                         </div>
                     </div>
                 </div>
@@ -484,8 +465,8 @@
                         <div class="wpo-section-title">
                             <span>Our Blog</span>
                             <h2>Latest News & Update</h2>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form,</p>
+                            <p>Stay updated with the latest happenings and developments within our organization.
+                                From breaking news to insightful stories.</p>
                         </div>
                     </div>
                 </div>
@@ -528,8 +509,8 @@
                         <div class="wpo-section-title">
                             <span>Who help us</span>
                             <h2>Our Beloved Partner</h2>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form,</p>
+                            <p>We are proud to collaborate with our beloved partner,
+                             whose unwavering support and shared vision help us achieve remarkable milestones</p>
                         </div>
                     </div>
                 </div>
@@ -592,7 +573,7 @@
                                     <li><a href="/event">Events</a></li>
                                     <li><a href="/blog">Latest News</a></li>
                                     <li><a href="/contact">Contact us</a></li>
-                                    <li><a href="/partenrship">Partnerships</a></li>
+                                    <li><a href="/partnership">Partnerships</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -605,7 +586,7 @@
                                     <p>Would you have any enquiries.Please feel free to contuct us</p>
                                     <ul>
                                         <li><i class="fi flaticon-mail"></i>changemaker@gmail.com</li>
-                                        <li><i class="fi flaticon-phone-call"></i>+628</li>
+                                        <li><i class="fi flaticon-phone-call"></i>+62895411022313</li>
                                         <li><i class="fi flaticon-location"></i>Indonesia</li>
                                     </ul>
                                 </div>
