@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\team;
+use App\Models\testimonial;
 use Illuminate\Http\Request;
 use \App\Models\events;
 use \App\Models\recruitments;
@@ -53,6 +54,7 @@ class IndexController extends Controller
         $teams = team::get();
         $recruitments = recruitments::get();
         $partnerships = partnerships::get(); 
+        // $testimonials = testimonial::get();
         return view('about.about', ['recruitments' => $recruitments, 'partnerships' => $partnerships, 'teams' => $teams]);
     }
 

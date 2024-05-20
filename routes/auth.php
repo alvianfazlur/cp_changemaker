@@ -119,4 +119,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/delete-testimonial/{id}', [AdminController::class,'delete_testimonial']);
     Route::get('/admin/update-testimonial/{id}', [AdminController::class,'edit_testimonial']);
     Route::post('/admin/updateDataTestimonial', [AdminController::class,'update_testimonial']);
+    
+    //Profile
+    Route::get('/admin/profile', [AdminController::class,'edit_profile']);
+    Route::post('/admin/updateDataProfile', [AdminController::class,'update_profile']);
 });

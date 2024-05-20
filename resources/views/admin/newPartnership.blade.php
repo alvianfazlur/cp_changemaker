@@ -33,7 +33,7 @@
                         <h2>New Partner</h2>
                     </div>
                     <div id="Donations" class="tab-pane">
-                        <form action="/admin/store-partnership" method="post">
+                        <form action="/admin/store-partnership" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             {{-- <input type="hidden" name="id" value=""> <br/> --}}
                             <div class="wpo-donations-amount">
@@ -51,8 +51,8 @@
                                 <input type="text" class="form-control" name="link"value=" " id="text" >
                                 <br>
 
-                                <h2>Image Url</h2>
-                                <input type="text" class="form-control" name="image"value="" id="text" required>
+                                <h2>Image</h2>
+                                <input type="file" class="form-control" name="image"value="file" id="image" required>
                                 <br>
                             </div>
                             <div class="submit-area">

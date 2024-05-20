@@ -188,7 +188,7 @@
                         <div class="wpo-blog-content">
                             <div class="post format-standard-image">
                                 <div class="entry-media">
-                                    <img src="{{$b->image}}" alt>
+                                    <img src="file_upload/{{$b->image}}" alt style="max-height: 450px; object-fit: fill;">
                                 </div>
                                 <div class="entry-meta">
                                     <ul>

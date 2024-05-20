@@ -25,12 +25,14 @@
     <link href="/assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="/assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/fab.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-</head>
-
 <body>
-
+    
+    <a href="">
+        <button class="action-button fab fa-whatsapp"></button>
+    </a>
     <!-- start page-wrapper -->
     <div class="page-wrapper">
         <!-- start preloader -->
@@ -138,15 +140,6 @@
                                         <img src="assets/images/slider/right-img2.png" alt="">
                                     </div>
                                     <div class="wpo-happy-client">
-                                        <div class="wpo-happy-client-img">
-                                            <ul class="wpo-happy-client-slide owl-carousel">
-                                                <li><img src="assets/images/slider/client1.png" alt=""></li>
-                                                <li><img src="assets/images/slider/client2.png" alt=""></li>
-                                                <li><img src="assets/images/slider/client3.png" alt=""></li>
-                                                <li><img src="assets/images/slider/client4.png" alt=""></li>
-                                                <li><img src="assets/images/slider/client3.png" alt=""></li>
-                                            </ul>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="right-item">
@@ -272,18 +265,7 @@
                     <div class="col-lg-6 col-md-12 col-12">
                         <div class="wpo-about-text">
                             <span>About Us</span>
-                            <h2>Calling out passionate Changers!!</h2>
-                            <p>Pengabdian Skala International dan berkontribusi dalam pembangunan yang berkelanjutan melalui pengajaran di Sanggar Bimbingan.
-                                Dengan kerjasama kita, kita dapat mewujudkan perubahan positif bagi anak-anak Indonesia yang berbakat.
-                                Mari berbagi pengetahuan dan menginspirasi generasi mendatang!
-                                Dengan fasilitas yang tidak perlu diragukan lagi!! Ditambah dengan jalur FULLY FUNDED🔥🔥 </p>
-                            <ul>
-                                <li>100% Fully Funded</li>
-                                <li>Tiket pesawat PP untuk delegasi terbaik</li>
-                                <li>Konsumsi & Transportasi selama kegiatan.</li>
-                                <li>Sertifikat Internasional</li>
-                                <li>Asuransi kesehatan.</li>
-                            </ul>
+                            {!! $profile->description !!}
                             <a class="theme-btn-s2" href="/about">More About</a>
                         </div>
                     </div>
@@ -355,7 +337,7 @@
                         @foreach ($teams as $t)   
                         <div class="wpo-team-item">
                             <div class="wpo-team-img">
-                                <img src="{{$t->image}}" alt="" style="max-height: 350px; object-fit: fill;">
+                                <img src="file_upload/{{$t->image}}" alt="" style="height: 350px; object-fit: cover;">
                             </div>
                             <div class="wpo-team-content">
                                 <h2><a href="{{$t->socmed}}">{{$t->name}}</a></h2>
@@ -476,7 +458,7 @@
                         <div class="col col-lg-4 col-md-6 col-12">
                             <div class="wpo-blog-item">
                                 <div class="wpo-blog-img">
-                                    <img src="{{$b->image}}" alt="">
+                                    <img src="file_upload/{{$b->image}}" alt style="height: 300px; object-fit: fill;">
                                 </div>
                                 <div class="wpo-blog-content">
                                     <div class="wpo-blog-content-top">
@@ -519,7 +501,7 @@
                         <div class="partner-grids partners-slider owl-carousel">
                             @foreach ($partnerships as $p)
                                 <div class="grid">
-                                    <img src="{{$p->image}}" alt style="width: 200px; height: auto;">
+                                    <img src="file_upload/{{$p->image}}" alt style="width: 200px; height: auto; box-fit:">
                                 </div>
                             @endforeach
                         </div>

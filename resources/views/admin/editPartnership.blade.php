@@ -33,7 +33,7 @@
                         <h2>Edit Your Recruitments</h2>
                     </div>
                     <div id="Donations" class="tab-pane">
-                        <form action="/admin/updateDataPartnership" method="post">
+                        <form action="/admin/updateDataPartnership" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <input type="hidden" name="id" value="{{ $partnership->id }}"> <br/>
                             <div class="wpo-donations-amount">
@@ -47,11 +47,11 @@
                                 <textarea class="form-control" name="description" id="description" required>{{ $partnership->description}}</textarea>
                                 <br>
 
-                                <h2>Link</h2>
+                                <h2>Link(Opsional)</h2>
                                 <input type="text" class="form-control" name="link"value="{{ $partnership->link}}" id="text">
 
                                 <h2>Image Url</h2>
-                                <textarea class="form-control" name="image" id="description" required>{{ $partnership->image}}</textarea>
+                                <input type="file" class="form-control" name="image"value="file" id="image">
                                 <br>
                            
                             </div>

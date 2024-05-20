@@ -33,7 +33,7 @@
                         <h2>Add Recruitments</h2>
                     </div>
                     <div id="Donations" class="tab-pane">
-                        <form action="/admin/store-recruitment" method="post">
+                        <form action="/admin/store-recruitment" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             {{-- <input type="hidden" name="id" value=""> <br/> --}}
                             <div class="wpo-donations-amount">
@@ -68,6 +68,19 @@
                            
                                 <h2>Benefits</h2>
                                 <textarea class="form-control" name="benefits" id="benefits"></textarea>
+
+                                <h2>Image</h2>
+                                <input type="file" class="form-control" name="image"value="file" id="image" required>
+                                <br>
+
+                                <h2>Guide Book Link</h2>
+                                <input type="text" class="form-control" name="guidebook"value="" id="text" required>
+
+                                <h2>Self Funded Link</h2>
+                                <input type="text" class="form-control" name="self_funded_link"value="" id="text" required>
+
+                                <h2>Fully & Special Funded Link</h2>
+                                <input type="text" class="form-control" name="fully_funded_link"value="" id="text" required>
                                 
                             </div>
                             <div class="submit-area">

@@ -43,6 +43,7 @@
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
+
   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
@@ -197,7 +198,7 @@
                   </a>
                 </div>
                 <div class="col-md-6 col-6">
-                  <a href="/register">
+                  <a href="/admin/profile">
                     <div class="card">
                       <div class="card-header mx-4 p-3 text-center">
                         <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
@@ -205,8 +206,8 @@
                         </div>
                       </div>
                       <div class="card-body pt-0 p-3 text-center">
-                        <h6 class="text-center mb-0">Admin</h6>
-                        <span class="text-xs">Add Admin</span>
+                        <h6 class="text-center mb-0">Profile</h6>
+                        <span class="text-xs">Detail Profile</span>
                       </div>
                     </div>
                   </a>

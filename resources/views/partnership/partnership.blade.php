@@ -144,13 +144,10 @@
                         <div class="wpo-breadcumb-wrap">
                             <h2>Partnerships</h2>
                             <ul>
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li><span>Partnerships</span></li>
                             </ul>
                             <br>
-                            <div class="close-form">
-                                <a class="theme-btn-s2" href="#">Join Our Partnership -></a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -163,6 +160,27 @@
                 <div class="sortable-gallery">
                     <div class="row">
                         <div class="wpo-campaign-area section-padding">
+                            <!-- wpo-cta-area end -->
+                            <div class="wpo-cta-area">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="wpo-cta-section">
+                                                <div class="wpo-cta-content">
+                                                    <h2>Lets Change The World Together</h2>
+                                                </div>
+                                                <br>
+                                                <a class="btn btn-success" href="#">Join Our Partnership</a>
+                                                <div class="volunteer-img">
+                                                    <img src="assets/images/volunteer.png" alt="">
+                                                </div>
+                                                <div class="shape"><img src="assets/images/cta-shape.png" alt=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- wpo-cta-area end -->
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-6">
@@ -175,7 +193,7 @@
                                             <div class="wpo-campaign-single">
                                                 <div class="wpo-campaign-item">
                                                     <div class="wpo-campaign-img">
-                                                        <img src="{{$p->image}}" alt="">                                            
+                                                        <img src="file_upload/{{$p->image}}" alt style="height: 200px; object-fit: ffill;">                                            
                                                         <span class="thumb">{{$p->type}}</span>
                                                     </div>
                                                     <div class="wpo-campaign-content">

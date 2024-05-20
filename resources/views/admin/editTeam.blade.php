@@ -33,7 +33,7 @@
                         <h2>Edit Your Recruitments</h2>
                     </div>
                     <div id="Donations" class="tab-pane">
-                        <form action="/admin/updateDataTeam" method="post">
+                        <form action="/admin/updateDataTeam" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <input type="hidden" name="id" value="{{ $team->id }}"> <br/>
                             <div class="wpo-donations-amount">
@@ -44,7 +44,7 @@
                                 <input type="text" class="form-control" name="job"value="{{ $team->job}}" id="text" required>
                                 
                                 <h2>Image Url</h2>
-                                <textarea class="form-control" name="image" id="description" required>{{ $team->image}}</textarea>
+                                <input type="file" class="form-control" name="image"value="file" id="image">
                                 <br>
 
                                 <h2>Social Media</h2>

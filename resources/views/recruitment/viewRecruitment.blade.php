@@ -165,9 +165,6 @@
                                 <li><span>Open Volunteer </span></li>
                             </ul>
                             <br><br>
-                            <div class="close-form">
-                                <a class="theme-btn-s2" href="{{$recruitment->link}}">Register Now!</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -181,7 +178,7 @@
                     <div class="col-lg-10 offset-lg-1">
                         <div class="wpo-project-single-wrap">
                             <div class="wpo-project-single-content">
-                                <img src="../assets/images/project-single/1.jpg" alt="">
+                                <img src="../file_upload/{{$recruitment->image}}" alt="">
                                 <div class="wpo-project-single-content-des">
                                     <div class="wpo-project-single-content-des-wrap">
                                         <div class="wpo-project-single-content-des-left">
@@ -202,39 +199,47 @@
                                             <br><br>
                                             <h3>Terbuka Untuk</h3>
                                             <p>{{$recruitment->requirements}}</p>
+                                            <div class="wpo-solutions-section">
+                                                <h2>Best Benefits of Project</h2>
+                                                <textarea name="benefits" readonly id="benefitsTextarea" style="border: none; width: 100%; resize: none; overflow: hidden;">{{$recruitment->benefits}}</textarea>
+                                                <script>
+                                                    document.addEventListener("DOMContentLoaded", function() {
+                                                        var textarea = document.getElementById('benefitsTextarea');
+                                                        textarea.style.height = 'auto'; // Reset the height
+                                                        textarea.style.height = textarea.scrollHeight + 'px'; // Set the height to fit the content
+                
+                                                        textarea.addEventListener('focus', function() {
+                                                            textarea.style.border = 'none';
+                                                            textarea.style.outline = 'none';
+                                                        });
+                                                    });
+                                                </script>
+                                            </div>
                                         </div>
                                         <div class="wpo-project-single-content-des-right">
                                             <ul>
                                                 <li>Location :<span>{{$recruitment->location}}</span></li>
                                                 <li>Start :<span>{{ Carbon::parse($recruitment->start_date)->format('d F Y') }}</span></li>
                                                 <li>End :<span>{{ Carbon::parse($recruitment->end_date)->format('d F Y') }}</span></li>
+                                                <li>
+                                                    <div class="close-form">
+                                                        <a class="theme-btn-s2" href="{{$recruitment->guidebook}}">Guide Book</a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="close-form">
+                                                        <a class="theme-btn-s2" href="{{$recruitment->fully_funded_link}}">Fully & Special Funded</a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="close-form">
+                                                        <a class="theme-btn-s2" href="{{$recruitment->self_funded_link}}">Self Funded Registration</a>
+                                                    </div>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="wpo-project-single-sub-img">
-                                        <ul>
-                                            <li><img src="../assets/images/project-single/2.jpg" alt=""></li>
-                                            <li><img src="../assets/images/project-single/3.jpg" alt=""></li>
-                                        </ul>
-                                        
-                                    </div>
                                 </div>
-                            </div>
-                            <div class="wpo-solutions-section">
-                                <h2>Best Benefits of Project</h2>
-                                <textarea name="benefits" readonly id="benefitsTextarea" style="border: none; width: 100%; resize: none; overflow: hidden;">{{$recruitment->benefits}}</textarea>
-                                <script>
-                                    document.addEventListener("DOMContentLoaded", function() {
-                                        var textarea = document.getElementById('benefitsTextarea');
-                                        textarea.style.height = 'auto'; // Reset the height
-                                        textarea.style.height = textarea.scrollHeight + 'px'; // Set the height to fit the content
-
-                                        textarea.addEventListener('focus', function() {
-                                            textarea.style.border = 'none';
-                                            textarea.style.outline = 'none';
-                                        });
-                                    });
-                                </script>
                             </div>
                         </div>
                     </div>

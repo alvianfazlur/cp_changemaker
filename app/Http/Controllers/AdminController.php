@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\blogs;
 use App\Models\events;
 use App\Models\partnerships;
+use App\Models\profile;
 use App\Models\team;
 use App\Models\testimonial;
 use Illuminate\Http\Request;
 use \App\Models\recruitments;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 class AdminController extends Controller
 {
@@ -55,11 +57,29 @@ class AdminController extends Controller
         $testimonial = testimonial::where('id', $id)->first();
         return view('admin.editTestimonial', ['testimonial' => $testimonial]);
     }
+    public function edit_profile(){
+        $profile = profile::first();
+        return view('admin.profile', ['profile' => $profile]);
+    }
     public function edit_blog($id){
         $blog = blogs::where('id', $id)->first();
         return view('admin.editBlog', ['blog' => $blog]);
     }
     public function update_recruitments(Request $request){
+
+        $revisi = recruitments::find($request->id);
+        if ($request->file('image')) {
+            $this->validate($request, [
+                'image' => 'required|file|mimes:jpeg,png,jpg',
+            ]);
+            File::delete('file_upload/' . $revisi->image);
+            $file = $request->file('image');
+            $nama_file = time() . "_" . $file->getClientOriginalName();
+            $tujuan_upload = 'file_upload';
+            $file->move($tujuan_upload, $nama_file);
+
+            $revisi->image = $nama_file;
+        }
 
         recruitments::where('id',$request->id)->update([
             'program_name' => $request->program_name,
@@ -67,9 +87,13 @@ class AdminController extends Controller
             'location' => $request->location,
             'start_date' => $request->start_date,
             'end_date' => $request->end_date,
+            'requirements' => $request->requirements,
             'decription' => $request->description,
-            'link' => $request->link,
-            'benefits' => $request->benefits
+            'benefits' => $request->benefits,
+            'image' => $revisi->image,
+            'guidebook' => $request->guidebook,
+            'self_funded_link' => $request->self_funded_link,
+            'fully_funded_link' => $request->fully_funded_link,
             
         ]);
 	// alihkan halaman
@@ -77,12 +101,25 @@ class AdminController extends Controller
     }
     public function update_blog(Request $request){
 
+        $revisi = blogs::find($request->id);
+        if ($request->file('image')) {
+            $this->validate($request, [
+                'image' => 'required|file|mimes:jpeg,png,jpg',
+            ]);
+            File::delete('file_upload/' . $revisi->image);
+            $file = $request->file('image');
+            $nama_file = time() . "_" . $file->getClientOriginalName();
+            $tujuan_upload = 'file_upload';
+            $file->move($tujuan_upload, $nama_file);
+
+            $revisi->image = $nama_file;
+        }
         blogs::where('id',$request->id)->update([
             'title' => $request->title,
             'author' => $request->author,
             'publication_date' => $request->publication_date,
             'content' => $request->content,
-            'image' => $request->image,
+            'image' => $revisi->image,
             
         ]);
 	// alihkan halaman
@@ -102,22 +139,50 @@ class AdminController extends Controller
     }
     public function update_partnership(Request $request){
 
+        $revisi = partnerships::find($request->id);
+        if ($request->file('image')) {
+            $this->validate($request, [
+                'image' => 'required|file|mimes:jpeg,png,jpg',
+            ]);
+            File::delete('file_upload/' . $revisi->image);
+            $file = $request->file('image');
+            $nama_file = time() . "_" . $file->getClientOriginalName();
+            $tujuan_upload = 'file_upload';
+            $file->move($tujuan_upload, $nama_file);
+
+            $revisi->image = $nama_file;
+        }
+
         partnerships::where('id',$request->id)->update([
             'name' => $request->name,
             'type' => $request->type,
             'link' => $request->link,
             'description' => $request->description, 
-            'image' => $request->image, 
+            'image' => $revisi->image, 
         ]);
 	// alihkan halaman
 	return redirect('/admin/partnerships');
     }
     public function update_team(Request $request){
 
+        $revisi = team::find($request->id);
+        if ($request->file('image')) {
+            $this->validate($request, [
+                'image' => 'required|file|mimes:jpeg,png,jpg',
+            ]);
+            File::delete('file_upload/' . $revisi->image);
+            $file = $request->file('image');
+            $nama_file = time() . "_" . $file->getClientOriginalName();
+            $tujuan_upload = 'file_upload';
+            $file->move($tujuan_upload, $nama_file);
+
+            $revisi->image = $nama_file;
+        }
+
         team::where('id',$request->id)->update([
             'name' => $request->name,
             'job' => $request->job,
-            'image' => $request->image,
+            'image' => $revisi->image,
             'socmed' => $request->socmed, 
         ]);
 	// alihkan halaman
@@ -132,6 +197,29 @@ class AdminController extends Controller
         ]);
 	// alihkan halaman
 	return redirect('/admin/testimonial');
+    }
+    public function update_profile(Request $request){
+
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'subtitle' => 'required|string|max:255',
+            'vision' => 'required|string',
+            'mission' => 'required|string',
+            'description' => 'required|string',
+            'whatsapp' => 'numeric', 'regex:/^628[0-9]{9,}$/',
+            'email' => 'required|email'
+        ]);
+
+        profile::where('id',$request->id)->update([
+            'title' => $request->title,
+            'subtitle' => $request->subtitle,
+            'vision' => $request->vision,
+            'mission' => $request->mission,
+            'description' => $request->description,
+
+        ]);
+	// alihkan halaman
+	return redirect('/home')->with('success', 'Profile updated successfully!');
     }
 
     public function delete_event($id){
@@ -194,6 +282,15 @@ class AdminController extends Controller
     }
     
     public function storeRecruitment(Request $request){
+        $this->validate($request, [
+            'image' => 'required|image|mimes:jpg,jpeg,png',
+        ]);
+
+        $file = $request->file('image');
+        $nama_file = time()."_".$file->getClientOriginalName();
+        $tujuan_upload = 'file_upload';
+        $file->move($tujuan_upload, $nama_file);
+        
         // insert data ke table
         recruitments::create([
             'program_name' => $request->program_name,
@@ -203,8 +300,11 @@ class AdminController extends Controller
             'end_date' => $request->end_date,
             'decription' => $request->description,
             'requirements' => $request->requirements,
-            'link' => $request->link,
+            'guidebook' => $request->guidebook,
+            'self_funded_link' => $request->self_funded_link,
+            'fully_funded_link' => $request->fully_funded_link,
             'benefits' => $request->benefits,
+            'image' => $nama_file,
         ]);       
 	
 	return redirect('/admin/recruitments');
@@ -222,11 +322,20 @@ class AdminController extends Controller
 	return redirect('/admin/events');
     }
     public function storeTeam(Request $request){
+        $this->validate($request, [
+            'image' => 'required|image|mimes:jpg,jpeg,png',
+        ]);
+
+        $file = $request->file('image');
+        $nama_file = time()."_".$file->getClientOriginalName();
+        $tujuan_upload = 'file_upload';
+        $file->move($tujuan_upload, $nama_file);
+
         // insert data ke table
         team::create([
             'name' => $request->name,
             'job' => $request->job,
-            'image' => $request->image,
+            'image' => $nama_file,
             'socmed' => $request->socmed,
         ]);       
 	
@@ -244,28 +353,46 @@ class AdminController extends Controller
     }
 
     public function storePartnership(Request $request){
+        $this->validate($request, [
+            'image' => 'required|image|mimes:jpg,jpeg,png',
+        ]);
+
+        $file = $request->file('image');
+        $nama_file = time()."_".$file->getClientOriginalName();
+        $tujuan_upload = 'file_upload';
+        $file->move($tujuan_upload, $nama_file);
+        
         // insert data ke table
         partnerships::create([
             'name' => $request->name,
             'type' => $request->type,
             'description' => $request->description,
             'link' => $request->link,
-            'image' => $request->image,
+            'image' => $nama_file,
         ]);       
 	
 	return redirect('/admin/partnerships');
     }
 
     public function storeBlog(Request $request){
+        $this->validate($request, [
+            'image' => 'required|image|mimes:jpg,jpeg,png',
+        ]);
+
+        $file = $request->file('image');
+        $nama_file = time()."_".$file->getClientOriginalName();
+        $tujuan_upload = 'file_upload';
+        $file->move($tujuan_upload, $nama_file);
+
         // insert data ke table
         blogs::create([
             'title' => $request->title,
             'author' => $request->author,
             'publication_date' => $request->publication_date,
             'content' => $request->content,
-            'image' => $request->image,
+            'image' => $nama_file,
         ]);       
 	
-	return redirect('/admin/blogs');
+        return redirect('/admin/blogs')->with('success', 'Blog post created successfully!');
     }
 }

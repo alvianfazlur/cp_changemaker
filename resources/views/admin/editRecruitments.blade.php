@@ -33,7 +33,7 @@
                         <h2>Edit Your Recruitments</h2>
                     </div>
                     <div id="Donations" class="tab-pane">
-                        <form action="/admin/updateDataRecruitments" method="post">
+                        <form action="/admin/updateDataRecruitments" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <input type="hidden" name="id" value="{{ $recruitments->id }}"> <br/>
                             <div class="wpo-donations-amount">
@@ -57,9 +57,6 @@
                                 <h2>End Date</h2>
                                 <input type="date" class="form-control" name="end_date"value="{{ $recruitments->end_date}}" id="text" required>
 
-                                <h2>Link</h2>
-                                <input type="text" class="form-control" name="link"value="{{ $recruitments->link}}" id="text" required>
-
                                 <h2>Description</h2>
                                 <textarea class="form-control" name="description" id="description" required>{{ $recruitments->decription}}</textarea>
                                 <br>
@@ -69,6 +66,18 @@
                            
                                 <h2>Benefits</h2>
                                 <textarea class="form-control" name="benefits" id="benefits">{{ $recruitments->benefits}}</textarea>
+<br>
+                                <h2>Guide Book Link</h2>
+                                <input type="text" class="form-control" name="guidebook"value="{{ $recruitments->guidebook}}" id="text" required>
+
+                                <h2>Self Funded Link</h2>
+                                <input type="text" class="form-control" name="self_funded_link"value="{{ $recruitments->self_funded_link}}" id="text" required>
+
+                                <h2>Fully & Special Funded Link</h2>
+                                <input type="text" class="form-control" name="fully_funded_link"value="{{ $recruitments->fully_funded_link}}" id="text" required>
+                                <h2>Image</h2>
+                                <input type="file" class="form-control" name="image"value="file" id="image">
+                                <br>
                                 
                             </div>
                             <div class="submit-area">

@@ -273,26 +273,26 @@
                         <div class="wpo-fun-fact-grids clearfix">
                             <div class="grid">
                                 <div class="info">
-                                    <h3><span class="odometer" data-count="500">00</span>+</h3>
-                                    <p>Completed Cases</p>
+                                    <h3><span class="odometer" data-count="{{count($recruitments)}}">00</span>+</h3>
+                                    <p>Campaign</p>
                                 </div>
                             </div>
                             <div class="grid">
                                 <div class="info">
-                                    <h3><span class="odometer" data-count="25">00</span>+</h3>
-                                    <p>Expert Consultants</p>
+                                    <h3><span class="odometer" data-count="100">00</span>+</h3>
+                                    <p>Delegates</p>
                                 </div>
                             </div>
                             <div class="grid">
                                 <div class="info">
-                                    <h3><span class="odometer" data-count="95">00</span>%</h3>
-                                    <p>Client Satisfaction</p>
+                                    <h3><span class="odometer" data-count="10">00</span>+</h3>
+                                    <p>Destination</p>
                                 </div>
                             </div>
                             <div class="grid">
                                 <div class="info">
-                                    <h3><span class="odometer" data-count="25">00</span>+</h3>
-                                    <p>Award Winning</p>
+                                    <h3><span class="odometer" data-count="{{count($partnerships)}}">00</span>+</h3>
+                                    <p>Partner</p>
                                 </div>
                             </div>
                             <div class="shape"><img src="assets/images/cta-shape.png" alt=""></div>
@@ -321,7 +321,7 @@
                         @foreach ($teams as $t)   
                         <div class="wpo-team-item">
                             <div class="wpo-team-img">
-                                <img src="{{$t->image}}" alt="" style="max-height: 350px; object-fit: fill;">
+                                <img src="file_upload/{{$t->image}}" alt="" style="height: 350px; object-fit: cover;">
                             </div>
                             <div class="wpo-team-content">
                                 <h2><a href="#">{{$t->name}}</a></h2>
@@ -353,7 +353,7 @@
                         <div class="partner-grids partners-slider owl-carousel">
                             @foreach ($partnerships as $p)
                                 <div class="grid">
-                                    <img src="{{$p->image}}" alt style="width: 200px; height: auto;">
+                                    <img src="file_upload/{{$p->image}}" alt style="width: 200px; height: auto; box-fit:">
                                 </div>
                             @endforeach
                         </div>

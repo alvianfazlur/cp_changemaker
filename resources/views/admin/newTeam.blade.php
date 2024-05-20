@@ -33,7 +33,7 @@
                         <h2>New Teams</h2>
                     </div>
                     <div id="Donations" class="tab-pane">
-                        <form action="/admin/store-team" method="post">
+                        <form action="/admin/store-team" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             {{-- <input type="hidden" name="id" value=""> <br/> --}}
                             <div class="wpo-donations-amount">
@@ -44,7 +44,7 @@
                                 <input type="text" class="form-control" name="job"value=" " id="text" required>
 
                                 <h2>Image Url</h2>
-                                <textarea class="form-control" name="image" id="description" required></textarea>
+                                <input type="file" class="form-control" name="image"value="file" id="image" required>
                                 <br>
 
                                 <h2>Social Media</h2>

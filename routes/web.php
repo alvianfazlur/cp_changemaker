@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\LoginController;
+use App\Models\profile;
 use App\Models\testimonial;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
@@ -28,10 +29,15 @@ Route::get('/', function () {
     $recruitments = recruitments::get();
     $partnerships = partnerships::get();
     $teams = team::get();
+    $profile = profile::first();
     $testimonial = testimonial::get();
     $events = events::orderBy('event_date', 'desc')->take(2)->get();
     $blogs = blogs::orderBy('publication_date', 'desc')->take(3)->get();
-    return view('home.home', ['recruitments' => $recruitments, 'events' => $events, 'blogs' => $blogs, 'partnerships' => $partnerships, 'teams' => $teams, 'testimonial' => $testimonial]);
+    return view('home.home', ['recruitments' => $recruitments, 'events' => $events,
+        'blogs' => $blogs, 'partnerships' => $partnerships,
+        'teams' => $teams, 'testimonial' => $testimonial,
+        'profile' => $profile
+    ]);
 });
 
 

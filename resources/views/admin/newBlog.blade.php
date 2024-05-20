@@ -33,7 +33,7 @@
                         <h2>New Blog</h2>
                     </div>
                     <div id="Donations" class="tab-pane">
-                        <form action="/admin/store-blog" method="post">
+                        <form action="/admin/store-blog" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             {{-- <input type="hidden" name="id" value=""> <br/> --}}
                             <div class="wpo-donations-amount">
@@ -41,7 +41,7 @@
                                 <input type="text" class="form-control" name="title"value="" id="text" required>                             
                            
                                 <h2>Author</h2>
-                                <input type="text" class="form-control" name="author"value="" id="text" required>
+                                <input type="text" class="form-control" name="author"value="" id="author" required>
                            
                                 <h2>Publication Date</h2>
                                 <input type="date" class="form-control" name="publication_date"value="{{ date('Y-m-d') }}" id="text" required>
@@ -50,8 +50,8 @@
                                 <textarea class="form-control" name="content" id="description" required></textarea>
                                 <br>
 
-                                <h2>Image Url</h2>
-                                <input type="text" class="form-control" name="image"value="" id="text" required>
+                                <h2>Image</h2>
+                                <input type="file" class="form-control" name="image"value="file" id="image" required>
                                 <br>
                             </div>
                             <div class="submit-area">

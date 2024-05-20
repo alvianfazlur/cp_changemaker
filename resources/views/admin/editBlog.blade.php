@@ -33,7 +33,7 @@
                         <h2>Edit Your Article</h2>
                     </div>
                     <div id="Donations" class="tab-pane">
-                        <form action="/admin/updateDataBlog" method="post">
+                        <form action="/admin/updateDataBlog" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <input type="hidden" name="id" value="{{ $blog->id }}"> <br/>
                             <div class="wpo-donations-amount">
@@ -50,7 +50,7 @@
                                 <textarea class="form-control" name="content" id="description" required>{{ $blog->content}}</textarea>
                                 <br>
                                 <h2>Image Url</h2>
-                                <textarea class="form-control" name="image" id="requirements" required>{{ $blog->image}}</textarea>
+                                <input type="file" class="form-control" name="image"value="file" id="image" required>
                                 <br>
 
 
