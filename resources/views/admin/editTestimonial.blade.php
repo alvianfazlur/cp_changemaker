@@ -44,7 +44,7 @@
                                 <input type="text" class="form-control" name="job"value="{{ $testimonial->job}}" id="text" required>
                                 
                                 <h2>Testimoni</h2>
-                                <textarea class="form-control" name="testimoni" id="description" required>{{ $testimonial->testimoni}}</textarea>
+                                <textarea class="form-control" name="testimoni" id="description" required maxlength="300">{{ $testimonial->testimoni}}</textarea>
                                 <br>
 
                             </div>

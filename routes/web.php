@@ -43,15 +43,16 @@ Route::get('/', function () {
 
 
 Route::get('/event', [IndexController::class,'viewEvent']);
-Route::get('/event/{id}', [IndexController::class,'detailEvent']);
+Route::get('/event/{title}', [IndexController::class,'detailEvent']);
 Route::get('/blog', [IndexController::class,'viewBlog']);
-Route::get('/blog/{id}', [IndexController::class,'detailBlog']);
+Route::get('/blog/{title}', [IndexController::class,'detailBlog']);
 Route::get('/search-blog/{title}', [IndexController::class,'searchBlog']);
 Route::get('/search-event/{title}', [IndexController::class,'searchEvent']);
 Route::get('/contact', [IndexController::class,'viewContact']);
 Route::get('/about', [IndexController::class,'viewInfo']);
-Route::get('/recruitment/{id}', [IndexController::class,'viewRecruitment']);
+Route::get('/recruitment/{title}', [IndexController::class,'viewRecruitment']);
 Route::get('/partnership', [IndexController::class,'viewPartnership']);
+Route::get('/gallery', [IndexController::class,'viewGallery']);
 
 //Admin
 // Route::get('/admin/recruitments', [AdminController::class,'open_recruitment']);

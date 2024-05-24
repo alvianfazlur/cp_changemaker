@@ -96,14 +96,17 @@
                                     <button class="menu-close"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
                                         <li>
-                                            <a href="#">Home</a>
+                                            <a href="/">Home</a>
                                         </li>
                                         <li class="menu-item-has-children">
                                             <a href="#">Recruitment</a>
                                             <ul class="sub-menu">
                                                 @foreach ($recruitments as $r)
-                                                <li><a href="/recruitment/{{$r->id}}">{{$r->program_name}}</a></li>
-                                                @endforeach
+                                            @php
+                                                $title = strtolower(str_replace(' ', '-', $r->program_name));
+                                            @endphp
+                                            <li><a href="/recruitment/{{$title}}">{{$r->program_name}}</a></li>
+                                            @endforeach
                                             </ul>
                                         </li>
                                         <li>
@@ -118,8 +121,9 @@
                                         <li class="menu-item-has-children">
                                             <a href="#">More</a>
                                             <ul class="sub-menu">
-                                                <li><a href="/about">Info</a></li>
+                                                <li><a href="/about">About Us</a></li>
                                                 <li><a href="/contact">Contact</a></li>
+                                                <li><a href="/gallery">Gallery</a></li>
                                                 <li><a href="/login">Login</a></li>
                                             </ul>
                                         </li>
@@ -199,11 +203,12 @@
                                 </div>
                                 <div class="wpo-event-content">
                                     <div class="wpo-event-text-top">
-                                        <h2><a href="/event/{{$e->id}}">{{$e->event_name}}</a></h2>
                                         @php
+                                            $title = strtolower(str_replace(' ', '-', $e->event_name));
                                             $description = strlen($e->description) > 100 ? substr($e->description, 0, 100) . '...' : $e->description;
                                         @endphp
-                                        <p>{{ $description }}</p>
+                                        <h2><a href="/event/{{$title}}">{{$e->event_name}}</a></h2>
+                                        {!! $description !!}
                                     </div>
                                 </div>
                             </div>
@@ -224,9 +229,9 @@
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget about-widget">
                                 <div class="logo widget-title">
-                                    <img src="assets/images/logo.png" alt="blog">
+                                    <img src="assets/images/logo2.png" alt="blog">
                                 </div>
-                                <p>Enhance & Empower Indonesian Youth!</p>
+                                <p>{{$profile->subtitle}}</p>
                                     <ul>
                                     <li>
                                         <a href="https://www.facebook.com/profile.php?id=100069888026987">
@@ -274,8 +279,8 @@
                                     <p>Would you have any enquiries.Please feel free to contuct us</p>
                                     <ul>
                                         <li><i class="fi flaticon-mail"></i>changemaker@gmail.com</li>
-                                        <li><i class="fi flaticon-phone-call"></i>+62895411022313</li>
-                                        <li><i class="fi flaticon-location"></i>Indonesia</li>
+                                        <li><i class="fi flaticon-phone-call"></i>+{{$profile->whatsapp}}</li>
+                                        <li><i class="fi flaticon-location"></i>{{$profile->address}}</li>
                                     </ul>
                                 </div>
                             </div>

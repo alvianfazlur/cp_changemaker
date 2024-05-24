@@ -99,7 +99,10 @@
                                             <a href="#">Recruitment</a>
                                             <ul class="sub-menu">
                                                 @foreach ($recruitments as $r)
-                                                <li><a href="/recruitment/{{$r->id}}">{{$r->program_name}}</a></li>
+                                                @php
+                                                    $title = strtolower(str_replace(' ', '-', $r->program_name));
+                                                @endphp
+                                                <li><a href="/recruitment/{{$title}}">{{$r->program_name}}</a></li>
                                                 @endforeach
                                             </ul>
                                         </li>
@@ -115,8 +118,9 @@
                                         <li class="menu-item-has-children">
                                             <a href="#">More</a>
                                             <ul class="sub-menu">
-                                                <li><a href="/about">Info</a></li>
+                                                <li><a href="/about">About Us</a></li>
                                                 <li><a href="/contact">Contact</a></li>
+                                                <li><a href="/gallery">Gallery</a></li>
                                                 <li><a href="/login">Login</a></li>
                                             </ul>
                                         </li>
@@ -170,7 +174,7 @@
                                                     <h2>Lets Change The World Together</h2>
                                                 </div>
                                                 <br>
-                                                <a class="btn btn-success" href="#">Join Our Partnership</a>
+                                                <a class="btn btn-success" href="https://wa.me/{{$profile->whatsapp}}">Join Our Partnership</a>
                                                 <div class="volunteer-img">
                                                     <img src="assets/images/volunteer.png" alt="">
                                                 </div>
@@ -193,12 +197,14 @@
                                             <div class="wpo-campaign-single">
                                                 <div class="wpo-campaign-item">
                                                     <div class="wpo-campaign-img">
-                                                        <img src="file_upload/{{$p->image}}" alt style="height: 200px; object-fit: ffill;">                                            
+                                                        <img src="file_upload/{{$p->image}}" alt style="height: 200px; object-fit: cover;">                                            
                                                         <span class="thumb">{{$p->type}}</span>
                                                     </div>
                                                     <div class="wpo-campaign-content">
                                                         <div class="wpo-campaign-text-top">
-                                                            <h2>{{$p->name}}</h2>
+                                                            <a href="{{$p->link}}">
+                                                                <h2>{{$p->name}}</h2>
+                                                            </a>
                                                             <p></p>
                                                             <div class="campaign-btn">
                                                             </div>
@@ -228,9 +234,9 @@
                     <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                         <div class="widget about-widget">
                             <div class="logo widget-title">
-                                <img src="assets/images/logo.png" alt="blog">
+                                <img src="assets/images/logo2.png" alt="blog">
                             </div>
-                            <p>Enhance & Empower Indonesian Youth!</p>
+                            <p>{{$profile->subtitle}}</p>
                                 <ul>
                                 <li>
                                     <a href="https://www.facebook.com/profile.php?id=100069888026987">
@@ -278,8 +284,8 @@
                                 <p>Would you have any enquiries.Please feel free to contuct us</p>
                                 <ul>
                                     <li><i class="fi flaticon-mail"></i>changemaker@gmail.com</li>
-                                    <li><i class="fi flaticon-phone-call"></i>+62895411022313</li>
-                                    <li><i class="fi flaticon-location"></i>Indonesia</li>
+                                    <li><i class="fi flaticon-phone-call"></i>+{{$profile->whatsapp}}</li>
+                                    <li><i class="fi flaticon-location"></i>{{$profile->address}}</li>
                                 </ul>
                             </div>
                         </div>

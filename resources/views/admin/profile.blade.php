@@ -161,7 +161,6 @@
                     <div class="wpo-donate-header">
                         <h2>Edit Company Profile</h2>
                     </div>
-                    <div id="Donations" class="tab-pane">
                     <form action="/admin/updateDataProfile" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <input type="hidden" name="id" value="{{ $profile->id }}"> <br/>
@@ -201,6 +200,8 @@
                             
                             <h2>Email</h2>
                             <input type="text" placeholder="punggawa@gmail.com" class="form-control" name="email" value="{{ $profile->email }}" id="subtitle" required>
+                            <h2>Youtube Video</h2>
+                            <input type="text" placeholder="<iframe>" class="form-control" name="youtube" value="{{ $profile->youtube_profile }}" id="subtitle" required>
                             
 
                             <div class="submit-area">

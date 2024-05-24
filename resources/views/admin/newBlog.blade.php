@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
 </head>
 <body>
     <!-- wpo-event-area start -->
@@ -33,7 +34,7 @@
                         <h2>New Blog</h2>
                     </div>
                     <div id="Donations" class="tab-pane">
-                        <form action="/admin/store-blog" method="post" enctype="multipart/form-data">
+                        <form action="/admin/store-blog" method="post" enctype="multipart/form-data" novalidate>
                             {{ csrf_field() }}
                             {{-- <input type="hidden" name="id" value=""> <br/> --}}
                             <div class="wpo-donations-amount">
@@ -47,7 +48,7 @@
                                 <input type="date" class="form-control" name="publication_date"value="{{ date('Y-m-d') }}" id="text" required>
 
                                 <h2>Content</h2>
-                                <textarea class="form-control" name="content" id="description" required></textarea>
+                                <textarea class="form-control" name="content" id="content" required></textarea>
                                 <br>
 
                                 <h2>Image</h2>
@@ -65,5 +66,17 @@
     </div>
     <!-- wpo-event-area end -->
 </div>
+<script>
+    let contentEditor;
+    
+    ClassicEditor
+        .create(document.querySelector('#content'))
+        .then(editor => {
+            contentEditor = editor;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+  </script>
 </body>
 </html>

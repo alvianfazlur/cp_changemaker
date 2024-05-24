@@ -102,7 +102,10 @@
                                             <a href="#">Recruitment</a>
                                             <ul class="sub-menu">
                                                 @foreach ($recruitments as $r)
-                                                    <li><a href="/recruitment/{{$r->id}}">{{$r->program_name}}</a></li>
+                                                @php
+                                                    $title = strtolower(str_replace(' ', '-', $r->program_name));
+                                                @endphp
+                                                <li><a href="/recruitment/{{$title}}">{{$r->program_name}}</a></li>
                                                 @endforeach
                                             </ul>
                                         </li>
@@ -118,8 +121,9 @@
                                         <li class="menu-item-has-children">
                                             <a href="#">More</a>
                                             <ul class="sub-menu">
-                                                <li><a href="/about">Info</a></li>
+                                                <li><a href="/about">About Us</a></li>
                                                 <li><a href="/contact">Contact</a></li>
+                                                <li><a href="/gallery">Gallery</a></li>
                                                 <li><a href="/login">Login</a></li>
                                             </ul>
                                         </li>
@@ -163,7 +167,7 @@
                             </div>
                             <div class="wpo-event-details-text">
                                 <h2>Event Description</h2>
-                                 <p>{{$event->description}}</p>
+                                {!!$event->description!!} 
                             </div>
                             <div class="wpo-event-details-wrap">
                                 <div class="wpo-event-details-tab">
@@ -185,23 +189,11 @@
                                 <div class="wpo-event-details-content">
                                     <div class="tab-content">
                                         <div id="Schedule" class="tab-pane active">
-                                            <textarea name="benefits" readonly id="descriptionTextarea" style="border: none; width: 100%; resize: none; overflow: hidden;">{{$event->schedule}}</textarea>
-                                            <script>
-                                                document.addEventListener("DOMContentLoaded", function() {
-                                                    var textarea = document.getElementById('descriptionTextarea');
-                                                    textarea.style.height = 'auto'; // Reset the height
-                                                    textarea.style.height = textarea.scrollHeight + 'px'; // Set the height to fit the content
-            
-                                                    textarea.addEventListener('focus', function() {
-                                                        textarea.style.border = 'none';
-                                                        textarea.style.outline = 'none';
-                                                    });
-                                                });
-                                            </script>    
+                                            {!!$event->schedule!!} 
                                         </div>
                                         <div id="Map" class="tab-pane">
                                             <div class="contact-map">
-                                                <iframe src="{{$event->location}}" allowfullscreen></iframe>
+                                                {!!$event->location!!}
                                             </div>
                                         </div>
                                         <div id="Contact" class="tab-pane">
@@ -245,7 +237,10 @@
                                                 <img src="../assets/images/event-single.jpg" alt style="height: 100%; width: 100%; object-fit: cover;">
                                             </div>
                                             <div class="details">
-                                                <h4><a href="/event/{{$a->id}}">{{$a->event_name}}</a></h4>
+                                                @php
+                                                    $title = strtolower(str_replace(' ', '-', $a->event_name));
+                                                @endphp
+                                                <h4><a href="/event/{{$title}}">{{$a->event_name}}</a></h4>
                                                 <span class="date">{{ Carbon::parse($a->event_date)->format('d F Y') }}</span>
                                             </div>
                                         </div>
@@ -268,9 +263,9 @@
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget about-widget">
                                 <div class="logo widget-title">
-                                    <img src="../assets/images/logo.png" alt="blog">
+                                    <img src="../assets/images/logo2.png" alt="blog">
                                 </div>
-                                <p>Enhance & Empower Indonesian Youth!</p>
+                                <p>{{$profile->subtitle}}</p>
                                     <ul>
                                     <li>
                                         <a href="https://www.facebook.com/profile.php?id=100069888026987">
@@ -318,8 +313,8 @@
                                     <p>Would you have any enquiries.Please feel free to contuct us</p>
                                     <ul>
                                         <li><i class="fi flaticon-mail"></i>changemaker@gmail.com</li>
-                                        <li><i class="fi flaticon-phone-call"></i>+62895411022313</li>
-                                        <li><i class="fi flaticon-location"></i>Indonesia</li>
+                                        <li><i class="fi flaticon-phone-call"></i>+{{$profile->whatsapp}}</li>
+                                        <li><i class="fi flaticon-location"></i>{{$profile->address}}</li>
                                     </ul>
                                 </div>
                             </div>

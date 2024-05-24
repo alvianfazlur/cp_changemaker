@@ -226,6 +226,14 @@
                         </div>
                       </a>
                     </div>
+                    <div class="col-md-6 mb-md-0 mb-4">
+                      <a href="/admin/gallery">
+                        <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
+                          <img class="w-10 me-3 mb-0" src="../assets/images/logo.png" alt="logo">
+                          <h6 class="mb-0">Gallery</h6>
+                        </div>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

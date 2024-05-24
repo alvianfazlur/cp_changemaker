@@ -102,7 +102,10 @@
                                             <a href="#">Recruitment</a>
                                             <ul class="sub-menu">
                                                 @foreach ($recruitments as $r)
-                                                <li><a href="/recruitment/{{$r->id}}">{{$r->program_name}}</a></li>
+                                                @php
+                                                    $title = strtolower(str_replace(' ', '-', $r->program_name));
+                                                @endphp
+                                                <li><a href="/recruitment/{{$title}}">{{$r->program_name}}</a></li>
                                                 @endforeach
                                             </ul>
                                         </li>
@@ -118,8 +121,9 @@
                                         <li class="menu-item-has-children">
                                             <a href="#">More</a>
                                             <ul class="sub-menu">
-                                                <li><a href="/about">Info</a></li>
+                                                <li><a href="/about">About Us</a></li>
                                                 <li><a href="/contact">Contact</a></li>
+                                                <li><a href="/gallery">Gallery</a></li>
                                                 <li><a href="/login">Login</a></li>
                                             </ul>
                                         </li>
@@ -187,7 +191,7 @@
                         <div class="wpo-blog-content">
                             <div class="post format-standard-image">
                                 <div class="entry-media">
-                                    <img src="{{$b->image}}" alt>
+                                    <img src="../file_upload/{{$b->image}}" alt style="max-height: 450px; object-fit: fill;">
                                 </div>
                                 <div class="entry-meta">
                                     <ul>
@@ -197,7 +201,11 @@
                                 </div>
                                 <div class="entry-details">
                                     <h3><a href="/blog/{{$b->id}}">{{$b->title}}</a></h3>
-                                    <p>{{substr($b->content, 0, strpos($b->content, "\n", strpos($b->content, "\n")+1))}}</p>
+                                    @php
+                                        $content = strlen($b->content) > 500 ? substr($b->content, 0, 500) . '...' : $b->content;
+                                    @endphp
+                                    {!! $content !!}
+                                    <br><br>
                                     <a href="/blog/{{$b->id}}" class="read-more">READ MORE...</a>
                                 </div>
                             </div>                            
@@ -217,7 +225,7 @@
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget about-widget">
                                 <div class="logo widget-title">
-                                    <img src="assets/images/logo.png" alt="blog">
+                                    <img src="../assets/images/logo.png" alt="blog">
                                 </div>
                                 <p>Enhance & Empower Indonesian Youth!</p>
                                     <ul>

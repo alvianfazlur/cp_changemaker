@@ -44,7 +44,7 @@
                                 <input type="text" class="form-control" name="job"value=" " id="text" required>
 
                                 <h2>Testimoni</h2>
-                                <textarea class="form-control" name="testimoni" id="description" required></textarea>
+                                <textarea class="form-control" name="testimoni" id="description" required maxlength="300"></textarea>
                                 <br>
                             </div>
                             <div class="submit-area">

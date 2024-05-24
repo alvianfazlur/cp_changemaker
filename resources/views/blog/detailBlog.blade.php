@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="wpOceans">
     <link rel="shortcut icon" type="image/png" href="../assets/images/logo.png">
-    <title>Charitio - Multipurpose Charity Nonprofit HTML5 Template</title>
+    <title>Changemaker</title>
     <link href="../assets/css/themify-icons.css" rel="stylesheet">
     <link href="../assets/css/flaticon.css" rel="stylesheet">
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -103,7 +103,10 @@
                                             <a href="#">Recruitment</a>
                                             <ul class="sub-menu">
                                                 @foreach ($recruitments as $r)
-                                                <li><a href="/recruitment/{{$r->id}}">{{$r->program_name}}</a></li>
+                                                @php
+                                                    $title = strtolower(str_replace(' ', '-', $r->program_name));
+                                                @endphp
+                                                <li><a href="/recruitment/{{$title}}">{{$r->program_name}}</a></li>
                                                 @endforeach
                                             </ul>
                                         </li>
@@ -119,8 +122,9 @@
                                         <li class="menu-item-has-children">
                                             <a href="#">More</a>
                                             <ul class="sub-menu">
-                                                <li><a href="/about">Info</a></li>
+                                                <li><a href="/about">About Us</a></li>
                                                 <li><a href="/contact">Contact</a></li>
+                                                <li><a href="/gallery">Gallery</a></li>
                                                 <li><a href="/login">Login</a></li>
                                             </ul>
                                         </li>
@@ -169,19 +173,7 @@
                                         <li><i class="fi flaticon-calendar"></i> {{ Carbon::parse($blog->publication_date)->format('d F Y') }}</li>
                                     </ul>
                                 </div>
-                                <textarea name="benefits" readonly id="descriptionTextarea" style="border: none; width: 100%; resize: none; overflow: hidden;">{{$blog->content}}</textarea>
-                                            <script>
-                                                document.addEventListener("DOMContentLoaded", function() {
-                                                    var textarea = document.getElementById('descriptionTextarea');
-                                                    textarea.style.height = 'auto'; // Reset the height
-                                                    textarea.style.height = textarea.scrollHeight + 'px'; // Set the height to fit the content
-            
-                                                    textarea.addEventListener('focus', function() {
-                                                        textarea.style.border = 'none';
-                                                        textarea.style.outline = 'none';
-                                                    });
-                                                });
-                                            </script>
+                                {!!$blog->content!!}
                                 <blockquote>
                                     "Youthful Spirit, Endless Impact: Embracing Volunteerism as the Catalyst for Positive Change in Our Communities, One Selfless Act at a Time."    
                                 </blockquote>
@@ -252,9 +244,9 @@
                     <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                         <div class="widget about-widget">
                             <div class="logo widget-title">
-                                <img src="assets/images/logo.png" alt="blog">
+                                <img src="../assets/images/logo2.png" alt="blog">
                             </div>
-                            <p>Enhance & Empower Indonesian Youth!</p>
+                            <p>{{$profile->subtitle}}</p>
                                 <ul>
                                 <li>
                                     <a href="https://www.facebook.com/profile.php?id=100069888026987">
@@ -302,8 +294,8 @@
                                 <p>Would you have any enquiries.Please feel free to contuct us</p>
                                 <ul>
                                     <li><i class="fi flaticon-mail"></i>changemaker@gmail.com</li>
-                                    <li><i class="fi flaticon-phone-call"></i>+62895411022313</li>
-                                    <li><i class="fi flaticon-location"></i>Indonesia</li>
+                                    <li><i class="fi flaticon-phone-call"></i>+{{$profile->whatsapp}}</li>
+                                    <li><i class="fi flaticon-location"></i>{{$profile->address}}</li>
                                 </ul>
                             </div>
                         </div>

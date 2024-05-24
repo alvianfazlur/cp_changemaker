@@ -16,6 +16,7 @@
     <link href="assets/css/owl.carousel.css" rel="stylesheet">
     <link href="assets/css/owl.theme.css" rel="stylesheet">
     <link href="assets/css/slick.css" rel="stylesheet">
+    <link href="assets/css/fab.css" rel="stylesheet">
     <link href="assets/css/slick-theme.css" rel="stylesheet">
     <link href="assets/css/swiper.min.css" rel="stylesheet">
     <link href="assets/css/owl.transitions.css" rel="stylesheet">
@@ -98,7 +99,10 @@
                                             <a href="#">Recruitment</a>
                                             <ul class="sub-menu">
                                                 @foreach ($recruitments as $r)
-                                                <li><a href="/recruitment/{{$r->id}}">{{$r->program_name}}</a></li>
+                                                @php
+                                                    $title = strtolower(str_replace(' ', '-', $r->program_name));
+                                                @endphp
+                                                <li><a href="/recruitment/{{$title}}">{{$r->program_name}}</a></li>
                                                 @endforeach
                                             </ul>
                                         </li>
@@ -114,8 +118,9 @@
                                         <li class="menu-item-has-children">
                                             <a class="active" href="#">More</a>
                                             <ul class="sub-menu">
-                                                <li><a href="/about">Info</a></li>
+                                                <li><a href="/about">About Us</a></li>
                                                 <li><a href="/contact">Contact</a></li>
+                                                <li><a href="/gallery">Gallery</a></li>
                                                 <li><a href="/login">Login</a></li>
                                             </ul>
                                         </li>
@@ -140,7 +145,7 @@
                         <div class="wpo-breadcumb-wrap">
                             <h2>About Us</h2>
                             <ul>
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li><span>About</span></li>
                             </ul>
                         </div>
@@ -155,13 +160,8 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="wpo-about-video-item">
-                            <div class="wpo-about-video-img">
-                                <img src="assets/images/about-vedio.jpg" alt="">
-                                <div class="entry-media video-holder">
-                                    <a href="https://www.youtube.com/embed/iSbzh0r9IV4?autoplay=1" class="video-btn" data-type="iframe">
-                                        <i class=""></i>
-                                    </a>
-                                </div>
+                            <div class="video-container">
+                                {!!$profile->youtube_profile!!}
                             </div>
                             <h2>See what we do for <span>Indonesia </span></h2>
                         </div>
@@ -246,19 +246,8 @@
                     <div class="col-lg-6 col-md-12 col-12">
                         <div class="wpo-about-text">
                             <span>About Us</span>
-                            <h2>Calling out passionate Changers!!</h2>
-                            <p>Pengabdian Skala International dan berkontribusi dalam pembangunan yang berkelanjutan melalui pengajaran di Sanggar Bimbingan.
-                                Dengan kerjasama kita, kita dapat mewujudkan perubahan positif bagi anak-anak Indonesia yang berbakat.
-                                Mari berbagi pengetahuan dan menginspirasi generasi mendatang!
-                                Dengan fasilitas yang tidak perlu diragukan lagi!! Ditambah dengan jalur FULLY FUNDED🔥🔥 </p>
-                            <ul>
-                                <li>100% Fully Funded</li>
-                                <li>Tiket pesawat PP untuk delegasi terbaik</li>
-                                <li>Konsumsi & Transportasi selama kegiatan.</li>
-                                <li>Sertifikat Internasional</li>
-                                <li>Asuransi kesehatan.</li>
-                            </ul>
-                            <a class="theme-btn-s2" href="/about">More About</a>
+                            {!!$profile->description!!}
+                            {{-- <a class="theme-btn-s2" href="/about">More About</a> --}}
                         </div>
                     </div>
                 </div>
@@ -353,7 +342,7 @@
                         <div class="partner-grids partners-slider owl-carousel">
                             @foreach ($partnerships as $p)
                                 <div class="grid">
-                                    <img src="file_upload/{{$p->image}}" alt style="width: 200px; height: auto; box-fit:">
+                                    <img src="file_upload/{{$p->image}}" alt style="width: 200px; height: 100px; object-fit:cover">
                                 </div>
                             @endforeach
                         </div>
@@ -371,9 +360,9 @@
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget about-widget">
                                 <div class="logo widget-title">
-                                    <img src="assets/images/logo.png" alt="blog">
+                                    <img src="assets/images/logo2.png" alt="blog">
                                 </div>
-                                <p>Enhance & Empower Indonesian Youth!</p>
+                                <p>{{$profile->subtitle}}</p>
                                     <ul>
                                     <li>
                                         <a href="https://www.facebook.com/profile.php?id=100069888026987">
@@ -421,8 +410,8 @@
                                     <p>Would you have any enquiries.Please feel free to contuct us</p>
                                     <ul>
                                         <li><i class="fi flaticon-mail"></i>changemaker@gmail.com</li>
-                                        <li><i class="fi flaticon-phone-call"></i>+62895411022313</li>
-                                        <li><i class="fi flaticon-location"></i>Indonesia</li>
+                                        <li><i class="fi flaticon-phone-call"></i>+{{$profile->whatsapp}}</li>
+                                        <li><i class="fi flaticon-location"></i>{{$profile->address}}</li>
                                     </ul>
                                 </div>
                             </div>

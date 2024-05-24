@@ -123,4 +123,12 @@ Route::middleware('auth')->group(function () {
     //Profile
     Route::get('/admin/profile', [AdminController::class,'edit_profile']);
     Route::post('/admin/updateDataProfile', [AdminController::class,'update_profile']);
+
+    //CRUD Admin Gallery
+    Route::get('/admin/gallery', [AdminController::class,'open_gallery']);
+    Route::get('/admin/new-photo', [AdminController::class,'new_photo']);
+    Route::post('/admin/store-photo', [AdminController::class,'storePhoto']);
+    Route::get('/admin/delete-photo/{id}', [AdminController::class,'delete_photo']);
+    Route::get('/admin/update-photo/{id}', [AdminController::class,'edit_photo']);
+    Route::post('/admin/updateDataPhoto', [AdminController::class,'update_photo']);
 });

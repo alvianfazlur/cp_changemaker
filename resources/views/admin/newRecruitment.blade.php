@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
 </head>
 <body>
     <!-- wpo-event-area start -->
@@ -33,7 +34,7 @@
                         <h2>Add Recruitments</h2>
                     </div>
                     <div id="Donations" class="tab-pane">
-                        <form action="/admin/store-recruitment" method="post" enctype="multipart/form-data">
+                        <form action="/admin/store-recruitment" method="post" enctype="multipart/form-data" novalidate>
                             {{ csrf_field() }}
                             {{-- <input type="hidden" name="id" value=""> <br/> --}}
                             <div class="wpo-donations-amount">
@@ -42,9 +43,10 @@
                                 
                                 <h2>Program Type</h2>
                                 <select class="form-select" name="program_type" id="type" required>
-                                    <option value="Self Funded">Self Funded</option>
-                                    <option value="Special Funded">Special Funded</option>
-                                    <option value="Fully Funded">Fully Funded</option>
+                                    <option value="Social Action">Social Action</option>
+                                    <option value="Exchange & Conference">Exchange & Conference</option>
+                                    <option value="Summit">Summit</option>
+                                    <option value="Volunteer">Volunteer</option>
                                 </select> <br>                               
                            
                                 <h2>Location</h2>
@@ -94,5 +96,34 @@
     </div>
     <!-- wpo-event-area end -->
 </div>
+<script>
+    let requirementsEditor, descriptionEditor, benefitEditor;
+    
+    ClassicEditor
+        .create(document.querySelector('#requirements'))
+        .then(editor => {
+            visionEditor = editor;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    ClassicEditor
+        .create(document.querySelector('#benefits'))
+        .then(editor => {
+            benefitEditor = editor;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    ClassicEditor
+        .create(document.querySelector('#description'))
+        .then(editor => {
+            visionEditor = editor;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+  </script>
 </body>
 </html>

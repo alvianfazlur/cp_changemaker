@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\blogs;
 use App\Models\events;
+use App\Models\gallery;
 use App\Models\partnerships;
 use App\Models\profile;
 use App\Models\team;
@@ -35,6 +36,10 @@ class AdminController extends Controller
         $partnerships = partnerships::get();
         return view('admin.partnerships', ['partnerships' => $partnerships]);
     }
+    public function open_gallery(){
+        $gallery = gallery::get();
+        return view('admin.gallery', ['gallery' => $gallery]);
+    }
 
     public function edit_recruitment($id){
         $recruitments = recruitments::where('id', $id)->first();
@@ -56,6 +61,10 @@ class AdminController extends Controller
     public function edit_testimonial($id){
         $testimonial = testimonial::where('id', $id)->first();
         return view('admin.editTestimonial', ['testimonial' => $testimonial]);
+    }
+    public function edit_photo($id){
+        $gallery = gallery::where('id', $id)->first();
+        return view('admin.editPhoto', ['gallery' => $gallery]);
     }
     public function edit_profile(){
         $profile = profile::first();
@@ -127,6 +136,11 @@ class AdminController extends Controller
     }
     public function update_events(Request $request){
 
+        $this->validate($request, [
+            'event_name' => 'required',
+            'location' => 'required',
+            'event_date' => 'required',
+        ]);
         events::where('id',$request->id)->update([
             'event_name' => $request->event_name,
             'location' => $request->location,
@@ -135,7 +149,7 @@ class AdminController extends Controller
             'schedule' => $request->schedule, 
         ]);
 	// alihkan halaman
-	return redirect('/home');
+	return redirect('/admin/events');
     }
     public function update_partnership(Request $request){
 
@@ -198,6 +212,15 @@ class AdminController extends Controller
 	// alihkan halaman
 	return redirect('/admin/testimonial');
     }
+    public function update_photo(Request $request){
+
+        gallery::where('id',$request->id)->update([
+            'title' => $request->title,
+            'caption' => $request->caption,
+        ]);
+	// alihkan halaman
+	return redirect('/admin/gallery');
+    }
     public function update_profile(Request $request){
 
         $request->validate([
@@ -216,6 +239,11 @@ class AdminController extends Controller
             'vision' => $request->vision,
             'mission' => $request->mission,
             'description' => $request->description,
+            'youtube_profile' => $request->youtube,
+            'instagram' => $request->instagram,
+            'whatsapp' => $request->whatsapp,
+            'address' => $request->address,
+            'email' => $request->email,
 
         ]);
 	// alihkan halaman
@@ -252,6 +280,11 @@ class AdminController extends Controller
 	    DB::table('testimonials')->where('id',$id)->delete();
 	    return redirect('/admin/testimonial');
     }
+    public function delete_photo($id){
+	    
+	    DB::table('galleries')->where('id',$id)->delete();
+	    return redirect('/admin/gallery');
+    }
     public function delete_partnership($id){
 	    
 	    DB::table('partnerships')->where('id',$id)->delete();
@@ -273,6 +306,9 @@ class AdminController extends Controller
     }
     public function new_testimonial(){
         return view('admin.newTestimonial', []);
+    }
+    public function new_photo(){
+        return view('admin.newPhoto', []);
     }
     public function new_event(){
         return view('admin.newEvent', []);
@@ -310,6 +346,13 @@ class AdminController extends Controller
 	return redirect('/admin/recruitments');
     }
     public function storeEvents(Request $request){
+        
+        $this->validate($request, [
+            'event_name' => 'required',
+            'location' => 'required',
+            'event_date' => 'required',
+        ]);
+        
         // insert data ke table
         events::create([
             'event_name' => $request->event_name,
@@ -319,7 +362,7 @@ class AdminController extends Controller
             'schedule' => $request->schedule,
         ]);       
 	
-	return redirect('/admin/events');
+	return redirect('/admin/events')->with('success', 'Events post created successfully!');
     }
     public function storeTeam(Request $request){
         $this->validate($request, [
@@ -340,6 +383,25 @@ class AdminController extends Controller
         ]);       
 	
 	return redirect('/admin/teams');
+    }
+    public function storePhoto(Request $request){
+        $this->validate($request, [
+            'image' => 'required|image|mimes:jpg,jpeg,png',
+        ]);
+
+        $file = $request->file('image');
+        $nama_file = time()."_".$file->getClientOriginalName();
+        $tujuan_upload = 'file_gallery';
+        $file->move($tujuan_upload, $nama_file);
+
+        // insert data ke table
+        gallery::create([
+            'title' => $request->title,
+            'caption' => $request->caption,
+            'image' => $nama_file,
+        ]);       
+	
+	return redirect('/admin/gallery');
     }
     public function storeTestimonial(Request $request){
         // insert data ke table

@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
 </head>
 <body>
     <!-- wpo-event-area start -->
@@ -47,10 +48,10 @@
                                 <input type="date" class="form-control" name="publication_date"value="{{ $blog->publication_date}}" id="text" required>
 
                                 <h2>Content</h2>
-                                <textarea class="form-control" name="content" id="description" required>{{ $blog->content}}</textarea>
+                                <textarea class="form-control" name="content" id="content" required>{{ $blog->content}}</textarea>
                                 <br>
                                 <h2>Image Url</h2>
-                                <input type="file" class="form-control" name="image"value="file" id="image" required>
+                                <input type="file" class="form-control" name="image"value="file" id="image">
                                 <br>
 
 
@@ -67,5 +68,17 @@
     </div>
     <!-- wpo-event-area end -->
 </div>
+<script>
+    let contentEditor;
+    
+    ClassicEditor
+        .create(document.querySelector('#content'))
+        .then(editor => {
+            contentEditor = editor;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+  </script>
 </body>
 </html>

@@ -103,7 +103,10 @@
                                             <a class="active" href="#">Recruitment</a>
                                             <ul class="sub-menu">
                                                 @foreach ($recruitments as $r)
-                                                <li><a href="/recruitment/{{$r->id}}">{{$r->program_name}}</a></li>
+                                                @php
+                                                    $title = strtolower(str_replace(' ', '-', $r->program_name));
+                                                @endphp
+                                                <li><a href="/recruitment/{{$title}}">{{$r->program_name}}</a></li>
                                                 @endforeach
                                             </ul>
                                         </li>
@@ -117,10 +120,11 @@
                                             <a href="/partnership">Partnership</a>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a href="#">More</a>
+                                            <a class="active" href="#">More</a>
                                             <ul class="sub-menu">
-                                                <li><a href="/about">Info</a></li>
+                                                <li><a href="/about">About Us</a></li>
                                                 <li><a href="/contact">Contact</a></li>
+                                                <li><a href="/gallery">Gallery</a></li>
                                                 <li><a href="/login">Login</a></li>
                                             </ul>
                                         </li>
@@ -183,37 +187,12 @@
                                     <div class="wpo-project-single-content-des-wrap">
                                         <div class="wpo-project-single-content-des-left">
                                             <h2>Open Volunteer Details</h2>
-                                            <textarea name="benefits" readonly id="descriptionTextarea" style="border: none; width: 100%; resize: none; overflow: hidden;">{{$recruitment->decription}}</textarea>
-                                            <script>
-                                                document.addEventListener("DOMContentLoaded", function() {
-                                                    var textarea = document.getElementById('descriptionTextarea');
-                                                    textarea.style.height = 'auto'; // Reset the height
-                                                    textarea.style.height = textarea.scrollHeight + 'px'; // Set the height to fit the content
-            
-                                                    textarea.addEventListener('focus', function() {
-                                                        textarea.style.border = 'none';
-                                                        textarea.style.outline = 'none';
-                                                    });
-                                                });
-                                            </script>
-                                            <br><br>
+                                            {!!$recruitment->decription!!}
                                             <h3>Terbuka Untuk</h3>
-                                            <p>{{$recruitment->requirements}}</p>
+                                            {!!$recruitment->requirements!!}
                                             <div class="wpo-solutions-section">
                                                 <h2>Best Benefits of Project</h2>
-                                                <textarea name="benefits" readonly id="benefitsTextarea" style="border: none; width: 100%; resize: none; overflow: hidden;">{{$recruitment->benefits}}</textarea>
-                                                <script>
-                                                    document.addEventListener("DOMContentLoaded", function() {
-                                                        var textarea = document.getElementById('benefitsTextarea');
-                                                        textarea.style.height = 'auto'; // Reset the height
-                                                        textarea.style.height = textarea.scrollHeight + 'px'; // Set the height to fit the content
-                
-                                                        textarea.addEventListener('focus', function() {
-                                                            textarea.style.border = 'none';
-                                                            textarea.style.outline = 'none';
-                                                        });
-                                                    });
-                                                </script>
+                                                {!!$recruitment->benefits!!}
                                             </div>
                                         </div>
                                         <div class="wpo-project-single-content-des-right">
@@ -257,9 +236,9 @@
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget about-widget">
                                 <div class="logo widget-title">
-                                    <img src="assets/images/logo.png" alt="blog">
+                                    <img src="../assets/images/logo2.png" alt="blog">
                                 </div>
-                                <p>Enhance & Empower Indonesian Youth!</p>
+                                <p>{{$profile->subtitle}}</p>
                                     <ul>
                                     <li>
                                         <a href="https://www.facebook.com/profile.php?id=100069888026987">
@@ -307,8 +286,8 @@
                                     <p>Would you have any enquiries.Please feel free to contuct us</p>
                                     <ul>
                                         <li><i class="fi flaticon-mail"></i>changemaker@gmail.com</li>
-                                        <li><i class="fi flaticon-phone-call"></i>+628</li>
-                                        <li><i class="fi flaticon-location"></i>Indonesia</li>
+                                        <li><i class="fi flaticon-phone-call"></i>+{{$profile->whatsapp}}</li>
+                                        <li><i class="fi flaticon-location"></i>{{$profile->address}}</li>
                                     </ul>
                                 </div>
                             </div>
