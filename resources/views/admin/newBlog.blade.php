@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta name="author" content="wpOceans">
-    <link rel="shortcut icon" type="image/png" href="../../assets/images/favicon.png">
-    <title>Charitio - Multipurpose Charity Nonprofit HTML5 Template</title>
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.png') }}">
+    <title>Changemaker Admin</title>
     <link href="../../assets/css/themify-icons.css" rel="stylesheet">
         <link href="../../assets/css/flaticon.css" rel="stylesheet">
         <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@
                         <h2>New Blog</h2>
                     </div>
                     <div id="Donations" class="tab-pane">
-                        <form action="/admin/store-blog" method="post" enctype="multipart/form-data" novalidate>
+                        <form action="/admin/store-blog" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             {{-- <input type="hidden" name="id" value=""> <br/> --}}
                             <div class="wpo-donations-amount">
@@ -48,10 +48,11 @@
                                 <input type="date" class="form-control" name="publication_date"value="{{ date('Y-m-d') }}" id="text" required>
 
                                 <h2>Content</h2>
-                                <textarea class="form-control" name="content" id="content" required></textarea>
+                                <textarea class="form-control" name="content" id="content"></textarea>
                                 <br>
 
                                 <h2>Image</h2>
+                                <p style="color: lightgrey; font-size: small;">Supported Format : Jpg, Jpeg, Png</p>
                                 <input type="file" class="form-control" name="image"value="file" id="image" required>
                                 <br>
                             </div>

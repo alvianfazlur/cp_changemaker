@@ -200,13 +200,14 @@
                                     </ul>
                                 </div>
                                 <div class="entry-details">
-                                    <h3><a href="/blog/{{$b->id}}">{{$b->title}}</a></h3>
                                     @php
+                                        $title = strtolower(str_replace(' ', '-', $b->title));
                                         $content = strlen($b->content) > 500 ? substr($b->content, 0, 500) . '...' : $b->content;
                                     @endphp
+                                    <h3><a href="/blog/{{$title}}">{{$b->title}}</a></h3>
                                     {!! $content !!}
                                     <br><br>
-                                    <a href="/blog/{{$b->id}}" class="read-more">READ MORE...</a>
+                                    <a href="/blog/{{$title}}" class="read-more">READ MORE...</a>
                                 </div>
                             </div>                            
                         </div>
@@ -305,7 +306,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col col-xs-12">
-                            <p class="copyright"> &copy; 2024 Changemaker. Design By <a href="index.html">wpOcean</a>. All Rights Reserved.</p>
+                            <p class="copyright"> &copy; 2024 Changemaker. Develop By <a href="https://punggawastudio.com/">Punggawa Studio</a>. All Rights Reserved.</p>
                         </div>
                     </div>
                 </div>

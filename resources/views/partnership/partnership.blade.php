@@ -197,7 +197,7 @@
                                             <div class="wpo-campaign-single">
                                                 <div class="wpo-campaign-item">
                                                     <div class="wpo-campaign-img">
-                                                        <img src="file_upload/{{$p->image}}" alt style="height: 200px; object-fit: cover;">                                            
+                                                        <img src="file_upload/{{$p->image}}" alt style="height: 200px; object-fit: fill;">                                            
                                                         <span class="thumb">{{$p->type}}</span>
                                                     </div>
                                                     <div class="wpo-campaign-content">
@@ -314,7 +314,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col col-xs-12">
-                        <p class="copyright"> &copy; 2024 Changemaker. Design By <a href="index.html">wpOcean</a>. All Rights Reserved.</p>
+                        <p class="copyright"> &copy; 2024 Changemaker. Develop By <a href="https://punggawastudio.com/">Punggawa Studio</a>. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>

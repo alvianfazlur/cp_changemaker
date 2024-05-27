@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="wpOceans">
-    <link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
+    <link rel="shortcut icon" type="image/png" href="../assets/images/logo.png">
     <title>Changemaker</title>
     <link href="../assets/css/themify-icons.css" rel="stylesheet">
     <link href="../assets/css/flaticon.css" rel="stylesheet">
@@ -96,7 +96,7 @@
                                     <button class="menu-close"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
                                         <li class="menu-item-has-children">
-                                            <a href="#">Home</a>
+                                            <a href="/">Home</a>
                                         </li>
                                         <li class="menu-item-has-children">
                                             <a href="#">Recruitment</a>
@@ -187,8 +187,7 @@
                         <div class="wpo-section-title">
                             <span>Events</span>
                             <h2>Changemaker Events</h2>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form,</p>
+                            <p>Join us at our upcoming events where we bring people together to learn, engage, and make a difference.</p>
                         </div>
                     </div>
                 </div>
@@ -204,11 +203,12 @@
                                 </div>
                                 <div class="wpo-event-content">
                                     <div class="wpo-event-text-top">
-                                        <h2><a href="/event/{{$e->id}}">{{$e->event_name}}</a></h2>
                                         @php
+                                            $title = strtolower(str_replace(' ', '-', $e->event_name));
                                             $description = strlen($e->description) > 100 ? substr($e->description, 0, 100) . '...' : $e->description;
                                         @endphp
-                                        <p>{{ $description }}</p>
+                                        <h2><a href="/event/{{$title}}">{{$e->event_name}}</a></h2>
+                                        {!! $description !!}
                                     </div>
                                 </div>
                             </div>
@@ -309,7 +309,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col col-xs-12">
-                            <p class="copyright"> &copy; 2024 Changemaker. Design By <a href="index.html">wpOcean</a>. All Rights Reserved.</p>
+                            <p class="copyright"> &copy; 2024 Changemaker. Develop By <a href="https://punggawastudio.com/">Punggawa Studio</a>. All Rights Reserved.</p>
                         </div>
                     </div>
                 </div>

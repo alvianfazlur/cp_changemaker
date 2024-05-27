@@ -96,7 +96,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/update-blog/{id}', [AdminController::class,'edit_blog']);
     Route::post('/admin/updateDataBlog', [AdminController::class,'update_blog']);
 
-    //CRUD Admin Partnberships
+    //CRUD Admin Partnerships
     Route::get('/admin/partnerships', [AdminController::class,'open_partnership']);
     Route::get('/admin/new-partnership', [AdminController::class,'new_partnership']);
     Route::post('/admin/store-partnership', [AdminController::class,'storePartnership']);

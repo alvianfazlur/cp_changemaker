@@ -197,7 +197,7 @@
                         <div class="partner-grids partners-slider owl-carousel">
                             @foreach ($partnerships as $p)
                                 <div class="grid">
-                                    <img src="file_upload/{{$p->image}}" alt style="width: 200px; height: 100px; object-fit:cover">
+                                    <img src="file_upload/{{$p->image}}" alt style="width: 200px; height: 100px; object-fit:fill">
                                 </div>
                             @endforeach
                         </div>
@@ -295,7 +295,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col col-xs-12">
-                            <p class="copyright"> &copy; 2024 Changemaker. Design By <a href="/">wpOcean</a>. All Rights Reserved.</p>
+                            <p class="copyright"> &copy; 2024 Changemaker. Develop By <a href="https://punggawastudio.com/">Punggawa Studio</a>. All Rights Reserved.</p>
                         </div>
                     </div>
                 </div>

@@ -208,7 +208,7 @@
                                     <h3><a href="/blog/{{$title}}">{{$b->title}}</a></h3>
                                     {!! $content !!}
                                     <br><br>
-                                    <a href="/blog/{{$b->id}}" class="read-more">READ MORE...</a>
+                                    <a href="/blog/{{$title}}" class="read-more">READ MORE...</a>
                                 </div>
                             </div>                            
                         </div>
@@ -307,7 +307,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col col-xs-12">
-                            <p class="copyright"> &copy; 2024 Changemaker. Design By <a href="index.html">wpOcean</a>. All Rights Reserved.</p>
+                            <p class="copyright"> &copy; 2024 Changemaker. Develop By <a href="https://punggawastudio.com/">Punggawa Studio</a>. All Rights Reserved.</p>
                         </div>
                     </div>
                 </div>

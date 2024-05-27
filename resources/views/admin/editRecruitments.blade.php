@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta name="author" content="wpOceans">
-    <link rel="shortcut icon" type="image/png" href="../../assets/images/favicon.png">
-    <title>Charitio - Multipurpose Charity Nonprofit HTML5 Template</title>
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    <title>Changemaker Admin</title>
     <link href="../../assets/css/themify-icons.css" rel="stylesheet">
         <link href="../../assets/css/flaticon.css" rel="stylesheet">
         <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -78,6 +78,7 @@
                                 <h2>Fully & Special Funded Link</h2>
                                 <input type="text" class="form-control" name="fully_funded_link"value="{{ $recruitments->fully_funded_link}}" id="text" required>
                                 <h2>Image</h2>
+                                <p style="color: lightgrey; font-size: small;">Supported Format : Jpg, Jpeg, Png</p>
                                 <input type="file" class="form-control" name="image"value="file" id="image">
                                 <br>
                                 

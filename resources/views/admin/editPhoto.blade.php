@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta name="author" content="wpOceans">
-    <link rel="shortcut icon" type="image/png" href="../../assets/images/favicon.png">
-    <title>Charitio - Multipurpose Charity Nonprofit HTML5 Template</title>
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    <title>Changemaker Admin</title>
     <link href="../../assets/css/themify-icons.css" rel="stylesheet">
         <link href="../../assets/css/flaticon.css" rel="stylesheet">
         <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -45,6 +45,7 @@
                                 <br>
 
                                 <h2>Image Preview</h2>
+                                <p style="color: lightgrey; font-size: small;">Supported Format : Jpg, Jpeg, Png</p>
                                 <img src="../../file_gallery/{{$gallery->image}}" alt="" style="height: auto; width:500px">
                            
                             </div>

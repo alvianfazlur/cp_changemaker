@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="wpOceans">
-    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
-    <title>Charitio - Multipurpose Charity Nonprofit HTML5 Template</title>
+    <link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
+    <title>Changemaker Admin</title>
     <link href="assets/css/themify-icons.css" rel="stylesheet">
     <link href="assets/css/flaticon.css" rel="stylesheet">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">

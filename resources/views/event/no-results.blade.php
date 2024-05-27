@@ -290,7 +290,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col col-xs-12">
-                        <p class="copyright"> &copy; 2024 Changemaker. Design By <a href="index.html">wpOcean</a>. All Rights Reserved.</p>
+                        <p class="copyright"> &copy; 2024 Changemaker. Develop By <a href="https://punggawastudio.com/">Punggawa Studio</a>. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>

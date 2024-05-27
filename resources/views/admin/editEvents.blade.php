@@ -2,8 +2,24 @@
 <html lang="en">
 <head>
     <meta name="author" content="wpOceans">
-    <link rel="shortcut icon" type="image/png" href="../../assets/images/favicon.png">
-    <title>Charitio - Multipurpose Charity Nonprofit HTML5 Template</title>
+    {{-- <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logo.png') }}"> --}}
+    {{-- <title>Changemaker Admin</title>
+    <link href="{{ asset('assets/css/themify-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/flaticon.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/animate.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/owl.carousel.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/owl.theme.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/slick.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/slick-theme.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/swiper.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/owl.transitions.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/jquery.fancybox.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/odometer-theme-default.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">  --}}
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/images/logo.png">
+    <title>Changemaker Admin</title>
     <link href="../../assets/css/themify-icons.css" rel="stylesheet">
         <link href="../../assets/css/flaticon.css" rel="stylesheet">
         <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">

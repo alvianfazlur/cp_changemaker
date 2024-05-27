@@ -125,11 +125,10 @@
                                 <span>Changemaker Indonesia</span>
                             </div>
                             <div class="wpo-hero-title">
-                                <h2>Enhance & Empower Indonesian Youth</h2>
+                                <h2>{{$profile->title}}</h2>
                             </div>
                             <div class="wpo-hero-subtitle">
-                                <p>We help local nonprofits access the funding, tools, training, and support they need
-                                    to become more.</p>
+                                <p>{{$profile->subtitle}}</p>
                             </div>
                             <div class="btns">
                                 <a href="/about" class="btn theme-btn-s2">Get Started</a>
@@ -302,7 +301,10 @@
                                     </div>
                                     <div class="wpo-campaign-content">
                                         <div class="wpo-campaign-text-top">
-                                            <h2><a href="/recruitment/{{$r->id}}">{{$r->program_name}}</a></h2>
+                                            @php
+                                                $title = strtolower(str_replace(' ', '-', $r->program_name));
+                                            @endphp
+                                            <h2><a href="/recruitment/{{$title}}">{{$r->program_name}}</a></h2>
                                             <p></p>
                                             <div class="campaign-btn">
                                                 <ul>
@@ -466,8 +468,11 @@
                                     <img src="file_upload/{{$b->image}}" alt style="height: 300px; object-fit: fill;">
                                 </div>
                                 <div class="wpo-blog-content">
+                                    @php
+                                        $title = strtolower(str_replace(' ', '-', $b->title));
+                                    @endphp
                                     <div class="wpo-blog-content-top">
-                                        <h2><a href="/blog/{{$b->id}}">{{$b->title}}</a></h2>
+                                        <h2><a href="/blog/{{$title}}">{{$b->title}}</a></h2>
                                     </div>
                                     <div class="wpo-blog-content-btm">
                                         <div class="wpo-blog-content-btm-left">
@@ -603,7 +608,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col col-xs-12">
-                            <p class="copyright"> &copy; 2024 Changemaker. Design By <a href="index.html">wpOcean</a>. All Rights Reserved.</p>
+                            <p class="copyright"> &copy; 2024 Changemaker. Develop By <a href="https://punggawastudio.com/">Punggawa Studio</a>. All Rights Reserved.</p>
                         </div>
                     </div>
                 </div>
